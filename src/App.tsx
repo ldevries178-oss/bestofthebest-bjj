@@ -3,61 +3,47 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import TicketsPage from './pages/TicketsPage';
 import LineupPage from './pages/LineupPage';
 import LocatiePage from './pages/LocatiePage';
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/tickets', label: 'Tickets' },
-  { to: '/line-up', label: 'Line-up' },
-  { to: '/locatie', label: 'Locatie' },
+  { to: '#home', label: 'Home' },
+  { to: '#tickets', label: 'Tickets' },
+  { to: '#line-up', label: 'Line-up' },
+  { to: '#locatie', label: 'Locatie' },
 ];
 
 function Navigation() {
-  const location = useLocation();
-
   return (
     <nav id="main-navigation" className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#05000a]/70 border-b border-cyan-500/10" aria-label="Hoofdnavigatie">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3 no-underline group" aria-label="Naar homepage">
+          <a href="#home" className="flex items-center gap-3 no-underline group" aria-label="Naar homepage">
             <span className="font-orbitron text-sm md:text-base font-bold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] transition-all duration-300">
               BOTB
             </span>
             <span className="hidden sm:inline font-rajdhani text-xs text-gray-500 tracking-[0.15em] uppercase border-l border-gray-700 pl-3">
               BJJ Edition
             </span>
-          </NavLink>
+          </a>
 
           {/* Nav Links */}
           <ul className="flex items-center gap-1 sm:gap-2 list-none m-0 p-0">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.to;
-              return (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    id={`nav-${link.label.toLowerCase().replace(/[^a-z]/g, '-')}`}
-                    className={`relative px-3 py-2 sm:px-4 font-orbitron text-[10px] sm:text-xs font-medium tracking-[0.15em] uppercase rounded-md transition-all duration-300 no-underline ${
-                      isActive
-                        ? 'text-cyan-300 bg-cyan-500/10 text-glow-cyan'
-                        : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'
-                    }`}
-                    aria-current={isActive ? 'page' : undefined}
-                  >
-                    {link.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full"></span>
-                    )}
-                  </NavLink>
-                </li>
-              );
-            })}
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <a
+                  href={link.to}
+                  id={`nav-${link.label.toLowerCase().replace(/[^a-z]/g, '-')}`}
+                  className="relative px-3 py-2 sm:px-4 font-orbitron text-[10px] sm:text-xs font-medium tracking-[0.15em] uppercase rounded-md transition-all duration-300 no-underline text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -92,13 +78,25 @@ export default function App() {
         <Navigation />
 
         {/* Main Content Area with top padding for fixed nav */}
+        <Helmet>
+          <title>Best of the Best – BJJ Edition | De Ultieme Confrontatie</title>
+          <meta name="description" content="Best of the Best BJJ Edition – De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd in 80s synthwave stijl." />
+          <meta name="keywords" content="BJJ, Best of the Best, Brazilian Jiu-Jitsu, martial arts, evenement, synthwave, tickets, line-up" />
+          <link rel="canonical" href="/" />
+        </Helmet>
         <main className="relative z-10 flex-1 flex flex-col pt-16">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/tickets" element={<TicketsPage />} />
-            <Route path="/line-up" element={<LineupPage />} />
-            <Route path="/locatie" element={<LocatiePage />} />
-          </Routes>
+          <section id="home" className="min-h-[calc(100vh-4rem)] flex flex-col">
+            <HomePage />
+          </section>
+          <section id="tickets" className="min-h-screen flex flex-col border-t border-cyan-500/10 bg-[#0a0514]/30">
+            <TicketsPage />
+          </section>
+          <section id="line-up" className="min-h-screen flex flex-col border-t border-cyan-500/10">
+            <LineupPage />
+          </section>
+          <section id="locatie" className="min-h-screen flex flex-col border-t border-cyan-500/10 bg-[#0a0514]/30">
+            <LocatiePage />
+          </section>
         </main>
 
         {/* Footer */}
@@ -109,13 +107,13 @@ export default function App() {
             </p>
             <div className="flex items-center gap-4">
               {navLinks.map((link) => (
-                <NavLink
+                <a
                   key={link.to}
-                  to={link.to}
+                  href={link.to}
                   className="font-rajdhani text-xs text-gray-500 tracking-wider uppercase hover:text-cyan-400 transition-colors duration-300 no-underline"
                 >
                   {link.label}
-                </NavLink>
+                </a>
               ))}
             </div>
           </div>

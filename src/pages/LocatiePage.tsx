@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 const infoItems = [
   {
     icon: '📍',
@@ -26,13 +24,6 @@ const infoItems = [
 export default function LocatiePage() {
   return (
     <>
-      <Helmet>
-        <title>Locatie – Best of the Best BJJ Edition | AFAS Live Amsterdam</title>
-        <meta name="description" content="Best of the Best BJJ Edition vindt plaats in AFAS Live, Amsterdam. Bekijk bereikbaarheid met OV en auto, parkeerinformatie en plattegrond." />
-        <meta name="keywords" content="locatie, AFAS Live, Amsterdam, BJJ evenement, bereikbaarheid, parkeren, Best of the Best" />
-        <link rel="canonical" href="/locatie" />
-      </Helmet>
-
       <div className="w-full flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Page Header */}
         <div className="flex flex-col items-center mb-16 w-full">

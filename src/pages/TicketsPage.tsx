@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 const tickets = [
   {
     id: 'early-bird',
@@ -33,13 +31,6 @@ const tickets = [
 export default function TicketsPage() {
   return (
     <>
-      <Helmet>
-        <title>Tickets – Best of the Best BJJ Edition</title>
-        <meta name="description" content="Koop je tickets voor Best of the Best BJJ Edition. Kies uit Early Bird, Regulier of VIP tickets en beleef de ultieme BJJ confrontatie." />
-        <meta name="keywords" content="tickets, BJJ evenement, Best of the Best, kaartjes kopen, VIP tickets" />
-        <link rel="canonical" href="/tickets" />
-      </Helmet>
-
       <div className="w-full flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Page Header */}
         <div className="flex flex-col items-center mb-16 w-full">

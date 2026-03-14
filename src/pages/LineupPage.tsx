@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 const fighters = [
   { name: 'Ricardo "The Machine" Silva', weight: '-77kg', belt: 'Zwarte Band', record: '28-3', country: '🇧🇷' },
   { name: 'Dmitri Volkov', weight: '-85kg', belt: 'Zwarte Band', record: '22-5', country: '🇷🇺' },
@@ -16,13 +14,6 @@ const weightClasses = ['-70kg', '-77kg', '-85kg', '-93kg'];
 export default function LineupPage() {
   return (
     <>
-      <Helmet>
-        <title>Line-up – Best of the Best BJJ Edition</title>
-        <meta name="description" content="Bekijk de volledige line-up van Best of the Best BJJ Edition. Topfighters uit de hele wereld strijden om de titel." />
-        <meta name="keywords" content="line-up, BJJ fighters, Best of the Best, deelnemers, Brazilian Jiu-Jitsu competitie" />
-        <link rel="canonical" href="/line-up" />
-      </Helmet>
-
       <div className="w-full flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Page Header */}
         <div className="flex flex-col items-center mb-16 w-full">
