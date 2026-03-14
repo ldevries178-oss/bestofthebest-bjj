@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const infoItems = [
   {
     icon: '📍',
@@ -26,22 +28,34 @@ export default function LocatiePage() {
     <>
       <div className="w-full flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Page Header */}
-        <div className="flex flex-col items-center mb-16 w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center mb-16 w-full"
+        >
           <div className="flex items-center justify-center gap-4 mb-6 opacity-80">
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent to-purple-500"></div>
             <div className="w-2 h-2 rounded-full bg-purple-500 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)]"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-purple-500"></div>
           </div>
-          <h1 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Locatie">
+          <h2 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Locatie">
             Locatie
-          </h1>
+          </h2>
           <p className="font-rajdhani text-base md:text-lg text-gray-300 tracking-[0.15em] uppercase mt-4 text-center max-w-2xl">
             AFAS Live — Het hart van Amsterdam Southeast
           </p>
-        </div>
+        </motion.div>
 
         {/* Venue Hero Card */}
-        <section className="w-full max-w-5xl mb-12">
+        <motion.section 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="w-full max-w-5xl mb-12"
+        >
           <div className="relative rounded-2xl border border-cyan-500/20 bg-[#0a0514]/70 backdrop-blur-md overflow-hidden">
             {/* Map embed area */}
             <div className="w-full h-64 md:h-80 bg-gradient-to-br from-cyan-900/20 to-purple-900/20 border-b border-cyan-500/10 flex items-center justify-center">
@@ -72,12 +86,16 @@ export default function LocatiePage() {
               </a>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Info Grid */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl w-full mb-16">
-          {infoItems.map((item) => (
-            <article
+          {infoItems.map((item, index) => (
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
               key={item.title}
               id={`info-${item.title.toLowerCase().replace(/[^a-z]/g, '-')}`}
               className="group rounded-xl border border-purple-500/20 bg-purple-950/15 backdrop-blur-md p-6 transition-all duration-500 hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.08)]"
@@ -95,7 +113,7 @@ export default function LocatiePage() {
                   ))}
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </section>
 

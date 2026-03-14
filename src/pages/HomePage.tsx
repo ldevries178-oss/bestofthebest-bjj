@@ -1,28 +1,48 @@
+import { motion } from "motion/react";
+
 export default function HomePage() {
   return (
     <>
       <div className="w-full h-full flex flex-col justify-between items-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 flex-1">
         {/* Top Section */}
-        <div className="flex flex-col items-center mt-4 w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col items-center mt-4 w-full"
+        >
           <div className="flex items-center justify-center gap-4 mb-4 opacity-80">
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent to-pink-500"></div>
             <div className="w-2 h-2 rounded-full bg-pink-500 box-glow-pink"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-pink-500"></div>
           </div>
           <h2 className="font-orbitron text-lg md:text-xl lg:text-2xl text-purple-400 tracking-[0.4em] uppercase font-medium drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] text-center">
-            Best of the Best
+            The Ultimate Event
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Middle Section */}
-        <div className="flex-1 flex items-center justify-center w-full">
-          <h1 className="vhs-hero-text font-orbitron text-5xl md:text-7xl lg:text-8xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase leading-tight text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="BJJ Edition">
-            BJJ Edition
-          </h1>
-        </div>
+        {/* Middle Section - Logo Replacing Title */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex-1 flex items-center justify-center w-full my-8 md:my-12 px-4"
+        >
+          <h1 className="sr-only">Best of the Best BJJ Edition</h1>
+          <div className="vhs-logo-container w-full max-w-2xl md:max-w-4xl">
+            <img src="/logo.png" alt="Best of the Best BJJ Edition Logo" className="vhs-logo drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]" />
+            <div className="vhs-logo-glitch-1"></div>
+            <div className="vhs-logo-glitch-2"></div>
+          </div>
+        </motion.div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col items-center w-full mb-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-col items-center w-full mb-4"
+        >
           <p className="font-rajdhani text-base md:text-lg lg:text-xl text-gray-200 tracking-[0.2em] uppercase max-w-3xl mx-auto mb-10 font-light leading-relaxed text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
             De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.
           </p>
@@ -45,7 +65,7 @@ export default function HomePage() {
               <div className="absolute inset-0 rounded-lg box-glow-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

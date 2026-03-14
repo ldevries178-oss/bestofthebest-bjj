@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const tickets = [
   {
     id: 'early-bird',
@@ -33,24 +35,34 @@ export default function TicketsPage() {
     <>
       <div className="w-full flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         {/* Page Header */}
-        <div className="flex flex-col items-center mb-16 w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center mb-16 w-full"
+        >
           <div className="flex items-center justify-center gap-4 mb-6 opacity-80">
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent to-pink-500"></div>
             <div className="w-2 h-2 rounded-full bg-pink-500 box-glow-pink"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-pink-500"></div>
           </div>
-          <h1 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Tickets">
+          <h2 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Tickets">
             Tickets
-          </h1>
+          </h2>
           <p className="font-rajdhani text-base md:text-lg text-gray-300 tracking-[0.15em] uppercase mt-4 text-center max-w-2xl">
             Kies jouw ticket en wees erbij op de mat
           </p>
-        </div>
+        </motion.div>
 
         {/* Ticket Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
-          {tickets.map((ticket) => (
-            <article
+          {tickets.map((ticket, index) => (
+            <motion.article
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               key={ticket.id}
               id={`ticket-${ticket.id}`}
               className={`relative flex flex-col rounded-xl border backdrop-blur-md p-8 transition-all duration-500 hover:-translate-y-2 group ${
@@ -109,12 +121,18 @@ export default function TicketsPage() {
               }`}>
                 <span className="vhs-text relative z-10" data-text="Bestel Nu">Bestel Nu</span>
               </button>
-            </article>
+            </motion.article>
           ))}
         </div>
 
         {/* Info section */}
-        <div className="mt-16 max-w-2xl text-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16 max-w-2xl text-center"
+        >
           <div className="flex items-center justify-center gap-4 mb-6 opacity-60">
             <div className="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent to-cyan-500"></div>
             <div className="w-1.5 h-1.5 rounded-full bg-cyan-500"></div>
@@ -123,7 +141,7 @@ export default function TicketsPage() {
           <p className="font-rajdhani text-sm text-gray-500 tracking-wider uppercase">
             Alle tickets zijn inclusief BTW • Geen restitutie mogelijk • 18+
           </p>
-        </div>
+        </motion.div>
       </div>
     </>
   );
