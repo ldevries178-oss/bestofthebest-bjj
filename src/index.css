@@ -343,16 +343,17 @@ h1, h2:not(.sr-only), h3, p, li, span:not(.vhs-text):not(.text-6xl):not([class*=
   font-size: clamp(2rem, 7vw, 5.5rem);
   line-height: 0.9;
   letter-spacing: 0.02em;
-  color: #f9a8d4 !important;
-  -webkit-text-fill-color: #f9a8d4 !important;
+  color: #f472b6 !important;
+  -webkit-text-fill-color: #f472b6 !important;
   background: none !important;
   -webkit-background-clip: initial !important;
   background-clip: initial !important;
   text-shadow:
-    0 0 7px rgba(236, 72, 153, 0.8),
-    0 0 15px rgba(236, 72, 153, 0.6),
-    0 0 30px rgba(236, 72, 153, 0.4),
-    0 0 50px rgba(168, 85, 247, 0.3);
+    0 0 10px rgba(244, 114, 182, 0.9),
+    0 0 20px rgba(236, 72, 153, 0.7),
+    0 0 40px rgba(236, 72, 153, 0.5),
+    0 0 60px rgba(219, 39, 119, 0.4),
+    0 0 80px rgba(168, 85, 247, 0.2);
   margin-top: -0.3em;
   position: relative;
   z-index: 5;
@@ -406,19 +407,4 @@ h1, h2:not(.sr-only), h3, p, li, span:not(.vhs-text):not(.text-6xl):not([class*=
   text-shadow: 3px 0 #f0f;
 }
 
-/* VHS Scan Line overlay on hero title */
-.hero-title-container::after {
-  content: '';
-  position: absolute;
-  top: -10%;
-  left: -5%;
-  right: -5%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-  opacity: 0;
-  z-index: 20;
-  pointer-events: none;
-  animation: vhs-tracking-line 4s linear infinite;
-}
 
