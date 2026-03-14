@@ -30,7 +30,7 @@ export default function LineupPage() {
             <div className="w-2 h-2 rounded-full bg-cyan-500 box-glow-cyan"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-cyan-500"></div>
           </div>
-          <h2 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Line-up">
+          <h2 className="font-orbitron text-4xl sm:text-5xl lg:text-6xl tracking-widest uppercase text-center synthwave-title-best">
             Line-up
           </h2>
           <p className="font-rajdhani text-base md:text-lg text-gray-300 tracking-[0.15em] uppercase mt-4 text-center max-w-2xl">

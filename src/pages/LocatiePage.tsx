@@ -40,7 +40,7 @@ export default function LocatiePage() {
             <div className="w-2 h-2 rounded-full bg-purple-500 drop-shadow-[0_0_10px_rgba(168,85,247,0.7)]"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-purple-500"></div>
           </div>
-          <h2 className="vhs-hero-text font-orbitron text-4xl md:text-5xl lg:text-6xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-cyan-100 to-cyan-500 text-glow-cyan uppercase text-center drop-shadow-[0_0_30px_rgba(34,211,238,0.3)]" data-text="Locatie">
+          <h2 className="font-orbitron text-4xl sm:text-5xl lg:text-6xl tracking-widest uppercase text-center synthwave-title-best">
             Locatie
           </h2>
           <p className="font-rajdhani text-base md:text-lg text-gray-300 tracking-[0.15em] uppercase mt-4 text-center max-w-2xl">

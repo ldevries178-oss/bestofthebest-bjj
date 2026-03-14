@@ -9,7 +9,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col items-center mt-4 w-full"
+          className="flex flex-col items-center mt-4 w-full relative z-10"
         >
           <div className="flex items-center justify-center gap-4 mb-4 opacity-80">
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent to-pink-500"></div>
@@ -21,18 +21,20 @@ export default function HomePage() {
           </h2>
         </motion.div>
 
-        {/* Middle Section - Logo Replacing Title */}
+        {/* Middle Section - Pure CSS Text Replacements */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 flex items-center justify-center w-full my-8 md:my-12 px-4"
+          className="flex-1 flex flex-col items-center justify-center w-full my-6 md:my-10 px-4 relative z-10"
         >
-          <h1 className="sr-only">Best of the Best BJJ Edition</h1>
-          <div className="vhs-logo-container w-full max-w-2xl md:max-w-4xl">
-            <img src="/logo.png" alt="Best of the Best BJJ Edition Logo" className="vhs-logo drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]" />
-            <div className="vhs-logo-glitch-1"></div>
-            <div className="vhs-logo-glitch-2"></div>
+          <div className="flex flex-col items-center justify-center text-center">
+            <h1 className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6 font-orbitron text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] uppercase leading-none synthwave-title-best">
+              <span>BEST</span><span className="-mt-2 md:mt-0">BEST</span>
+            </h1>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] synthwave-title-edition -mt-6 sm:-mt-10 md:-mt-12 lg:-mt-16 ml-0 md:ml-12 z-20">
+              BJJ Edition
+            </h2>
           </div>
         </motion.div>
 

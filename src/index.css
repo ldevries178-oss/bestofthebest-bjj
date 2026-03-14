@@ -17,6 +17,16 @@ html {
   .text-glow-pink {
     text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
   }
+  .text-glow-synthwave {
+    text-shadow: 
+      3px 3px 0 #000, 
+      -1px -1px 0 #fff, 
+      1px -1px 0 #fff, 
+      -1px 1px 0 #fff, 
+      1px 1px 0 #fff,
+      0px 0px 10px #f0f, 
+      0px 0px 20px #0ff;
+  }
   .box-glow-pink {
     box-shadow: 0 0 15px rgba(236, 72, 153, 0.5), inset 0 0 10px rgba(236, 72, 153, 0.2);
   }
@@ -189,58 +199,6 @@ html {
 
 @keyframes hero-text-skew {
   0%, 94%, 100% { transform: skewX(0deg); }
-  95% { transform: skewX(4deg); }
-  96% { transform: skewX(-4deg); }
-  97% { transform: skewX(2deg); }
-  98% { transform: skewX(-2deg); }
-  99% { transform: skewX(0deg); }
-}
-
-/* Logo VHS Glitch Effects */
-.vhs-logo-container {
-  position: relative;
-  display: inline-block;
-  animation: hero-logo-skew 6s infinite;
-}
-
-.vhs-logo {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 10;
-}
-
-.vhs-logo-glitch-1,
-.vhs-logo-glitch-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.7;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
-
-.vhs-logo-glitch-1 {
-  z-index: 1;
-  filter: drop-shadow(-4px 0 0 #0ff);
-  animation: hero-glitch-anim-1 6s infinite;
-}
-
-.vhs-logo-glitch-2 {
-  z-index: 2;
-  filter: drop-shadow(4px 0 0 #f0f);
-  animation: hero-glitch-anim-2 6s infinite;
-}
-
-@keyframes hero-logo-skew {
-  0%, 94%, 100% { transform: skewX(0deg); }
   95% { transform: skewX(2deg); }
   96% { transform: skewX(-2deg); }
   97% { transform: skewX(1deg); }
@@ -250,18 +208,37 @@ html {
 
 @keyframes hero-glitch-anim-1 {
   0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(20% 0 80% 0); transform: translate(-6px, 2px); opacity: 0.9; }
-  96% { clip-path: inset(60% 0 10% 0); transform: translate(6px, -2px); opacity: 0.9; }
-  97% { clip-path: inset(40% 0 50% 0); transform: translate(-6px, 3px); opacity: 0.9; }
-  98% { clip-path: inset(80% 0 5% 0); transform: translate(6px, -3px); opacity: 0.9; }
-  99% { clip-path: inset(10% 0 60% 0); transform: translate(-3px, 2px); opacity: 0.9; }
+  95% { clip-path: inset(20% 0 80% 0); transform: translate(-4px, 1px); opacity: 0.9; }
+  96% { clip-path: inset(60% 0 10% 0); transform: translate(4px, -1px); opacity: 0.9; }
+  97% { clip-path: inset(40% 0 50% 0); transform: translate(-4px, 2px); opacity: 0.9; }
+  98% { clip-path: inset(80% 0 5% 0); transform: translate(4px, -2px); opacity: 0.9; }
+  99% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 1px); opacity: 0.9; }
 }
 
 @keyframes hero-glitch-anim-2 {
   0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(10% 0 60% 0); transform: translate(6px, -2px); opacity: 0.9; }
-  96% { clip-path: inset(30% 0 20% 0); transform: translate(-6px, 2px); opacity: 0.9; }
-  97% { clip-path: inset(70% 0 10% 0); transform: translate(6px, -3px); opacity: 0.9; }
-  98% { clip-path: inset(20% 0 50% 0); transform: translate(-6px, 3px); opacity: 0.9; }
-  99% { clip-path: inset(50% 0 30% 0); transform: translate(3px, -2px); opacity: 0.9; }
+  95% { clip-path: inset(10% 0 60% 0); transform: translate(4px, -1px); opacity: 0.9; }
+  96% { clip-path: inset(30% 0 20% 0); transform: translate(-4px, 1px); opacity: 0.9; }
+  97% { clip-path: inset(70% 0 10% 0); transform: translate(4px, -2px); opacity: 0.9; }
+  98% { clip-path: inset(20% 0 50% 0); transform: translate(-4px, 2px); opacity: 0.9; }
+  99% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); opacity: 0.9; }
+}
+
+/* Synthwave Specific Title Styling */
+.synthwave-title-best {
+  background: linear-gradient(to bottom, #f0f 0%, #a855f7 40%, #fff 45%, #0ff 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+}
+
+.synthwave-title-edition {
+  font-family: 'Mrs Saint Delafield', cursive, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px #f0f;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 40px #f0f;
+  transform: rotate(-5deg);
 }
