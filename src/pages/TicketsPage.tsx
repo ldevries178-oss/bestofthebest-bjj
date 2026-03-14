@@ -47,7 +47,7 @@ export default function TicketsPage() {
             <div className="w-2 h-2 rounded-full bg-pink-500 box-glow-pink"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-pink-500"></div>
           </div>
-          <h2 className="font-orbitron text-4xl sm:text-5xl lg:text-6xl tracking-widest uppercase text-center synthwave-title-best">
+          <h2 className="font-orbitron text-4xl sm:text-5xl lg:text-6xl tracking-widest uppercase text-center botb-title-glitch" data-text="Tickets">
             Tickets
           </h2>
           <p className="font-rajdhani text-base md:text-lg text-gray-300 tracking-[0.15em] uppercase mt-4 text-center max-w-2xl">

@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 export default function HomePage() {
   return (
     <>
-      <div className="w-full h-full flex flex-col justify-between items-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 flex-1">
+      <div className="w-full h-full flex flex-col justify-between items-center py-4 md:py-8 px-4 sm:px-6 lg:px-8 flex-1">
         {/* Top Section */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -16,25 +16,46 @@ export default function HomePage() {
             <div className="w-2 h-2 rounded-full bg-pink-500 box-glow-pink"></div>
             <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent to-pink-500"></div>
           </div>
-          <h2 className="font-orbitron text-lg md:text-xl lg:text-2xl text-purple-400 tracking-[0.4em] uppercase font-medium drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] text-center">
+          <h2 className="font-orbitron text-lg md:text-xl lg:text-2xl tracking-[0.4em] uppercase font-medium drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] text-center botb-title-glitch" data-text="The Ultimate Event">
             The Ultimate Event
           </h2>
         </motion.div>
 
-        {/* Middle Section - Pure CSS Text Replacements */}
+        {/* Middle Section - Text Title with VHS Glitch */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex-1 flex flex-col items-center justify-center w-full my-6 md:my-10 px-4 relative z-10"
+          className="flex-1 flex flex-col items-center justify-center w-full relative z-10 m-0 p-0"
         >
-          <div className="flex flex-col items-center justify-center text-center">
-            <h1 className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-6 font-orbitron text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] uppercase leading-none synthwave-title-best">
-              <span>BEST</span><span className="-mt-2 md:mt-0">BEST</span>
+          <div className="hero-title-container relative flex flex-col items-center select-none">
+            {/* VHS Glitch Layer 1 */}
+            <div className="hero-title-glitch-1 absolute inset-0 flex flex-col items-center pointer-events-none" aria-hidden="true">
+              <div className="hero-best-line flex items-baseline justify-center gap-2 md:gap-3">
+                <span className="synthwave-title-best">BEST</span>
+                <span className="synthwave-title-of">of the</span>
+                <span className="synthwave-title-best">BEST</span>
+              </div>
+              <span className="synthwave-title-edition">BJJ Edition</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="hero-best-line flex items-baseline justify-center gap-2 md:gap-3 m-0 p-0 leading-none">
+              <span className="synthwave-title-best" data-text="BEST">BEST</span>
+              <span className="synthwave-title-of" data-text="of the">of the</span>
+              <span className="synthwave-title-best" data-text="BEST">BEST</span>
             </h1>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[6rem] synthwave-title-edition -mt-6 sm:-mt-10 md:-mt-12 lg:-mt-16 ml-0 md:ml-12 z-20">
-              BJJ Edition
-            </h2>
+            <span className="synthwave-title-edition" data-text="BJJ Edition">BJJ Edition</span>
+
+            {/* VHS Glitch Layer 2 */}
+            <div className="hero-title-glitch-2 absolute inset-0 flex flex-col items-center pointer-events-none" aria-hidden="true">
+              <div className="hero-best-line flex items-baseline justify-center gap-2 md:gap-3">
+                <span className="synthwave-title-best">BEST</span>
+                <span className="synthwave-title-of">of the</span>
+                <span className="synthwave-title-best">BEST</span>
+              </div>
+              <span className="synthwave-title-edition">BJJ Edition</span>
+            </div>
           </div>
         </motion.div>
 

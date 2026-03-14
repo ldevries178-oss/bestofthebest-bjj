@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 html {
@@ -160,6 +160,55 @@ html {
   100% { top: 110%; opacity: 0; }
 }
 
+/* Global Text Gradient */
+.botb-gradient-text,
+h1, h2:not(.sr-only), h3, p, li, span:not(.vhs-text):not(.text-6xl):not([class*='bg-']):not(.synthwave-title-edition):not(.synthwave-title-best) {
+  background: linear-gradient(180deg, #f472b6 0%, #c084fc 35%, #ffffff 50%, #38bdf8 55%, #1e40af 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Reusable Title Glitch */
+.botb-title-glitch {
+  position: relative;
+  display: inline-block;
+  animation: hero-text-skew 6s infinite;
+}
+
+.botb-title-glitch::before,
+.botb-title-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.botb-title-glitch::before {
+  color: #0ff !important;
+  -webkit-text-fill-color: #0ff !important;
+  text-shadow: -3px 0 #0ff !important;
+  z-index: 1;
+  animation: hero-glitch-anim-1 6s infinite;
+}
+
+.botb-title-glitch::after {
+  color: #f0f !important;
+  -webkit-text-fill-color: #f0f !important;
+  text-shadow: 3px 0 #f0f !important;
+  z-index: 2;
+  animation: hero-glitch-anim-2 6s infinite;
+}
+
 /* Hero Text Continuous Glitch */
 .vhs-hero-text {
   position: relative;
@@ -224,21 +273,152 @@ html {
   99% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); opacity: 0.9; }
 }
 
-/* Synthwave Specific Title Styling */
-.synthwave-title-best {
-  background: linear-gradient(to bottom, #f0f 0%, #a855f7 40%, #fff 45%, #0ff 50%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-weight: 900;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+/* ===== Hero Title Text Styles ===== */
+
+.hero-title-container {
+  animation: hero-text-skew 6s infinite;
 }
 
-.synthwave-title-edition {
-  font-family: 'Mrs Saint Delafield', cursive, sans-serif;
-  color: transparent;
-  -webkit-text-stroke: 1px #f0f;
-  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 40px #f0f;
-  transform: rotate(-5deg);
+/* "BEST" - bold, blocky, 3D gradient text */
+.synthwave-title-best {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(
+    180deg,
+    #f472b6 0%,
+    #c084fc 20%,
+    #818cf8 40%,
+    #38bdf8 60%,
+    #1e40af 80%,
+    #1e3a5f 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
+  position: relative;
 }
+
+/* Add 3D depth layer behind BEST */
+.hero-title-container > h1 > .synthwave-title-best,
+.hero-title-container > h1 > .synthwave-title-of {
+  position: relative;
+}
+
+/* "of the" - smaller italic */
+.synthwave-title-of {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  line-height: 1;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  background: linear-gradient(
+    180deg,
+    #f472b6 0%,
+    #c084fc 30%,
+    #818cf8 50%,
+    #38bdf8 70%,
+    #1e40af 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+  align-self: center;
+}
+
+/* "BJJ Edition" - cursive neon pink glow */
+.synthwave-title-edition {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-weight: 400;
+  font-size: clamp(2rem, 7vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: #f9a8d4 !important;
+  -webkit-text-fill-color: #f9a8d4 !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow:
+    0 0 7px rgba(236, 72, 153, 0.8),
+    0 0 15px rgba(236, 72, 153, 0.6),
+    0 0 30px rgba(236, 72, 153, 0.4),
+    0 0 50px rgba(168, 85, 247, 0.3);
+  margin-top: -0.3em;
+  position: relative;
+  z-index: 5;
+}
+
+/* ===== VHS Glitch on Hero Title ===== */
+
+.hero-title-glitch-1,
+.hero-title-glitch-2 {
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.hero-title-glitch-1 {
+  z-index: 1;
+  animation: hero-glitch-anim-1 6s infinite;
+}
+.hero-title-glitch-1 .synthwave-title-best,
+.hero-title-glitch-1 .synthwave-title-of {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  color: #0ff !important;
+  -webkit-text-fill-color: #0ff !important;
+  filter: none;
+  text-shadow: -3px 0 #0ff;
+}
+.hero-title-glitch-1 .synthwave-title-edition {
+  color: #0ff !important;
+  -webkit-text-fill-color: #0ff !important;
+  text-shadow: -3px 0 #0ff;
+}
+
+.hero-title-glitch-2 {
+  z-index: 6;
+  animation: hero-glitch-anim-2 6s infinite;
+}
+.hero-title-glitch-2 .synthwave-title-best,
+.hero-title-glitch-2 .synthwave-title-of {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  color: #f0f !important;
+  -webkit-text-fill-color: #f0f !important;
+  filter: none;
+  text-shadow: 3px 0 #f0f;
+}
+.hero-title-glitch-2 .synthwave-title-edition {
+  color: #f0f !important;
+  -webkit-text-fill-color: #f0f !important;
+  text-shadow: 3px 0 #f0f;
+}
+
+/* VHS Scan Line overlay on hero title */
+.hero-title-container::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  right: -5%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  z-index: 20;
+  pointer-events: none;
+  animation: vhs-tracking-line 4s linear infinite;
+}
+
