@@ -1,0 +1,209 @@
+export type Lang = 'nl' | 'fr' | 'de';
+
+export const translations = {
+  nl: {
+    // Navigation
+    home: 'Home',
+    tickets: 'Tickets',
+    lineup: 'Line-up',
+    locatie: 'Locatie',
+
+    // Hero
+    theUltimateEvent: 'The Ultimate Event',
+    heroSubtitle: 'De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.',
+    buyTickets: 'Koop Tickets',
+    viewLineup: 'Bekijk Line-up',
+
+    // Tickets
+    ticketsTitle: 'Tickets',
+    ticketsSubtitle: 'Kies jouw ticket en wees erbij op de mat',
+    earlyBird: 'Early Bird',
+    earlyBirdDesc: 'Beperkt beschikbaar – voor de echte fans die er vroeg bij zijn.',
+    earlyBirdF1: 'Toegang tot het evenement',
+    earlyBirdF2: 'Gratis welkomstdrankje',
+    earlyBirdF3: 'Early Bird goodiebag',
+    regulier: 'Regulier',
+    regulierDesc: 'Standaard toegang tot Best of the Best BJJ Edition.',
+    regulierF1: 'Toegang tot het evenement',
+    regulierF2: 'Toegang tot alle wedstrijden',
+    regulierF3: 'Food & drinks beschikbaar',
+    vip: 'VIP',
+    vipDesc: 'De ultieme ervaring – vooraan bij de actie met exclusieve privileges.',
+    vipF1: 'Voorrang bij binnenkomst',
+    vipF2: 'VIP-tribune met beste zicht',
+    vipF3: 'All-inclusive food & drinks',
+    vipF4: 'Meet & greet met fighters',
+    vipF5: 'Exclusief VIP-shirt',
+    popular: 'Populair',
+    orderNow: 'Bestel Nu',
+    ticketsFooter: 'Alle tickets zijn inclusief BTW • Geen restitutie mogelijk • 18+',
+
+    // Line-up
+    lineupTitle: 'Line-up',
+    lineupSubtitle: 'De beste fighters van de wereld – klaar voor de strijd',
+    record: 'Record',
+    blackBelt: 'Zwarte Band',
+    brownBelt: 'Bruine Band',
+    moreFighters: 'Meer fighters worden binnenkort aangekondigd • Volg ons voor updates',
+
+    // Locatie
+    locatieTitle: 'Locatie',
+    locatieSubtitle: 'AFAS Live — Het hart van Amsterdam Southeast',
+    address: 'Adres',
+    dateTime: 'Datum & Tijd',
+    dateTimeLine1: 'Zaterdag 12 juli 2026',
+    dateTimeLine2: 'Deuren open: 18:00',
+    dateTimeLine3: 'Start: 19:00',
+    publicTransport: 'Met OV',
+    ptLine1: 'Metro 54: Station Strandvliet',
+    ptLine2: '5 min lopen vanaf het station',
+    ptLine3: 'Bus 46 & 47 stoppen voor de deur',
+    byCar: 'Met de Auto',
+    carLine1: 'A2 / A9 richting Amsterdam Arena',
+    carLine2: 'Parkeergarage P1 Arena',
+    carLine3: '€10 dagtarief parkeren',
+    capacity: 'Capaciteit: 6.000 plaatsen • Indoor arena',
+    openInMaps: 'Open in Maps',
+
+    // Footer
+    copyright: '© 2026 Best of the Best BJJ Edition. Alle rechten voorbehouden.',
+  },
+
+  fr: {
+    // Navigation
+    home: 'Accueil',
+    tickets: 'Billets',
+    lineup: 'Line-up',
+    locatie: 'Lieu',
+
+    // Hero
+    theUltimateEvent: 'The Ultimate Event',
+    heroSubtitle: 'L\'ultime confrontation sur le tapis. Vivez le combat rétro-futuriste.',
+    buyTickets: 'Acheter des Billets',
+    viewLineup: 'Voir le Line-up',
+
+    // Tickets
+    ticketsTitle: 'Billets',
+    ticketsSubtitle: 'Choisissez votre billet et soyez présent sur le tapis',
+    earlyBird: 'Early Bird',
+    earlyBirdDesc: 'Disponibilité limitée – pour les vrais fans qui sont en avance.',
+    earlyBirdF1: 'Accès à l\'événement',
+    earlyBirdF2: 'Boisson de bienvenue gratuite',
+    earlyBirdF3: 'Sac cadeau Early Bird',
+    regulier: 'Standard',
+    regulierDesc: 'Accès standard à Best of the Best BJJ Edition.',
+    regulierF1: 'Accès à l\'événement',
+    regulierF2: 'Accès à tous les combats',
+    regulierF3: 'Nourriture & boissons disponibles',
+    vip: 'VIP',
+    vipDesc: 'L\'expérience ultime – au premier rang avec des privilèges exclusifs.',
+    vipF1: 'Entrée prioritaire',
+    vipF2: 'Tribune VIP avec meilleure vue',
+    vipF3: 'Nourriture & boissons all-inclusive',
+    vipF4: 'Rencontre avec les combattants',
+    vipF5: 'T-shirt VIP exclusif',
+    popular: 'Populaire',
+    orderNow: 'Commander',
+    ticketsFooter: 'Tous les billets incluent la TVA • Pas de remboursement • 18+',
+
+    // Line-up
+    lineupTitle: 'Line-up',
+    lineupSubtitle: 'Les meilleurs combattants du monde – prêts pour le combat',
+    record: 'Palmarès',
+    blackBelt: 'Ceinture Noire',
+    brownBelt: 'Ceinture Marron',
+    moreFighters: 'Plus de combattants seront annoncés bientôt • Suivez-nous',
+
+    // Locatie
+    locatieTitle: 'Lieu',
+    locatieSubtitle: 'AFAS Live — Le cœur du sud-est d\'Amsterdam',
+    address: 'Adresse',
+    dateTime: 'Date & Heure',
+    dateTimeLine1: 'Samedi 12 juillet 2026',
+    dateTimeLine2: 'Ouverture des portes : 18h00',
+    dateTimeLine3: 'Début : 19h00',
+    publicTransport: 'Transports en commun',
+    ptLine1: 'Métro 54 : Station Strandvliet',
+    ptLine2: '5 min à pied depuis la station',
+    ptLine3: 'Bus 46 & 47 s\'arrêtent devant',
+    byCar: 'En Voiture',
+    carLine1: 'A2 / A9 direction Amsterdam Arena',
+    carLine2: 'Parking P1 Arena',
+    carLine3: '10 € tarif journalier',
+    capacity: 'Capacité : 6 000 places • Salle couverte',
+    openInMaps: 'Ouvrir dans Maps',
+
+    // Footer
+    copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
+  },
+
+  de: {
+    // Navigation
+    home: 'Start',
+    tickets: 'Tickets',
+    lineup: 'Line-up',
+    locatie: 'Ort',
+
+    // Hero
+    theUltimateEvent: 'The Ultimate Event',
+    heroSubtitle: 'Die ultimative Konfrontation auf der Matte. Erlebe den retro-futuristischen Kampf.',
+    buyTickets: 'Tickets Kaufen',
+    viewLineup: 'Line-up Ansehen',
+
+    // Tickets
+    ticketsTitle: 'Tickets',
+    ticketsSubtitle: 'Wähle dein Ticket und sei auf der Matte dabei',
+    earlyBird: 'Early Bird',
+    earlyBirdDesc: 'Begrenzt verfügbar – für echte Fans, die früh dran sind.',
+    earlyBirdF1: 'Zugang zur Veranstaltung',
+    earlyBirdF2: 'Gratis Willkommensgetränk',
+    earlyBirdF3: 'Early Bird Goodiebag',
+    regulier: 'Standard',
+    regulierDesc: 'Standardzugang zu Best of the Best BJJ Edition.',
+    regulierF1: 'Zugang zur Veranstaltung',
+    regulierF2: 'Zugang zu allen Kämpfen',
+    regulierF3: 'Essen & Getränke verfügbar',
+    vip: 'VIP',
+    vipDesc: 'Das ultimative Erlebnis – ganz vorne mit exklusiven Privilegien.',
+    vipF1: 'Bevorzugter Einlass',
+    vipF2: 'VIP-Tribüne mit bester Sicht',
+    vipF3: 'All-inclusive Essen & Getränke',
+    vipF4: 'Meet & Greet mit Kämpfern',
+    vipF5: 'Exklusives VIP-Shirt',
+    popular: 'Beliebt',
+    orderNow: 'Jetzt Bestellen',
+    ticketsFooter: 'Alle Tickets inklusive MwSt. • Keine Rückerstattung • 18+',
+
+    // Line-up
+    lineupTitle: 'Line-up',
+    lineupSubtitle: 'Die besten Kämpfer der Welt – bereit für den Kampf',
+    record: 'Bilanz',
+    blackBelt: 'Schwarzer Gürtel',
+    brownBelt: 'Brauner Gürtel',
+    moreFighters: 'Weitere Kämpfer werden bald angekündigt • Folge uns für Updates',
+
+    // Locatie
+    locatieTitle: 'Ort',
+    locatieSubtitle: 'AFAS Live — Das Herz von Amsterdam Südost',
+    address: 'Adresse',
+    dateTime: 'Datum & Uhrzeit',
+    dateTimeLine1: 'Samstag 12. Juli 2026',
+    dateTimeLine2: 'Einlass: 18:00 Uhr',
+    dateTimeLine3: 'Beginn: 19:00 Uhr',
+    publicTransport: 'Öffentlicher Nahverkehr',
+    ptLine1: 'Metro 54: Station Strandvliet',
+    ptLine2: '5 Min. Fußweg von der Station',
+    ptLine3: 'Bus 46 & 47 halten vor der Tür',
+    byCar: 'Mit dem Auto',
+    carLine1: 'A2 / A9 Richtung Amsterdam Arena',
+    carLine2: 'Parkhaus P1 Arena',
+    carLine3: '10 € Tagesgebühr',
+    capacity: 'Kapazität: 6.000 Plätze • Indoor-Arena',
+    openInMaps: 'In Maps öffnen',
+
+    // Footer
+    copyright: '© 2026 Best of the Best BJJ Edition. Alle Rechte vorbehalten.',
+  },
+} as const;
+
+export type TranslationKey = keyof typeof translations.nl;

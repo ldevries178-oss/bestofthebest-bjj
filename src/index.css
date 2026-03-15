@@ -10,401 +10,90 @@ html {
   --font-rajdhani: "Rajdhani", sans-serif;
 }
 
-@layer utilities {
-  .text-glow-cyan {
-    text-shadow: 0 0 10px rgba(34, 211, 238, 0.7), 0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3);
-  }
-  .text-glow-pink {
-    text-shadow: 0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
-  }
-  .text-glow-synthwave {
-    text-shadow: 
-      3px 3px 0 #000, 
-      -1px -1px 0 #fff, 
-      1px -1px 0 #fff, 
-      -1px 1px 0 #fff, 
-      1px 1px 0 #fff,
-      0px 0px 10px #f0f, 
-      0px 0px 20px #0ff;
-  }
-  .box-glow-pink {
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.5), inset 0 0 10px rgba(236, 72, 153, 0.2);
-  }
-  .box-glow-cyan {
-    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3), inset 0 0 10px rgba(34, 211, 238, 0.2);
-  }
+/* ===== Purple Synthwave Grid on White ===== */
+.synthwave-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridMove 4s linear infinite;
 }
 
-.synthwave-grid {
-  background-image: 
-    linear-gradient(to right, rgba(34, 211, 238, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(236, 72, 153, 0.15) 1px, transparent 1px);
-  background-size: 50px 50px;
-  transform: perspective(1000px) rotateX(75deg) translateY(100px) translateZ(-200px);
-  transform-origin: bottom center;
-  animation: gridMove 3s linear infinite;
-  mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+/* Subtle diagonal stripes overlay */
+.synthwave-grid-light::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 80px,
+    rgba(168, 85, 247, 0.03) 80px,
+    rgba(168, 85, 247, 0.03) 81px
+  );
+  pointer-events: none;
 }
 
 @keyframes gridMove {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 50px;
-  }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 60px; }
 }
 
-/* VHS Glitch Effects */
-.vhs-button {
+/* ===== VHS Image Glitch Effect ===== */
+.vhs-image-container {
   position: relative;
+  display: flex;
 }
 
-.vhs-text {
+.vhs-image-base {
   position: relative;
-  display: inline-block;
-  z-index: 10;
-}
-
-.vhs-button:hover .vhs-text {
-  animation: vhs-text-glitch 3s infinite;
-}
-
-.vhs-button:hover .vhs-text::before,
-.vhs-button:hover .vhs-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.vhs-button:hover .vhs-text::before {
-  z-index: 1;
-  animation: vhs-glitch-anim-1 3s infinite;
-}
-
-.vhs-button:hover .vhs-text::after {
   z-index: 2;
-  animation: vhs-glitch-anim-2 3s infinite;
+  animation: hero-img-skew 6s infinite;
 }
 
-/* Pink Button Glitch Colors */
-.vhs-button-pink:hover .vhs-text::before {
-  color: #0ff;
-  text-shadow: -2px 0 #0ff;
-}
-.vhs-button-pink:hover .vhs-text::after {
-  color: #f0f;
-  text-shadow: 2px 0 #f0f;
-}
-
-/* Cyan Button Glitch Colors */
-.vhs-button-cyan:hover .vhs-text::before {
-  color: #fff;
-  text-shadow: -2px 0 #fff;
-}
-.vhs-button-cyan:hover .vhs-text::after {
-  color: #f0f;
-  text-shadow: 2px 0 #f0f;
-}
-
-.vhs-button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px rgba(255,255,255,0.8);
-  opacity: 0;
-  z-index: 20;
+.vhs-image-glitch-1,
+.vhs-image-glitch-2 {
   pointer-events: none;
-}
-
-.vhs-button:hover::after {
-  animation: vhs-tracking-line 2s linear infinite;
-}
-
-@keyframes vhs-text-glitch {
-  0%, 4%, 100% { transform: skewX(0deg) translate(0); opacity: 1; }
-  1% { transform: skewX(8deg) translate(-2px); opacity: 0.8; }
-  2% { transform: skewX(-8deg) translate(2px); opacity: 0.9; }
-  3% { transform: skewX(4deg) translate(-1px); opacity: 1; }
-}
-
-@keyframes vhs-glitch-anim-1 {
-  0%, 4%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  1% { clip-path: inset(20% 0 80% 0); transform: translate(-4px, 1px); }
-  2% { clip-path: inset(60% 0 10% 0); transform: translate(4px, -1px); }
-  3% { clip-path: inset(40% 0 50% 0); transform: translate(-4px, 2px); }
-}
-
-@keyframes vhs-glitch-anim-2 {
-  0%, 4%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-  1% { clip-path: inset(10% 0 60% 0); transform: translate(4px, -1px); }
-  2% { clip-path: inset(30% 0 20% 0); transform: translate(-4px, 1px); }
-  3% { clip-path: inset(70% 0 10% 0); transform: translate(4px, -2px); }
-}
-
-@keyframes vhs-tracking-line {
-  0% { top: -10%; opacity: 0; }
-  10% { opacity: 0.7; }
-  40% { top: 110%; opacity: 0.7; }
-  50% { opacity: 0; }
-  100% { top: 110%; opacity: 0; }
-}
-
-/* Global Text Gradient */
-.botb-gradient-text,
-h1, h2:not(.sr-only), h3, p, li, span:not(.vhs-text):not(.text-6xl):not([class*='bg-']):not(.synthwave-title-edition):not(.synthwave-title-best) {
-  background: linear-gradient(180deg, #f472b6 0%, #c084fc 35%, #ffffff 50%, #38bdf8 55%, #1e40af 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-}
-
-/* Reusable Title Glitch */
-.botb-title-glitch {
-  position: relative;
-  display: inline-block;
-  animation: hero-text-skew 6s infinite;
-}
-
-.botb-title-glitch::before,
-.botb-title-glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
-  pointer-events: none;
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  -webkit-text-fill-color: initial !important;
 }
 
-.botb-title-glitch::before {
-  color: #0ff !important;
-  -webkit-text-fill-color: #0ff !important;
-  text-shadow: -3px 0 #0ff !important;
+.vhs-image-glitch-1 {
   z-index: 1;
-  animation: hero-glitch-anim-1 6s infinite;
+  filter: drop-shadow(-6px 0 0 rgba(168, 85, 247, 0.6));
+  animation: hero-img-glitch-1 6s infinite;
+  transform: translateX(-2px);
 }
 
-.botb-title-glitch::after {
-  color: #f0f !important;
-  -webkit-text-fill-color: #f0f !important;
-  text-shadow: 3px 0 #f0f !important;
-  z-index: 2;
-  animation: hero-glitch-anim-2 6s infinite;
+.vhs-image-glitch-2 {
+  z-index: 3;
+  filter: drop-shadow(6px 0 0 rgba(236, 72, 153, 0.6));
+  animation: hero-img-glitch-2 6s infinite;
+  transform: translateX(2px);
 }
 
-/* Hero Text Continuous Glitch */
-.vhs-hero-text {
-  position: relative;
-  display: inline-block;
-  animation: hero-text-skew 6s infinite;
-}
-
-.vhs-hero-text::before,
-.vhs-hero-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  background: none;
-  -webkit-text-fill-color: initial;
-}
-
-.vhs-hero-text::before {
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-  text-shadow: -4px 0 #0ff;
-  z-index: 1;
-  animation: hero-glitch-anim-1 6s infinite;
-}
-
-.vhs-hero-text::after {
-  color: #f0f;
-  -webkit-text-fill-color: #f0f;
-  text-shadow: 4px 0 #f0f;
-  z-index: 2;
-  animation: hero-glitch-anim-2 6s infinite;
-}
-
-@keyframes hero-text-skew {
+@keyframes hero-img-skew {
   0%, 94%, 100% { transform: skewX(0deg); }
-  95% { transform: skewX(2deg); }
-  96% { transform: skewX(-2deg); }
-  97% { transform: skewX(1deg); }
-  98% { transform: skewX(-1deg); }
+  95% { transform: skewX(1.5deg); }
+  96% { transform: skewX(-1.5deg); }
+  97% { transform: skewX(0.8deg); }
+  98% { transform: skewX(-0.8deg); }
   99% { transform: skewX(0deg); }
 }
 
-@keyframes hero-glitch-anim-1 {
+@keyframes hero-img-glitch-1 {
   0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(20% 0 80% 0); transform: translate(-4px, 1px); opacity: 0.9; }
-  96% { clip-path: inset(60% 0 10% 0); transform: translate(4px, -1px); opacity: 0.9; }
-  97% { clip-path: inset(40% 0 50% 0); transform: translate(-4px, 2px); opacity: 0.9; }
-  98% { clip-path: inset(80% 0 5% 0); transform: translate(4px, -2px); opacity: 0.9; }
-  99% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 1px); opacity: 0.9; }
+  95% { clip-path: inset(20% 0 70% 0); transform: translate(-5px, 1px); opacity: 0.8; }
+  96% { clip-path: inset(60% 0 10% 0); transform: translate(5px, -1px); opacity: 0.7; }
+  97% { clip-path: inset(35% 0 50% 0); transform: translate(-4px, 2px); opacity: 0.8; }
+  98% { clip-path: inset(75% 0 5% 0); transform: translate(4px, -2px); opacity: 0.7; }
+  99% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 1px); opacity: 0.8; }
 }
 
-@keyframes hero-glitch-anim-2 {
+@keyframes hero-img-glitch-2 {
   0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(10% 0 60% 0); transform: translate(4px, -1px); opacity: 0.9; }
-  96% { clip-path: inset(30% 0 20% 0); transform: translate(-4px, 1px); opacity: 0.9; }
-  97% { clip-path: inset(70% 0 10% 0); transform: translate(4px, -2px); opacity: 0.9; }
-  98% { clip-path: inset(20% 0 50% 0); transform: translate(-4px, 2px); opacity: 0.9; }
-  99% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); opacity: 0.9; }
+  95% { clip-path: inset(10% 0 60% 0); transform: translate(5px, -1px); opacity: 0.7; }
+  96% { clip-path: inset(30% 0 20% 0); transform: translate(-5px, 1px); opacity: 0.8; }
+  97% { clip-path: inset(65% 0 10% 0); transform: translate(4px, -2px); opacity: 0.7; }
+  98% { clip-path: inset(15% 0 55% 0); transform: translate(-4px, 2px); opacity: 0.8; }
+  99% { clip-path: inset(45% 0 30% 0); transform: translate(2px, -1px); opacity: 0.7; }
 }
-
-/* ===== Hero Title Text Styles ===== */
-
-.hero-title-container {
-  animation: hero-text-skew 6s infinite;
-}
-
-/* "BEST" - bold, blocky, 3D gradient text */
-.synthwave-title-best {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: clamp(3rem, 12vw, 9rem);
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  background: linear-gradient(
-    180deg,
-    #f472b6 0%,
-    #c084fc 20%,
-    #818cf8 40%,
-    #38bdf8 60%,
-    #1e40af 80%,
-    #1e3a5f 100%
-  ) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: none;
-  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
-  position: relative;
-}
-
-/* Add 3D depth layer behind BEST */
-.hero-title-container > h1 > .synthwave-title-best,
-.hero-title-container > h1 > .synthwave-title-of {
-  position: relative;
-}
-
-/* "of the" - smaller italic */
-.synthwave-title-of {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 500;
-  font-size: clamp(1.2rem, 4vw, 3rem);
-  line-height: 1;
-  text-transform: lowercase;
-  letter-spacing: 0.05em;
-  font-style: italic;
-  background: linear-gradient(
-    180deg,
-    #f472b6 0%,
-    #c084fc 30%,
-    #818cf8 50%,
-    #38bdf8 70%,
-    #1e40af 100%
-  ) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
-  align-self: center;
-}
-
-/* "BJJ Edition" - cursive neon pink glow */
-.synthwave-title-edition {
-  font-family: 'Mrs Saint Delafield', cursive;
-  font-weight: 400;
-  font-size: clamp(2rem, 7vw, 5.5rem);
-  line-height: 0.9;
-  letter-spacing: 0.02em;
-  color: #f472b6 !important;
-  -webkit-text-fill-color: #f472b6 !important;
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  text-shadow:
-    0 0 10px rgba(244, 114, 182, 0.9),
-    0 0 20px rgba(236, 72, 153, 0.7),
-    0 0 40px rgba(236, 72, 153, 0.5),
-    0 0 60px rgba(219, 39, 119, 0.4),
-    0 0 80px rgba(168, 85, 247, 0.2);
-  margin-top: -0.3em;
-  position: relative;
-  z-index: 5;
-}
-
-/* ===== VHS Glitch on Hero Title ===== */
-
-.hero-title-glitch-1,
-.hero-title-glitch-2 {
-  opacity: 0;
-  mix-blend-mode: screen;
-}
-
-.hero-title-glitch-1 {
-  z-index: 1;
-  animation: hero-glitch-anim-1 6s infinite;
-}
-.hero-title-glitch-1 .synthwave-title-best,
-.hero-title-glitch-1 .synthwave-title-of {
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  color: #0ff !important;
-  -webkit-text-fill-color: #0ff !important;
-  filter: none;
-  text-shadow: -3px 0 #0ff;
-}
-.hero-title-glitch-1 .synthwave-title-edition {
-  color: #0ff !important;
-  -webkit-text-fill-color: #0ff !important;
-  text-shadow: -3px 0 #0ff;
-}
-
-.hero-title-glitch-2 {
-  z-index: 6;
-  animation: hero-glitch-anim-2 6s infinite;
-}
-.hero-title-glitch-2 .synthwave-title-best,
-.hero-title-glitch-2 .synthwave-title-of {
-  background: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  color: #f0f !important;
-  -webkit-text-fill-color: #f0f !important;
-  filter: none;
-  text-shadow: 3px 0 #f0f;
-}
-.hero-title-glitch-2 .synthwave-title-edition {
-  color: #f0f !important;
-  -webkit-text-fill-color: #f0f !important;
-  text-shadow: 3px 0 #f0f;
-}
-
-
