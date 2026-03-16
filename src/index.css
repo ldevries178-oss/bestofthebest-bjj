@@ -12,13 +12,11 @@ html {
 
 
 
-/* ===== Floating Neon Logo ===== */
+/* ===== Static Neon Logo ===== */
 .hero-logo-glow {
   position: relative;
   z-index: 2;
-  /* Use multiply to remove white background again because the image container still behaves as if it has a white box */
-  mix-blend-mode: multiply;
-  filter: brightness(1.1) contrast(1.1); /* Static brightness/contrast adjustment */
+  background-color: transparent;
 }
 
 /* ===== Targeted Neon Flicker Effect ===== */
