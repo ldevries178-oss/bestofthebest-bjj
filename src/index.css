@@ -10,94 +10,25 @@ html {
   --font-rajdhani: "Rajdhani", sans-serif;
 }
 
-/* ===== Purple Synthwave Grid on White ===== */
-.synthwave-grid-light {
-  background-image:
-    linear-gradient(to right, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: gridMove 4s linear infinite;
-}
 
-/* Subtle diagonal stripes overlay */
-.synthwave-grid-light::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 80px,
-    rgba(168, 85, 247, 0.03) 80px,
-    rgba(168, 85, 247, 0.03) 81px
-  );
-  pointer-events: none;
-}
 
-@keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
-}
-
-/* ===== VHS Image Glitch Effect ===== */
-.vhs-image-container {
-  position: relative;
-  display: flex;
-}
-
-.vhs-image-base {
+/* ===== Floating Neon Logo ===== */
+.hero-logo-glow {
   position: relative;
   z-index: 2;
-  animation: hero-img-skew 6s infinite;
-  /* Darker subtle shadow so glitch stands out */
-  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.5)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+  animation: logo-float 4s ease-in-out infinite;
 }
 
-.vhs-image-glitch-1,
-.vhs-image-glitch-2 {
-  pointer-events: none;
-  opacity: 0;
-}
-
-.vhs-image-glitch-1 {
-  z-index: 1;
-  /* Darker purple and more opacity/offset for light background */
-  filter: drop-shadow(-8px 2px 0 rgba(107, 33, 168, 0.9));
-  animation: hero-img-glitch-1 6s infinite;
-  transform: translateX(-2px);
-}
-
-.vhs-image-glitch-2 {
-  z-index: 3;
-  /* Darker pink and more opacity/offset for light background */
-  filter: drop-shadow(8px -2px 0 rgba(190, 24, 93, 0.9));
-  animation: hero-img-glitch-2 6s infinite;
-  transform: translateX(2px);
-}
-
-@keyframes hero-img-skew {
-  0%, 94%, 100% { transform: skewX(0deg); }
-  95% { transform: skewX(1.5deg); }
-  96% { transform: skewX(-1.5deg); }
-  97% { transform: skewX(0.8deg); }
-  98% { transform: skewX(-0.8deg); }
-  99% { transform: skewX(0deg); }
-}
-
-@keyframes hero-img-glitch-1 {
-  0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(20% 0 70% 0); transform: translate(-6px, 2px); opacity: 0.9; }
-  96% { clip-path: inset(60% 0 10% 0); transform: translate(6px, -2px); opacity: 1; }
-  97% { clip-path: inset(35% 0 50% 0); transform: translate(-5px, 3px); opacity: 0.9; }
-  98% { clip-path: inset(75% 0 5% 0); transform: translate(5px, -3px); opacity: 1; }
-  99% { clip-path: inset(10% 0 60% 0); transform: translate(-3px, 2px); opacity: 0.9; }
-}
-
-@keyframes hero-img-glitch-2 {
-  0%, 94%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
-  95% { clip-path: inset(10% 0 60% 0); transform: translate(6px, -2px); opacity: 1; }
-  96% { clip-path: inset(30% 0 20% 0); transform: translate(-6px, 2px); opacity: 0.9; }
-  97% { clip-path: inset(65% 0 10% 0); transform: translate(5px, -3px); opacity: 1; }
-  98% { clip-path: inset(15% 0 55% 0); transform: translate(-5px, 3px); opacity: 0.9; }
-  99% { clip-path: inset(45% 0 30% 0); transform: translate(3px, -2px); opacity: 1; }
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    /* Now that the image is transparent, the shadow will beautifully follow the text outline! */
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4)) 
+            drop-shadow(0 0 20px rgba(236, 72, 153, 0.2));
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.7)) 
+            drop-shadow(0 0 30px rgba(236, 72, 153, 0.5));
+  }
 }

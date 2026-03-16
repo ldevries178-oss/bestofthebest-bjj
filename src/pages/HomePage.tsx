@@ -32,23 +32,11 @@ export default function HomePage() {
           className="flex-1 flex flex-col items-center justify-center w-full relative z-10 m-0 p-0"
         >
           <h1 className="sr-only">Best of the Best BJJ Edition</h1>
-          <div className="relative w-full max-w-[95vw] md:max-w-4xl lg:max-w-5xl vhs-image-container flex justify-center items-center">
-            <img 
-              src="/hero-logo.png" 
-              alt="" 
-              className="vhs-image-glitch-1 absolute inset-0 w-full h-full object-contain" 
-              aria-hidden="true" 
-            />
+          <div className="relative w-full max-w-[95vw] md:max-w-4xl lg:max-w-5xl hero-logo-container flex justify-center items-center">
             <img 
               src="/hero-logo.png" 
               alt="Best of the Best BJJ Edition" 
-              className="vhs-image-base w-full h-auto object-contain" 
-            />
-            <img 
-              src="/hero-logo.png" 
-              alt="" 
-              className="vhs-image-glitch-2 absolute inset-0 w-full h-full object-contain" 
-              aria-hidden="true" 
+              className="hero-logo-glow w-full h-auto object-contain" 
             />
           </div>
         </motion.div>
