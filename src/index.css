@@ -16,19 +16,20 @@ html {
 .hero-logo-glow {
   position: relative;
   z-index: 2;
+  /* Use multiply to remove white background again because the image container still behaves as if it has a white box */
+  mix-blend-mode: multiply;
   animation: logo-float 4s ease-in-out infinite;
 }
 
 @keyframes logo-float {
   0%, 100% {
     transform: translateY(0) scale(1);
-    /* Now that the image is transparent, the shadow will beautifully follow the text outline! */
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.4)) 
-            drop-shadow(0 0 20px rgba(236, 72, 153, 0.2));
+    filter: brightness(1) contrast(1.1);
   }
   50% {
     transform: translateY(-8px) scale(1.02);
-    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.7)) 
-            drop-shadow(0 0 30px rgba(236, 72, 153, 0.5));
+    /* Instead of drop-shadow (which creates a huge colored rectangle behind the transparent bounds),
+       we use brightness and contrast to make the inner colors pop dynamically! */
+    filter: brightness(1.25) contrast(1.3);
   }
 }
