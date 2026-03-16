@@ -34,18 +34,28 @@ html {
   }
 }
 
-/* ===== Neon Flicker Effect ===== */
+/* ===== Targeted Neon Flicker Effect ===== */
 @keyframes neon-flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    filter: brightness(1) contrast(1.1);
+    opacity: 1;
+    filter: blur(8px) brightness(1.2);
   }
   20%, 24%, 55% {
-    filter: brightness(0.6) contrast(1.3);
+    opacity: 0.6;
+    filter: blur(12px) brightness(0.7);
   }
 }
 
-.neon-flicker-bg {
-  animation: neon-flicker 5s infinite;
+.neon-lamp-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 0, 222, 0.6) 0%, rgba(255, 0, 222, 0) 70%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: neon-flicker 4s infinite;
+  z-index: 1;
 }
 
 .neon-text-flicker {
@@ -54,12 +64,12 @@ html {
 
 @keyframes neon-text-flicker-anim {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 40px #ff00de, 0 0 80px #ff00de;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 60px #ff00de;
     opacity: 1;
   }
   20%, 24%, 55% {
-    text-shadow: none;
-    opacity: 0.8;
+    text-shadow: 0 0 2px #fff, 0 0 5px #ff00de;
+    opacity: 0.9;
   }
 }
 
@@ -71,34 +81,35 @@ html {
   top: 0;
   left: 0;
   overflow: hidden;
+  /* Mask gradient to make it seamless at the top edge */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 100%);
 }
 
-.fog-img {
+.fog-layer {
   position: absolute;
-  height: 100vh;
-  width: 300vw;
-  z-index: 1;
-  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
   background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
-  background-size: contain;
-  background-position: center;
-  animation: fog-layer-1 60s linear infinite;
+  background-size: 200vw 100%;
+  background-position: bottom;
+  animation: fog-pan 60s linear infinite;
+  opacity: 0.5;
+  mix-blend-mode: screen;
 }
 
-.fog-img-second {
+.fog-layer-2 {
   background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png') repeat-x;
-  background-size: contain;
-  animation: fog-layer-2 40s linear infinite;
+  background-size: 300vw 100%;
+  background-position: bottom;
+  animation: fog-pan 45s linear infinite reverse;
+  opacity: 0.3;
 }
 
-@keyframes fog-layer-1 {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-200vw, 0, 0); }
-}
-
-@keyframes fog-layer-2 {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-200vw, 0, 0); }
+@keyframes fog-pan {
+  0% { background-position: 0% 100%; }
+  100% { background-position: 200vw 100%; }
 }
 
 /* ===== Button Shine Animation ===== */
