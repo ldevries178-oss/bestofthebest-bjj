@@ -41,18 +41,13 @@ export default function HomePage() {
         </motion.div>
 
         {/* Centered Logo */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          className="w-full max-w-[95vw] md:max-w-xl lg:max-w-3xl flex justify-center items-center my-4 md:my-8"
-        >
+        <div className="w-full max-w-[95vw] md:max-w-xl lg:max-w-3xl flex justify-center items-center my-4 md:my-8">
           <img 
             src="/hero-logo.png" 
             alt="Best of the Best BJJ Edition" 
             className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)]" 
           />
-        </motion.div>
+        </div>
 
         {/* CTA Button */}
         <motion.div 
