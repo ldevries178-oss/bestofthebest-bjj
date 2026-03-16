@@ -41,9 +41,10 @@ function Navigation() {
   const { t } = useLang();
   const navLinks = [
     { to: '#home', label: t('home') },
+    { to: '#about', label: t('about') },
     { to: '#tickets', label: t('tickets') },
     { to: '#line-up', label: t('lineup') },
-    { to: '#locatie', label: t('locatie') },
+    { to: '#contact', label: t('contact') },
   ];
 
   return (
@@ -134,10 +135,8 @@ export default function App() {
               </p>
               <div className="flex items-center gap-4">
                 {[
-                  { to: '#home', label: t('home') },
-                  { to: '#tickets', label: t('tickets') },
-                  { to: '#line-up', label: t('lineup') },
-                  { to: '#locatie', label: t('locatie') },
+                  { to: '#tos', label: t('tos') },
+                  { to: '#privacy', label: t('privacy') },
                 ].map((link) => (
                   <a
                     key={link.to}

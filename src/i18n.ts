@@ -4,15 +4,19 @@ export const translations = {
   nl: {
     // Navigation
     home: 'Home',
+    about: 'About',
     tickets: 'Tickets',
     lineup: 'Line-up',
     locatie: 'Locatie',
+    contact: 'Contact',
 
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.',
+    slogan: 'Voor de beste Europese teams die tegen elkaar strijden',
     buyTickets: 'Koop Tickets',
     viewLineup: 'Bekijk Line-up',
+    smoothcompCta: 'Inschrijven via Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Tickets',
@@ -67,20 +71,26 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Alle rechten voorbehouden.',
+    tos: 'Terms of Service',
+    privacy: 'Privacy Policy',
   },
 
   fr: {
     // Navigation
     home: 'Accueil',
+    about: 'À propos',
     tickets: 'Billets',
     lineup: 'Line-up',
     locatie: 'Lieu',
+    contact: 'Contact',
 
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'L\'ultime confrontation sur le tapis. Vivez le combat rétro-futuriste.',
+    slogan: 'Pour les meilleures équipes européennes en compétition',
     buyTickets: 'Acheter des Billets',
     viewLineup: 'Voir le Line-up',
+    smoothcompCta: 'Inscription sur Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Billets',
@@ -135,20 +145,26 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
+    tos: 'Conditions d\'utilisation',
+    privacy: 'Politique de confidentialité',
   },
 
   de: {
     // Navigation
     home: 'Start',
+    about: 'Über uns',
     tickets: 'Tickets',
     lineup: 'Line-up',
     locatie: 'Ort',
+    contact: 'Kontakt',
 
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'Die ultimative Konfrontation auf der Matte. Erlebe den retro-futuristischen Kampf.',
+    slogan: 'Für die besten europäischen Teams im Wettkampf',
     buyTickets: 'Tickets Kaufen',
     viewLineup: 'Line-up Ansehen',
+    smoothcompCta: 'Anmeldung über Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Tickets',
@@ -203,6 +219,8 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Alle Rechte vorbehalten.',
+    tos: 'Nutzungsbedingungen',
+    privacy: 'Datenschutzrichtlinie',
   },
 } as const;
 
