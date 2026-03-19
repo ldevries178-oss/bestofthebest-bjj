@@ -13,7 +13,8 @@ export const translations = {
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.',
-    slogan: 'Voor de beste Europese teams die tegen elkaar strijden',
+    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
+    teamsAdmissions: 'Teams admissions',
     buyTickets: 'Koop Tickets',
     viewLineup: 'Bekijk Line-up',
     smoothcompCta: 'Inschrijven via Smoothcomp',
@@ -87,7 +88,8 @@ export const translations = {
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'L\'ultime confrontation sur le tapis. Vivez le combat rétro-futuriste.',
-    slogan: 'Pour les meilleures équipes européennes en compétition',
+    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
+    teamsAdmissions: 'Teams admissions',
     buyTickets: 'Acheter des Billets',
     viewLineup: 'Voir le Line-up',
     smoothcompCta: 'Inscription sur Smoothcomp',
@@ -161,7 +163,8 @@ export const translations = {
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'Die ultimative Konfrontation auf der Matte. Erlebe den retro-futuristischen Kampf.',
-    slogan: 'Für die besten europäischen Teams im Wettkampf',
+    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
+    teamsAdmissions: 'Teams admissions',
     buyTickets: 'Tickets Kaufen',
     viewLineup: 'Line-up Ansehen',
     smoothcompCta: 'Anmeldung über Smoothcomp',
