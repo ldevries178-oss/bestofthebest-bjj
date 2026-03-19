@@ -47,7 +47,6 @@ export default function HomePage() {
             src="/hero-logo.png" 
             alt="Best of the Best BJJ Edition" 
             className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)]" 
-            style={{ backgroundColor: 'transparent' }}
           />
         </div>
 
@@ -56,7 +55,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col items-center justify-center w-full mt-6 md:mt-12 space-y-6 z-40"
+          className="flex flex-col items-center justify-center w-full mt-6 space-y-2 z-[45]"
         >
           <a href="#smoothcomp" className="group relative px-6 py-4 md:px-10 md:py-5 bg-black/40 text-pink-400 font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-none transition-all duration-300 text-center no-underline border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.5),inset_0_0_15px_rgba(236,72,153,0.4)] hover:shadow-[0_0_40px_rgba(236,72,153,0.9),inset_0_0_25px_rgba(236,72,153,0.7)] hover:text-white hover:border-pink-400 backdrop-blur-sm w-full max-w-[320px] md:max-w-[400px]">
             <span className="relative z-10 drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">{t('smoothcompCta')}</span>

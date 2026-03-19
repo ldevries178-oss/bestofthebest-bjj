@@ -15,7 +15,7 @@ const langs: Lang[] = ['nl', 'fr', 'de'];
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <div className="fixed top-6 right-6 lg:right-10 z-[100] flex items-center gap-4">
+    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center gap-2 md:gap-4 bg-black/50 p-2 rounded-lg backdrop-blur-sm border border-white/10">
       {langs.map((l) => (
         <button
           key={l}
