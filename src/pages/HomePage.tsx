@@ -46,7 +46,8 @@ export default function HomePage() {
           <img 
             src="/hero-logo.png" 
             alt="Best of the Best BJJ Edition" 
-            className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)] bg-transparent mix-blend-screen" 
+            className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)]" 
+            style={{ backgroundColor: 'transparent' }}
           />
         </div>
 
@@ -55,16 +56,16 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col items-center w-full mt-4 md:mt-12 space-y-4 z-40"
+          className="flex flex-col items-center justify-center w-full mt-6 md:mt-12 space-y-6 z-40"
         >
-          <a href="#smoothcomp" className="group relative px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-xl transition-all duration-300 hover:from-pink-500 hover:to-purple-500 hover:-translate-y-1 overflow-hidden w-full sm:w-auto shadow-[0_0_20px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] text-center no-underline border-2 border-pink-400/50">
-            <span className="relative z-10 drop-shadow-md">{t('smoothcompCta')}</span>
-            <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
+          <a href="#smoothcomp" className="group relative px-6 py-4 md:px-10 md:py-5 bg-black/40 text-pink-400 font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-none transition-all duration-300 text-center no-underline border-2 border-pink-500 shadow-[0_0_20px_rgba(236,72,153,0.5),inset_0_0_15px_rgba(236,72,153,0.4)] hover:shadow-[0_0_40px_rgba(236,72,153,0.9),inset_0_0_25px_rgba(236,72,153,0.7)] hover:text-white hover:border-pink-400 backdrop-blur-sm w-full max-w-[320px] md:max-w-[400px]">
+            <span className="relative z-10 drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">{t('smoothcompCta')}</span>
+            <div className="absolute inset-0 bg-pink-500/10 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
           </a>
 
-          <a href="#teams" className="group relative px-8 py-4 sm:px-10 sm:py-5 bg-transparent text-white font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-xl transition-all duration-300 hover:bg-white/5 hover:-translate-y-1 overflow-hidden w-full sm:w-auto shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] text-center no-underline border-2 border-purple-500/50 backdrop-blur-sm">
-            <span className="relative z-10 drop-shadow-md">{t('teamsAdmissions')}</span>
-            <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
+          <a href="#teams" className="group relative px-6 py-4 md:px-10 md:py-5 bg-black/40 text-purple-400 font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-none transition-all duration-300 text-center no-underline border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.5),inset_0_0_15px_rgba(168,85,247,0.4)] hover:shadow-[0_0_40px_rgba(168,85,247,0.9),inset_0_0_25px_rgba(168,85,247,0.7)] hover:text-white hover:border-purple-400 backdrop-blur-sm w-full max-w-[320px] md:max-w-[400px]">
+            <span className="relative z-10 drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]">{t('teamsAdmissions')}</span>
+            <div className="absolute inset-0 bg-purple-500/10 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
           </a>
         </motion.div>
 

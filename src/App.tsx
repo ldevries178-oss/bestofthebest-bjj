@@ -15,17 +15,18 @@ const langs: Lang[] = ['nl', 'fr', 'de'];
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <div className="absolute top-6 right-4 sm:right-6 md:right-8 z-50 flex items-center gap-1 border border-purple-300/40 rounded-lg overflow-hidden">
+    <div className="fixed top-6 right-6 lg:right-10 z-[100] flex items-center gap-4">
       {langs.map((l) => (
         <button
           key={l}
           onClick={() => setLang(l)}
-          className={`px-2.5 py-1.5 font-orbitron text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-200 cursor-pointer border-none ${
+          className={`font-orbitron cursor-pointer text-sm font-bold tracking-widest uppercase bg-transparent border-none outline-none transition-colors duration-300 ${
             lang === l
-              ? 'bg-purple-600 text-white'
-              : 'bg-transparent text-purple-500 hover:bg-purple-100 hover:text-purple-700'
+              ? 'text-pink-400 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]'
+              : 'text-white/60 hover:text-white drop-shadow-md'
           }`}
           aria-label={`Taal: ${l.toUpperCase()}`}
+          style={{ backgroundColor: 'transparent' }}
         >
           {l.toUpperCase()}
         </button>
