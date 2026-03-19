@@ -15,21 +15,17 @@ const langs: Lang[] = ['nl', 'fr', 'de'];
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center gap-2 md:gap-4 bg-black/50 p-2 rounded-lg backdrop-blur-sm border border-white/10">
-      {langs.map((l) => (
-        <button
-          key={l}
-          onClick={() => setLang(l)}
-          className={`font-orbitron cursor-pointer text-sm font-bold tracking-widest uppercase bg-transparent border-none outline-none transition-colors duration-300 ${
-            lang === l
-              ? 'text-pink-400 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]'
-              : 'text-white/60 hover:text-white drop-shadow-md'
-          }`}
-          aria-label={`Taal: ${l.toUpperCase()}`}
-          style={{ backgroundColor: 'transparent' }}
-        >
-          {l.toUpperCase()}
-        </button>
+    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center space-x-3 font-bold bg-[#0a0a0f]/80 p-2 px-4 rounded-lg backdrop-blur-sm border border-[#ff00ff]/30 text-sm tracking-widest uppercase">
+      {langs.map((l, idx) => (
+        <div key={l} className="flex flex-row items-center space-x-3">
+          <span 
+            onClick={() => setLang(l)}
+            className={`cursor-pointer nav-3d-effect transition-all ${lang === l ? 'text-[#00ffff]' : 'text-[#ff00ff] opacity-80 hover:opacity-100 hover:text-[#00ffff]'}`}
+          >
+            {l}
+          </span>
+          {idx < langs.length - 1 && <span className="text-gray-600">|</span>}
+        </div>
       ))}
     </div>
   );
@@ -49,12 +45,6 @@ export default function App() {
           
           {/* Language Switcher top right */}
           <LanguageSwitcher />
-
-          {/* Purple Synthwave Grid Background */}
-          <div className="absolute inset-0 synthwave-grid-light z-0 pointer-events-none opacity-50"></div>
-
-          {/* Subtle radial glow */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.15)_0%,transparent_70%)] z-0 pointer-events-none"></div>
 
           <Helmet>
             <title>Best of the Best – BJJ Edition | De Ultieme Confrontatie</title>
