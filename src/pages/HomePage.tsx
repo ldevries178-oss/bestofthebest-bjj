@@ -46,7 +46,7 @@ export default function HomePage() {
           <img 
             src="/hero-logo.png" 
             alt="Best of the Best BJJ Edition" 
-            className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)] bg-transparent" 
+            className="hero-logo-glow w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(168,85,247,0.8)] bg-transparent mix-blend-screen" 
           />
         </div>
 
@@ -55,14 +55,14 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col items-center w-full mt-2 space-y-4 md:space-y-5 z-40"
+          className="flex flex-col items-center w-full mt-4 md:mt-12 space-y-4 z-40"
         >
-          <a href="#smoothcomp" className="group relative px-6 py-3 md:px-10 md:py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-orbitron text-sm md:text-lg font-bold tracking-[0.15em] uppercase rounded-xl transition-all duration-300 hover:from-pink-500 hover:to-purple-500 hover:-translate-y-1 overflow-hidden w-full sm:w-auto min-w-[280px] shadow-[0_0_20px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] text-center no-underline border-2 border-pink-400/50">
+          <a href="#smoothcomp" className="group relative px-8 py-4 sm:px-10 sm:py-5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-xl transition-all duration-300 hover:from-pink-500 hover:to-purple-500 hover:-translate-y-1 overflow-hidden w-full sm:w-auto shadow-[0_0_20px_rgba(236,72,153,0.6)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] text-center no-underline border-2 border-pink-400/50">
             <span className="relative z-10 drop-shadow-md">{t('smoothcompCta')}</span>
             <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
           </a>
 
-          <a href="#teams" className="group relative px-6 py-3 md:px-10 md:py-4 bg-black/40 text-purple-100 font-orbitron text-sm md:text-lg font-bold tracking-[0.15em] uppercase rounded-xl transition-all duration-300 hover:bg-black/60 hover:-translate-y-1 overflow-hidden w-full sm:w-auto min-w-[280px] shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] text-center no-underline border-2 border-purple-500/60 backdrop-blur-md">
+          <a href="#teams" className="group relative px-8 py-4 sm:px-10 sm:py-5 bg-transparent text-white font-orbitron text-sm md:text-xl font-bold tracking-[0.2em] uppercase rounded-xl transition-all duration-300 hover:bg-white/5 hover:-translate-y-1 overflow-hidden w-full sm:w-auto shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] text-center no-underline border-2 border-purple-500/50 backdrop-blur-sm">
             <span className="relative z-10 drop-shadow-md">{t('teamsAdmissions')}</span>
             <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:animate-shine z-0"></div>
           </a>
