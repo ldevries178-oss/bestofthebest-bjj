@@ -35,28 +35,22 @@ export default function HomePage() {
           </h2>
         </div>
 
-        {/* Chrome Title: BEST OF THE BEST */}
-        <div className="flex flex-row items-center justify-center relative z-20 w-full mb-[-1rem] md:mb-[-2rem]">
-          <span className="chrome-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] font-black tracking-widest leading-none">BEST</span>
-          <div className="flex flex-col items-center justify-center mx-2 md:mx-6 mt-[-3rem] md:mt-[-5rem]">
-            <span className="text-white font-bold text-lg md:text-2xl lg:text-4xl neon-text-blue whitespace-nowrap tracking-wider">OF THE</span>
-          </div>
-          <span className="chrome-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] font-black tracking-widest leading-none">BEST</span>
+        {/* Transparent Hero Logo */}
+        <div className="z-30 w-full flex justify-center mt-[-2rem] mb-8 md:mb-12">
+          <img 
+            src="/hero-logo.png" 
+            alt="Best of the Best - BJJ Edition" 
+            className="w-[90vw] max-w-[800px] h-auto object-contain bg-transparent"
+            style={{ filter: "drop-shadow(0 0 20px rgba(255, 0, 255, 0.4))" }}
+          />
         </div>
 
-        {/* Cursive Subtitle: BJJ Edition */}
-        <div className="z-30 mt-[-2rem] md:mt-[-4rem] mb-12 md:mb-20">
-          <h1 className="font-cursive text-6xl md:text-8xl lg:text-9xl text-white neon-text-pink rotate-[-3deg]">
-            BJJ Edition
-          </h1>
-        </div>
-
-        {/* Buttons separated */}
-        <div className="flex flex-col gap-6 z-40 w-full max-w-lg px-4 mt-4">
-          <a href="#smoothcomp" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron">
+        {/* Buttons stacked tight (strak onder elkaar) */}
+        <div className="flex flex-col gap-0 z-40 w-full max-w-lg px-4 mt-4 drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+          <a href="#smoothcomp" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron !rounded-b-none border-b-0 hover:z-10">
             {t('smoothcompCta')}
           </a>
-          <a href="#teams" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron">
+          <a href="#teams" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron !rounded-t-none hover:z-10">
             {t('teamsAdmissions')}
           </a>
         </div>
