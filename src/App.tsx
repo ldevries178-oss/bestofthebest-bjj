@@ -15,19 +15,28 @@ const langs: Lang[] = ['nl', 'fr', 'de'];
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center space-x-3 font-bold bg-[#0a0a0f]/80 p-2 pl-6 rounded-lg backdrop-blur-sm border-l border-gray-700 text-sm tracking-widest uppercase">
-      {langs.map((l, idx) => (
-        <div key={l} className="flex flex-row items-center space-x-3">
-          <span 
-            onClick={() => setLang(l)}
-            className={`cursor-pointer nav-3d-effect transition-all ${lang === l ? 'text-synthBlue' : 'text-synthPink opacity-80 hover:opacity-100 hover:text-synthBlue'}`}
-          >
-            {l}
-          </span>
-          {idx < langs.length - 1 && <span className="text-gray-600">|</span>}
-        </div>
-      ))}
-    </div>
+    <header className="fixed top-0 right-0 w-full p-4 md:p-6 flex justify-end z-[100] pointer-events-none">
+      <nav className="flex gap-4 md:gap-6 items-center bg-black/40 px-6 py-2 rounded-full border border-[#ff00ff]/30 backdrop-blur-sm shadow-[0_0_15px_rgba(255,0,255,0.2)] pointer-events-auto font-orbitron">
+        <button 
+          onClick={() => setLang('nl')} 
+          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'nl' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+        >
+          NL
+        </button>
+        <button 
+          onClick={() => setLang('fr')} 
+          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'fr' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+        >
+          FR
+        </button>
+        <button 
+          onClick={() => setLang('de')} 
+          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'de' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+        >
+          DE
+        </button>
+      </nav>
+    </header>
   );
 }
 
@@ -41,25 +50,18 @@ export default function App() {
   return (
     <LangContext.Provider value={{ lang, setLang, t }}>
       <HelmetProvider>
-        <div className="relative h-screen w-screen overflow-hidden bg-black font-sans selection:bg-pink-500/30">
-          
-          {/* Language Switcher top right */}
-          <LanguageSwitcher />
+        {/* Fixeer de taalknoppen (NL, FR, DE) rechtsboven */}
+        <LanguageSwitcher />
 
-          <Helmet>
-            <title>Best of the Best – BJJ Edition | De Ultieme Confrontatie</title>
-            <meta name="description" content="Best of the Best BJJ Edition – De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd in 80s synthwave stijl." />
-            <meta name="keywords" content="BJJ, Best of the Best, Brazilian Jiu-Jitsu, martial arts, evenement, synthwave, tickets, line-up" />
-            <link rel="canonical" href="/" />
-          </Helmet>
-          
-          <main className="relative z-10 h-full w-full flex flex-col">
-            <HomePage />
-          </main>
-
-        </div>
+        <Helmet>
+          <title>Best of the Best – BJJ Edition | De Ultieme Confrontatie</title>
+          <meta name="description" content="Best of the Best BJJ Edition – De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd in 80s synthwave stijl." />
+          <meta name="keywords" content="BJJ, Best of the Best, Brazilian Jiu-Jitsu, martial arts, evenement, synthwave, tickets, line-up" />
+          <link rel="canonical" href="/" />
+        </Helmet>
+        
+        <HomePage />
       </HelmetProvider>
     </LangContext.Provider>
   );
 }
-

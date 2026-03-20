@@ -179,3 +179,33 @@ body {
   -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
   filter: drop-shadow(0px 4px 0px #1a0033) drop-shadow(0px 0px 25px rgba(255,0,255,0.7)) drop-shadow(0px 0px 45px rgba(0,255,255,0.4));
 }
+
+/* ===== EXACT STITCH UI BASE STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.text-glow-white {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.text-glow-blue {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+.text-glow-pink {
+  text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
+}
+.logo-text-gradient {
+  background: linear-gradient(to bottom, #fff 0%, #ff8cba 40%, #a450ff 60%, #4a00e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(164, 80, 255, 0.8));
+}
+.btn-neon {
+  background: transparent;
+  border: 2px solid #f0f;
+  box-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+}
+.bg-synthwave {
+  background-image: url("/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

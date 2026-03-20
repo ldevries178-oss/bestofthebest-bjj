@@ -4,64 +4,39 @@ export default function HomePage() {
   const { t } = useLang();
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-start min-h-screen font-orbitron overflow-x-hidden text-white">
-      {/* Background Image filling the screen */}
-      <div 
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
-      ></div>
-      <div className="scanlines pointer-events-none"></div>
+    <div className="bg-synthwave min-h-screen text-white flex flex-col items-center justify-between relative overflow-hidden font-sans">
+      {/* Overlay to darken background slightly if needed */}
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
 
-      {/* BEGIN: MainHeader Nav */}
-      <header className="relative z-10 w-full px-8 py-6 flex justify-start md:justify-center items-center" data-purpose="top-navigation">
-        <nav className="flex items-center space-x-8 text-sm tracking-widest uppercase">
-          <div className="hidden md:flex space-x-6 text-synthPink">
-            <a className="nav-3d-effect hover:text-synthBlue transition-colors font-orbitron" href="#">Home</a>
-            <a className="nav-3d-effect hover:text-synthBlue transition-colors font-orbitron" href="#">About</a>
-            <a className="nav-3d-effect hover:text-synthBlue transition-colors font-orbitron" href="#">Tickets</a>
-            <a className="nav-3d-effect hover:text-synthBlue transition-colors font-orbitron" href="#">Line-up</a>
-            <a className="nav-3d-effect hover:text-synthBlue transition-colors font-orbitron" href="#">Contact</a>
-          </div>
-        </nav>
-      </header>
-
-      {/* Main Content Areas */}
-      <main className="flex-grow flex flex-col items-center justify-center relative z-10 px-4 w-full pt-12 pb-8 md:pt-16 md:pb-12 text-center h-full">
+      {/* Main Content */}
+      <main className="relative z-10 flex flex-col items-center justify-center flex-grow w-full max-w-4xl px-4 text-center mt-[-5vh]">
         
-        {/* Top Text */}
-        <div className="mb-4 md:mb-8">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-orbitron font-medium text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)] tracking-wide leading-relaxed">
-            {t('slogan')}
-          </h2>
-        </div>
-
-        {/* Transparent Hero Logo */}
-        <div className="z-30 w-full flex justify-center mt-[-2rem] mb-8 md:mb-12">
+        {/* Voeg transparant logo toe op de lege plek in de hero-sectie */}
+        <div className="mb-0 w-full flex justify-center">
           <img 
             src="/hero-logo.png" 
-            alt="Best of the Best - BJJ Edition" 
-            className="w-[90vw] max-w-[800px] h-auto object-contain bg-transparent"
-            style={{ filter: "drop-shadow(0 0 20px rgba(255, 0, 255, 0.4))" }}
+            alt="Hero Logo" 
+            className="w-full max-w-[800px] h-auto object-contain filter drop-shadow-[0_0_20px_#ff00ff]" 
           />
         </div>
-
-        {/* Buttons stacked tight (strak onder elkaar) */}
-        <div className="flex flex-col gap-0 z-40 w-full max-w-lg px-4 mt-4 drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]">
-          <a href="#smoothcomp" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron !rounded-b-none border-b-0 hover:z-10">
-            {t('smoothcompCta')}
+        
+        {/* Actieknoppen strak onder elkaar */}
+        <div className="flex flex-col items-center justify-center gap-0 w-full max-w-[400px] px-4 mt-8 z-20">
+          <a href="#smoothcomp" className="flex items-center justify-center text-center w-full md:w-[350px] py-4 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-lg md:text-xl uppercase tracking-wider rounded-t-lg rounded-b-none shadow-[0_0_10px_#ff00ff,inset_0_0_10px_#ff00ff] hover:bg-[#ff00ff]/20 transition-all duration-300 relative z-10 border-b-0">
+            {t('smoothcompCta') || "Schrijf je in via Smoothcomp"}
           </a>
-          <a href="#teams" className="w-full image-btn font-bold py-5 px-8 uppercase tracking-widest text-lg md:text-base text-center font-orbitron !rounded-t-none hover:z-10">
-            {t('teamsAdmissions')}
+          <a href="#teams" className="flex items-center justify-center text-center w-full md:w-[350px] py-4 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-lg md:text-xl uppercase tracking-wider rounded-b-lg rounded-t-none shadow-[0_0_10px_#00ffff,inset_0_0_10px_#00ffff] hover:bg-[#00ffff]/20 transition-all duration-300 relative z-0 border-t border-[#00ffff]">
+            {t('teamsAdmissions') || "Teams admissions"}
           </a>
         </div>
       </main>
 
-      {/* Footer Links */}
-      <footer className="relative z-10 w-full text-center pb-8 pt-4 text-synthBlue text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
-        <a href="#tos" className="hover:text-white transition-colors mr-8">{t('tos')}</a>
-        <a href="#privacy" className="hover:text-white transition-colors">{t('privacy')}</a>
+      {/* Footer */}
+      <footer className="w-full relative z-10 flex justify-center items-center gap-4 p-6 text-sm text-[#00ffff] font-medium">
+        <a className="hover:text-white transition-colors" href="#">{t('tos') || "Terms of Service"}</a>
+        <span className="text-white/50">|</span>
+        <a className="hover:text-white transition-colors" href="#">{t('privacy') || "Privacy Policy"}</a>
       </footer>
-
     </div>
   );
 }
