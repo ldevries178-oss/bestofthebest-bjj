@@ -37,18 +37,18 @@ export default function HomePage() {
         <div className="w-full max-w-4xl flex justify-center z-10">
           <img 
             alt="Best Of Best BJJ Edition Logo" 
-            className="w-full h-auto drop-shadow-[0_0_50px_rgba(255,0,255,0.4)]" 
+            className="w-full h-auto drop-shadow-[0_0_50px_rgba(255,0,255,0.4)] bg-transparent" 
             data-purpose="hero-logo" 
             src="/hero-logo.png" 
           />
         </div>
 
         {/* Action Buttons tightly directly under each other */}
-        <div className="flex flex-col gap-2 z-20 w-full max-w-sm px-4 mt-6">
-          <a href="#smoothcomp" className="w-full neon-button bg-synthDark border-2 border-synthBlue text-synthBlue font-bold py-4 px-8 rounded-sm uppercase tracking-wider text-sm md:text-base text-center hover:bg-synthBlue hover:text-synthDark font-orbitron transition-all">
+        <div className="flex flex-col z-20 w-full max-w-sm px-4 mt-6">
+          <a href="#smoothcomp" className="w-full neon-button bg-synthDark border-2 border-synthBlue text-synthBlue font-bold py-4 px-8 rounded-t-sm uppercase tracking-wider text-sm md:text-base text-center hover:bg-synthBlue hover:text-synthDark font-orbitron transition-all">
             {t('smoothcompCta')}
           </a>
-          <a href="#teams" className="w-full neon-button bg-synthPurple border-2 border-synthPink text-synthPink font-bold py-4 px-8 rounded-sm uppercase tracking-wider text-sm md:text-base text-center hover:bg-synthPink hover:text-white font-orbitron transition-all">
+          <a href="#teams" className="w-full neon-button bg-synthPurple border-2 border-t-0 border-synthPink text-synthPink font-bold py-4 px-8 rounded-b-sm uppercase tracking-wider text-sm md:text-base text-center hover:bg-synthPink hover:text-white font-orbitron transition-all">
             {t('teamsAdmissions')}
           </a>
         </div>

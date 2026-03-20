@@ -15,12 +15,12 @@ const langs: Lang[] = ['nl', 'fr', 'de'];
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center space-x-3 font-bold bg-[#0a0a0f]/80 p-2 px-4 rounded-lg backdrop-blur-sm border border-[#ff00ff]/30 text-sm tracking-widest uppercase">
+    <div className="fixed top-4 right-4 md:top-6 md:right-8 z-[9999] flex items-center space-x-3 font-bold bg-[#0a0a0f]/80 p-2 pl-6 rounded-lg backdrop-blur-sm border-l border-gray-700 text-sm tracking-widest uppercase">
       {langs.map((l, idx) => (
         <div key={l} className="flex flex-row items-center space-x-3">
           <span 
             onClick={() => setLang(l)}
-            className={`cursor-pointer nav-3d-effect transition-all ${lang === l ? 'text-[#00ffff]' : 'text-[#ff00ff] opacity-80 hover:opacity-100 hover:text-[#00ffff]'}`}
+            className={`cursor-pointer nav-3d-effect transition-all ${lang === l ? 'text-synthBlue' : 'text-synthPink opacity-80 hover:opacity-100 hover:text-synthBlue'}`}
           >
             {l}
           </span>
