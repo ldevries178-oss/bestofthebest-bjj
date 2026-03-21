@@ -16,17 +16,17 @@ export default function HomePage() {
       ></video>
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl px-4 text-center">
+      <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl px-4 text-center gap-0">
         
         {/* Main Slogan */}
-        <div className="mb-1 z-20">
+        <div className="z-20">
           <h1 className="font-orbitron font-semibold text-xl md:text-2xl xl:text-3xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] text-center px-4 tracking-wide leading-snug">
             {t('slogan') || "The Ultimate Brazilian Jiu Jitsu Championship."}
           </h1>
         </div>
 
         {/* Transparent Hero Logo */}
-        <div className="z-20 w-full flex justify-center mb-1">
+        <div className="z-20 w-full flex justify-center -mt-2">
           <img 
             src="/hero-logog.png.png" 
             alt="Best Of The Best - BJJ Edition" 
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-1.5">
+        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-1.5 -mt-2">
           <a 
             href="#smoothcomp" 
             className="neon-button-ref flex items-center justify-center w-full h-[48px] md:h-[52px] font-orbitron font-semibold text-sm md:text-base tracking-wider rounded-lg whitespace-nowrap px-6"
