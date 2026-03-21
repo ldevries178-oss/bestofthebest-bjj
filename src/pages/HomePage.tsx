@@ -4,7 +4,7 @@ export default function HomePage() {
   const { lang, setLang, t } = useLang();
 
   return (
-    <div className="min-h-screen text-white flex flex-col items-center justify-center relative overflow-hidden font-sans">
+    <div className="h-[100dvh] w-full text-white flex flex-col items-center justify-center relative overflow-hidden font-sans">
       {/* Fullscreen Video Background */}
       <video 
         autoPlay 
@@ -25,58 +25,34 @@ export default function HomePage() {
         
         {/* Slogan */}
         <div className="mb-2 z-20">
-          <h2 className="font-cursive text-2xl md:text-4xl lg:text-5xl neon-text-pink text-center px-4 leading-tight">
+          <h2 className="font-cursive text-base md:text-lg neon-text-pink text-center px-4 tracking-wider">
             VOOR DE BESTE EUROPESE TEAMS DIE TEGEN ELKAAR STRIJDEN
           </h2>
         </div>
 
         {/* Main Logo */}
-        <div className="w-full flex justify-center z-20 mb-8">
+        <div className="w-full flex justify-center z-20 mb-6">
           <img 
             src="/hero-logog.png.png" 
             alt="Best Of Best BJJ Edition Logo" 
-            className="relative z-10 w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,0,255,0.4)]" 
+            className="relative z-10 w-full max-w-[400px] md:max-w-[500px] h-auto drop-shadow-[0_0_30px_rgba(255,0,255,0.4)]" 
           />
         </div>
 
         {/* Actieknoppen strak onder elkaar */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[400px] px-4 z-20 gap-4">
+        <div className="flex flex-col items-center justify-center w-full max-w-[320px] px-4 z-20 gap-3">
           <a 
             href="#smoothcomp" 
-            className="neon-button flex items-center justify-center w-full py-4 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-lg md:text-xl uppercase tracking-wider rounded-lg hover:bg-[#ff00ff]/20"
+            className="neon-button flex items-center justify-center w-full py-3 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-sm md:text-base uppercase tracking-wider rounded-lg hover:bg-[#ff00ff]/20"
           >
             {t('smoothcompCta') || "Schrijf je in via Smoothcomp"}
           </a>
           <a 
             href="#teams" 
-            className="neon-button flex items-center justify-center w-full py-4 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-lg md:text-xl uppercase tracking-wider rounded-lg hover:bg-[#ff00ff]/20"
+            className="neon-button flex items-center justify-center w-full py-3 bg-transparent border-2 border-[#ff00ff] text-white font-orbitron font-bold text-sm md:text-base uppercase tracking-wider rounded-lg hover:bg-[#ff00ff]/20"
           >
             {t('teamsAdmissions') || "Teams admissions"}
           </a>
-        </div>
-
-        {/* Taalselectie in het midden */}
-        <div className="flex items-center justify-center space-x-4 font-bold mt-10 z-20 font-orbitron text-xl">
-          <span 
-            onClick={() => setLang('nl')}
-            className={`nav-3d-effect cursor-pointer transition-opacity ${lang === 'nl' ? 'text-synthBlue opacity-100' : 'text-synthPink opacity-80 hover:opacity-100 hover:text-synthBlue'}`}
-          >
-            NL
-          </span>
-          <span className="text-white/50">|</span>
-          <span 
-            onClick={() => setLang('fr')}
-            className={`nav-3d-effect cursor-pointer transition-opacity ${lang === 'fr' ? 'text-synthBlue opacity-100' : 'text-synthPink opacity-80 hover:opacity-100 hover:text-synthBlue'}`}
-          >
-            FR
-          </span>
-          <span className="text-white/50">|</span>
-          <span 
-            onClick={() => setLang('de')}
-            className={`nav-3d-effect cursor-pointer transition-opacity ${lang === 'de' ? 'text-synthBlue opacity-100' : 'text-synthPink opacity-80 hover:opacity-100 hover:text-synthBlue'}`}
-          >
-            DE
-          </span>
         </div>
       </main>
 
