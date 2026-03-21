@@ -25,6 +25,16 @@ export default function HomePage() {
           </h1>
         </div>
 
+        {/* Transparent Hero Logo */}
+        <div className="z-20 w-full flex justify-center mb-8 md:mb-12">
+          <img 
+            src="/hero-logog.png.png" 
+            alt="Best Of The Best - BJJ Edition" 
+            className="w-[90vw] max-w-[800px] h-auto object-contain bg-transparent"
+            style={{ filter: "drop-shadow(0 0 20px rgba(255, 0, 255, 0.4))" }}
+          />
+        </div>
+
         {/* Action Buttons */}
         <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-3">
           <a 
@@ -40,6 +50,12 @@ export default function HomePage() {
             {t('teamsAdmissions') || "Teams admissions"}
           </a>
         </div>
+
+        {/* Footer Links */}
+        <footer className="w-full text-center pt-6 text-[#00ffff] text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
+          <a href="#tos" className="hover:text-white transition-colors mr-8">{t('tos')}</a>
+          <a href="#privacy" className="hover:text-white transition-colors">{t('privacy')}</a>
+        </footer>
       </main>
     </div>
   );
