@@ -19,14 +19,14 @@ export default function HomePage() {
       <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl px-4 text-center">
         
         {/* Main Slogan */}
-        <div className="mb-12 z-20">
+        <div className="mb-3 z-20">
           <h1 className="font-orbitron font-semibold text-2xl md:text-3xl xl:text-4xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] text-center px-4 tracking-wide leading-snug">
             {t('slogan') || "The Ultimate Brazilian Jiu Jitsu Championship."}
           </h1>
         </div>
 
         {/* Transparent Hero Logo */}
-        <div className="z-20 w-full flex justify-center mb-8 md:mb-12">
+        <div className="z-20 w-full flex justify-center mb-3">
           <img 
             src="/hero-logog.png.png" 
             alt="Best Of The Best - BJJ Edition" 
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-3">
+        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-2">
           <a 
             href="#smoothcomp" 
             className="neon-button-ref flex items-center justify-center w-full h-[54px] md:h-[58px] font-orbitron font-semibold text-sm md:text-base tracking-wider rounded-lg whitespace-nowrap px-6"
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
 
         {/* Footer Links */}
-        <footer className="w-full text-center pt-6 text-[#00ffff] text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
+        <footer className="w-full text-center pt-3 text-[#00ffff] text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
           <a href="#tos" className="hover:text-white transition-colors mr-8">{t('tos')}</a>
           <a href="#privacy" className="hover:text-white transition-colors">{t('privacy')}</a>
         </footer>
