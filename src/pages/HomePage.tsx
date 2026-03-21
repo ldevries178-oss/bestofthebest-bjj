@@ -31,7 +31,10 @@ export default function HomePage() {
             src="/hero-logo.png" 
             alt="Best Of The Best - BJJ Edition" 
             className="w-[80vw] max-w-[650px] h-auto object-contain bg-transparent"
-            style={{ clipPath: "inset(0 0 5px 0)" }}
+            style={{ 
+              WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
+              maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'
+            }}
           />
         </div>
 
