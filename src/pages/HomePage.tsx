@@ -30,10 +30,11 @@ export default function HomePage() {
           <img 
             src="/hero-logo.png" 
             alt="Best Of The Best - BJJ Edition" 
-            className="w-[80vw] max-w-[650px] h-auto object-contain bg-transparent"
+            className="w-[85vw] md:w-[80vw] max-w-[650px] h-auto object-contain bg-transparent"
             style={{ 
               WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
-              maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
+              filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) brightness(1.15)'
             }}
           />
         </div>
