@@ -145,67 +145,12 @@ body {
   z-index: -1;
 }
 
-/* Custom Image Buttons */
-.image-btn {
-  background-color: rgba(10, 5, 20, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7), inset 0 0 10px rgba(0, 255, 255, 0.5);
-  color: white;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  text-shadow: 0 0 5px white;
+/* Button Glow Effect */
+.neon-button {
+  box-shadow: 0 0 15px #ff00ff, inset 0 0 10px #00ffff;
   transition: all 0.3s ease;
 }
-.image-btn:hover {
-  box-shadow: 0 0 25px rgba(255, 0, 255, 1), inset 0 0 15px rgba(0, 255, 255, 0.8);
-  background-color: rgba(255, 0, 255, 0.15);
-  transform: scale(1.02);
-}
-
-/* Chrome text 80s typography */
-.chrome-text {
-  background: linear-gradient(
-    to bottom, 
-    #ffffff 0%, 
-    #ffccff 30%, 
-    #ff00ff 48%, 
-    #ffffff 50%, 
-    #00004d 52%, 
-    #0080ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
-  filter: drop-shadow(0px 4px 0px #1a0033) drop-shadow(0px 0px 25px rgba(255,0,255,0.7)) drop-shadow(0px 0px 45px rgba(0,255,255,0.4));
-}
-
-/* ===== EXACT STITCH UI BASE STYLES ===== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
-.text-glow-white {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
-}
-.text-glow-blue {
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
-}
-.text-glow-pink {
-  text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
-}
-.logo-text-gradient {
-  background: linear-gradient(to bottom, #fff 0%, #ff8cba 40%, #a450ff 60%, #4a00e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px rgba(164, 80, 255, 0.8));
-}
-.btn-neon {
-  background: transparent;
-  border: 2px solid #f0f;
-  box-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
-}
-.bg-synthwave {
-  background-image: url("/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.neon-button:hover {
+  box-shadow: 0 0 25px #ff00ff, inset 0 0 15px #00ffff;
+  transform: scale(1.05);
 }
