@@ -31,7 +31,7 @@ export default function HomePage() {
             src="/best of the best logo PNG transparant.png" 
             alt="Best Of The Best - BJJ Edition" 
             className="w-[80vw] max-w-[650px] h-auto object-contain bg-transparent"
-            style={{ filter: "drop-shadow(0 0 20px rgba(255, 0, 255, 0.4))" }}
+            style={{ clipPath: "inset(0 0 5px 0)" }}
           />
         </div>
 
