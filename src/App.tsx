@@ -12,7 +12,7 @@ import { LangContext, useLang } from './LangContext';
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <header className="fixed top-0 right-0 w-full p-4 md:p-6 flex justify-end z-[100] pointer-events-none">
+    <header className="fixed top-0 left-0 w-full p-4 md:p-6 flex justify-end z-[100] pointer-events-none bg-gradient-to-b from-black/80 via-black/40 to-transparent">
       <nav className="flex gap-4 md:gap-6 items-center px-4 py-2 pointer-events-auto font-orbitron z-50">
         <button 
           onClick={() => setLang('nl')} 
