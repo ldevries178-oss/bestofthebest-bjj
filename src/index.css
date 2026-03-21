@@ -154,3 +154,51 @@ body {
   box-shadow: 0 0 25px #ff00ff, inset 0 0 15px #00ffff;
   transform: scale(1.05);
 }
+
+/* ===== NEW REFERENCE BUTTON STYLES ===== */
+.neon-button-ref {
+  position: relative;
+  background: rgba(10, 10, 15, 0.4); /* Dark translucent background */
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  color: white;
+  z-index: 1;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  /* The glow around the border */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(255, 0, 255, 0.1);
+}
+
+/* Glowing border effect using pseudo-element */
+.neon-button-ref::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px; /* Border thickness */
+  border-radius: 9px;
+  background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
+  z-index: -1;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* Inner mask to create the border */
+.neon-button-ref::after {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  border-radius: 8px;
+  background: rgba(10, 10, 15, 0.6); /* Needs to match or be slightly darker */
+  z-index: -1;
+}
+
+.neon-button-ref:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.4);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+.neon-button-ref:hover::before {
+  opacity: 1;
+  filter: blur(2px);
+}
+

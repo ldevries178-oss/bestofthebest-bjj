@@ -17,7 +17,7 @@ export const translations = {
     teamsAdmissions: 'Teams admissions',
     buyTickets: 'Koop Tickets',
     viewLineup: 'Bekijk Line-up',
-    smoothcompCta: 'Inschrijven via Smoothcomp',
+    smoothcompCta: 'Schrijf je in via Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Tickets',

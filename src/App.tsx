@@ -13,22 +13,22 @@ function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
     <header className="fixed top-0 right-0 w-full p-4 md:p-6 flex justify-end z-[100] pointer-events-none">
-      <nav className="flex gap-4 md:gap-6 items-center bg-black/40 px-6 py-2 rounded-full border border-[#ff00ff]/30 backdrop-blur-sm shadow-[0_0_15px_rgba(255,0,255,0.2)] pointer-events-auto font-orbitron">
+      <nav className="flex gap-4 md:gap-6 items-center px-4 py-2 pointer-events-auto font-orbitron z-50">
         <button 
           onClick={() => setLang('nl')} 
-          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'nl' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+          className={`px-2 py-1 text-sm font-bold uppercase transition-all duration-300 rounded hover:scale-110 hover:text-[#00ffff] hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.8)] ${lang === 'nl' ? 'text-[#00ffff] drop-shadow-[0_0_8px_rgba(0,255,255,0.8)]' : 'text-[#ff00ff]/70'}`}
         >
           NL
         </button>
         <button 
           onClick={() => setLang('fr')} 
-          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'fr' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+          className={`px-2 py-1 text-sm font-bold uppercase transition-all duration-300 rounded hover:scale-110 hover:text-[#00ffff] hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.8)] ${lang === 'fr' ? 'text-[#00ffff] drop-shadow-[0_0_8px_rgba(0,255,255,0.8)]' : 'text-[#ff00ff]/70'}`}
         >
           FR
         </button>
         <button 
           onClick={() => setLang('de')} 
-          className={`px-3 py-1 text-sm font-bold uppercase transition-colors rounded ${lang === 'de' ? 'text-pink-400' : 'text-white hover:text-pink-400'}`}
+          className={`px-2 py-1 text-sm font-bold uppercase transition-all duration-300 rounded hover:scale-110 hover:text-[#00ffff] hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.8)] ${lang === 'de' ? 'text-[#00ffff] drop-shadow-[0_0_8px_rgba(0,255,255,0.8)]' : 'text-[#ff00ff]/70'}`}
         >
           DE
         </button>
