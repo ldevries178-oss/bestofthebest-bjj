@@ -16,7 +16,7 @@ export default function HomePage() {
       ></video>
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center justify-around w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-12 md:py-20">
+      <main className="relative z-10 flex flex-col items-center justify-center gap-8 w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-8 md:py-12">
         
         {/* Main Slogan */}
         <div className="z-20">
