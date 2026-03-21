@@ -16,17 +16,17 @@ export default function HomePage() {
       ></video>
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-3xl px-4 text-center gap-0">
+      <main className="relative z-10 flex flex-col items-center justify-around w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-12 md:py-20">
         
         {/* Main Slogan */}
-        <div className="z-20 mb-1">
+        <div className="z-20">
           <h1 className="font-orbitron font-semibold text-xl md:text-2xl xl:text-3xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] text-center px-4 tracking-wide leading-snug">
             {t('slogan') || "The Ultimate Brazilian Jiu Jitsu Championship."}
           </h1>
         </div>
 
         {/* Transparent Hero Logo */}
-        <div className="z-20 w-full flex justify-center mt-2">
+        <div className="z-20 w-full flex justify-center">
           <img 
             src="/best of the best logo PNG transparant.png" 
             alt="Best Of The Best - BJJ Edition" 
@@ -36,7 +36,7 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-1.5 mt-2">
+        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-3">
           <a 
             href="#smoothcomp" 
             className="neon-button-ref flex items-center justify-center w-full h-[48px] md:h-[52px] font-orbitron font-semibold text-sm md:text-base tracking-wider rounded-lg whitespace-nowrap px-6"
@@ -52,7 +52,7 @@ export default function HomePage() {
         </div>
 
         {/* Footer Links */}
-        <footer className="w-full text-center pt-2 text-[#00ffff] text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
+        <footer className="w-full text-center mt-8 text-[#00ffff] text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_#00ffff]">
           <a href="#tos" className="hover:text-white transition-colors mr-8">{t('tos')}</a>
           <a href="#privacy" className="hover:text-white transition-colors">{t('privacy')}</a>
         </footer>
