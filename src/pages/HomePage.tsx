@@ -15,27 +15,24 @@ export default function HomePage() {
         src="/achtergrond.mp4"
       ></video>
 
-      {/* Stitch Background Elements */}
-      <div className="absolute inset-0 hero-overlay z-[0]"></div>
-      <div className="scanlines z-[1]"></div>
-      <div className="grid-bg z-[0]"></div>
+      {/* Blocky overlays removed per user request */}
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 text-center mt-[-5vh]">
+      <main className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 text-center mt-[-2vh]">
         
         {/* Slogan */}
-        <div className="mb-2 z-20">
+        <div className="mb-1 z-20">
           <h2 className="font-cursive text-base md:text-lg neon-text-pink text-center px-4 tracking-wider">
             VOOR DE BESTE EUROPESE TEAMS DIE TEGEN ELKAAR STRIJDEN
           </h2>
         </div>
 
         {/* Main Logo */}
-        <div className="w-full flex justify-center z-20 mb-6">
+        <div className="w-full flex justify-center z-20 mb-2">
           <img 
             src="/hero-logog.png.png" 
             alt="Best Of Best BJJ Edition Logo" 
-            className="relative z-10 w-full max-w-[400px] md:max-w-[500px] h-auto drop-shadow-[0_0_30px_rgba(255,0,255,0.4)]" 
+            className="relative z-10 w-full max-w-[250px] md:max-w-[350px] h-auto drop-shadow-[0_0_30px_rgba(255,0,255,0.4)]" 
           />
         </div>
 
