@@ -28,7 +28,7 @@ export default function HomePage() {
         {/* Transparent Hero Logo */}
         <div className="z-20 w-full flex justify-center">
           <img 
-            src="/best of the best logo PNG transparant.png" 
+            src="/hero-logo.png" 
             alt="Best Of The Best - BJJ Edition" 
             className="w-[80vw] max-w-[650px] h-auto object-contain bg-transparent"
             style={{ clipPath: "inset(0 0 5px 0)" }}
