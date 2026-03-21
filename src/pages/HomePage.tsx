@@ -33,9 +33,9 @@ export default function HomePage() {
         {/* Main Logo */}
         <div className="w-full flex justify-center z-20 mb-8">
           <img 
-            src="/hero-logo.png" 
+            src="/hero-logog.png.png" 
             alt="Best Of Best BJJ Edition Logo" 
-            className="w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,0,255,0.4)]" 
+            className="relative z-10 w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,0,255,0.4)]" 
           />
         </div>
 
