@@ -1,6 +1,81 @@
-export type Lang = 'nl' | 'fr' | 'de';
+export type Lang = 'en' | 'nl' | 'fr';
 
 export const translations = {
+  en: {
+    // Navigation
+    home: 'Home',
+    about: 'About',
+    tickets: 'Tickets',
+    lineup: 'Line-up',
+    locatie: 'Location',
+    contact: 'Contact',
+
+    // Hero
+    theUltimateEvent: 'The Ultimate Event',
+    heroSubtitle: 'The ultimate confrontation on the mat. Experience the retro-futuristic fight.',
+    slogan: 'The Ultimate Grappling Championship.',
+    teamsAdmissions: 'Teams admissions',
+    buyTickets: 'Buy Tickets',
+    viewLineup: 'View Line-up',
+    smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
+
+    // Tickets
+    ticketsTitle: 'Tickets',
+    ticketsSubtitle: 'Choose your ticket and be there on the mat',
+    earlyBird: 'Early Bird',
+    earlyBirdDesc: 'Limited availability – for the real fans who are early.',
+    earlyBirdF1: 'Access to the event',
+    earlyBirdF2: 'Free welcome drink',
+    earlyBirdF3: 'Early Bird goodie bag',
+    regulier: 'Regular',
+    regulierDesc: 'Standard access to Best of the Best BJJ Edition.',
+    regulierF1: 'Access to the event',
+    regulierF2: 'Access to all matches',
+    regulierF3: 'Food & drinks available',
+    vip: 'VIP',
+    vipDesc: 'The ultimate experience – front row with exclusive privileges.',
+    vipF1: 'Priority entry',
+    vipF2: 'VIP stand with best view',
+    vipF3: 'All-inclusive food & drinks',
+    vipF4: 'Meet & greet with fighters',
+    vipF5: 'Exclusive VIP shirt',
+    popular: 'Popular',
+    orderNow: 'Order Now',
+    ticketsFooter: 'All tickets include VAT • No refunds • 18+',
+
+    // Line-up
+    lineupTitle: 'Line-up',
+    lineupSubtitle: 'The best fighters in the world – ready for battle',
+    record: 'Record',
+    blackBelt: 'Black Belt',
+    brownBelt: 'Brown Belt',
+    moreFighters: 'More fighters will be announced soon • Follow us for updates',
+
+    // Locatie
+    locatieTitle: 'Location',
+    locatieSubtitle: 'AFAS Live — The heart of Amsterdam Southeast',
+    address: 'Address',
+    dateTime: 'Date & Time',
+    dateTimeLine1: 'Saturday 12 July 2026',
+    dateTimeLine2: 'Doors open: 18:00',
+    dateTimeLine3: 'Start: 19:00',
+    publicTransport: 'Public Transport',
+    ptLine1: 'Metro 54: Strandvliet Station',
+    ptLine2: '5 min walk from the station',
+    ptLine3: 'Bus 46 & 47 stop at the door',
+    byCar: 'By Car',
+    carLine1: 'A2 / A9 towards Amsterdam Arena',
+    carLine2: 'Parking garage P1 Arena',
+    carLine3: '€10 daily rate',
+    capacity: 'Capacity: 6,000 seats • Indoor arena',
+    openInMaps: 'Open in Maps',
+
+    // Footer
+    copyright: '© 2026 Best of the Best BJJ Edition. All rights reserved.',
+    tos: 'Terms & Conditions',
+    privacy: 'Privacy Policy',
+  },
+
   nl: {
     // Navigation
     home: 'Home',
@@ -13,11 +88,11 @@ export const translations = {
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.',
-    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
+    slogan: 'The Ultimate Grappling Championship.',
     teamsAdmissions: 'Teams admissions',
     buyTickets: 'Koop Tickets',
     viewLineup: 'Bekijk Line-up',
-    smoothcompCta: 'Schrijf je in via Smoothcomp',
+    smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Tickets',
@@ -72,7 +147,7 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Alle rechten voorbehouden.',
-    tos: 'Terms of Service',
+    tos: 'Terms & Conditions',
     privacy: 'Privacy Policy',
   },
 
@@ -88,11 +163,11 @@ export const translations = {
     // Hero
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'L\'ultime confrontation sur le tapis. Vivez le combat rétro-futuriste.',
-    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
+    slogan: 'The Ultimate Grappling Championship.',
     teamsAdmissions: 'Teams admissions',
     buyTickets: 'Acheter des Billets',
     viewLineup: 'Voir le Line-up',
-    smoothcompCta: 'Inscription sur Smoothcomp',
+    smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
 
     // Tickets
     ticketsTitle: 'Billets',
@@ -147,84 +222,9 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
-    tos: 'Conditions d\'utilisation',
+    tos: 'Terms & Conditions',
     privacy: 'Politique de confidentialité',
-  },
-
-  de: {
-    // Navigation
-    home: 'Start',
-    about: 'Über uns',
-    tickets: 'Tickets',
-    lineup: 'Line-up',
-    locatie: 'Ort',
-    contact: 'Kontakt',
-
-    // Hero
-    theUltimateEvent: 'The Ultimate Event',
-    heroSubtitle: 'Die ultimative Konfrontation auf der Matte. Erlebe den retro-futuristischen Kampf.',
-    slogan: 'The Ultimate Brazilian Jiu Jitsu Championship.',
-    teamsAdmissions: 'Teams admissions',
-    buyTickets: 'Tickets Kaufen',
-    viewLineup: 'Line-up Ansehen',
-    smoothcompCta: 'Anmeldung über Smoothcomp',
-
-    // Tickets
-    ticketsTitle: 'Tickets',
-    ticketsSubtitle: 'Wähle dein Ticket und sei auf der Matte dabei',
-    earlyBird: 'Early Bird',
-    earlyBirdDesc: 'Begrenzt verfügbar – für echte Fans, die früh dran sind.',
-    earlyBirdF1: 'Zugang zur Veranstaltung',
-    earlyBirdF2: 'Gratis Willkommensgetränk',
-    earlyBirdF3: 'Early Bird Goodiebag',
-    regulier: 'Standard',
-    regulierDesc: 'Standardzugang zu Best of the Best BJJ Edition.',
-    regulierF1: 'Zugang zur Veranstaltung',
-    regulierF2: 'Zugang zu allen Kämpfen',
-    regulierF3: 'Essen & Getränke verfügbar',
-    vip: 'VIP',
-    vipDesc: 'Das ultimative Erlebnis – ganz vorne mit exklusiven Privilegien.',
-    vipF1: 'Bevorzugter Einlass',
-    vipF2: 'VIP-Tribüne mit bester Sicht',
-    vipF3: 'All-inclusive Essen & Getränke',
-    vipF4: 'Meet & Greet mit Kämpfern',
-    vipF5: 'Exklusives VIP-Shirt',
-    popular: 'Beliebt',
-    orderNow: 'Jetzt Bestellen',
-    ticketsFooter: 'Alle Tickets inklusive MwSt. • Keine Rückerstattung • 18+',
-
-    // Line-up
-    lineupTitle: 'Line-up',
-    lineupSubtitle: 'Die besten Kämpfer der Welt – bereit für den Kampf',
-    record: 'Bilanz',
-    blackBelt: 'Schwarzer Gürtel',
-    brownBelt: 'Brauner Gürtel',
-    moreFighters: 'Weitere Kämpfer werden bald angekündigt • Folge uns für Updates',
-
-    // Locatie
-    locatieTitle: 'Ort',
-    locatieSubtitle: 'AFAS Live — Das Herz von Amsterdam Südost',
-    address: 'Adresse',
-    dateTime: 'Datum & Uhrzeit',
-    dateTimeLine1: 'Samstag 12. Juli 2026',
-    dateTimeLine2: 'Einlass: 18:00 Uhr',
-    dateTimeLine3: 'Beginn: 19:00 Uhr',
-    publicTransport: 'Öffentlicher Nahverkehr',
-    ptLine1: 'Metro 54: Station Strandvliet',
-    ptLine2: '5 Min. Fußweg von der Station',
-    ptLine3: 'Bus 46 & 47 halten vor der Tür',
-    byCar: 'Mit dem Auto',
-    carLine1: 'A2 / A9 Richtung Amsterdam Arena',
-    carLine2: 'Parkhaus P1 Arena',
-    carLine3: '10 € Tagesgebühr',
-    capacity: 'Kapazität: 6.000 Plätze • Indoor-Arena',
-    openInMaps: 'In Maps öffnen',
-
-    // Footer
-    copyright: '© 2026 Best of the Best BJJ Edition. Alle Rechte vorbehalten.',
-    tos: 'Nutzungsbedingungen',
-    privacy: 'Datenschutzrichtlinie',
   },
 } as const;
 
-export type TranslationKey = keyof typeof translations.nl;
+export type TranslationKey = keyof typeof translations.en;

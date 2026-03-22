@@ -8,9 +8,9 @@ type LangContextType = {
 };
 
 export const LangContext = createContext<LangContextType>({
-  lang: 'nl',
+  lang: 'en',
   setLang: () => {},
-  t: (key) => translations.nl[key],
+  t: (key) => translations.en[key],
 });
 
 export function useLang() {
