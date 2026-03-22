@@ -65,10 +65,8 @@ export default function HomePage() {
       {/* Right-Side Vertical Navigation */}
       <nav className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 md:gap-6 z-50 pointer-events-auto text-right font-orbitron text-[10px] md:text-xs xl:text-sm tracking-widest font-semibold hidden md:flex">
         <a href="#toernooi" className="nav-link-vert">{t('navTournament') || "1. The Tournament March 21, 2027"}</a>
-        <a href="#smoothcomp" className="nav-link-vert">{t('navSmoothcomp') || "2. Athletes via Smoothcomp"}</a>
-        <a href="#teams" className="nav-link-vert">{t('navTeams') || "3. Team Admissions"}</a>
-        <a href="#sponsors" className="nav-link-vert">{t('navSponsors') || "4. Sponsors"}</a>
-        <a href="#contact" className="nav-link-vert">{t('navContact') || "5. Contact"}</a>
+        <a href="#sponsors" className="nav-link-vert">{t('navSponsors') || "2. Sponsors"}</a>
+        <a href="#contact" className="nav-link-vert">{t('navContact') || "3. Contact"}</a>
       </nav>
 
     </div>

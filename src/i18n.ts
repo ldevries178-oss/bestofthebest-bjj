@@ -23,8 +23,8 @@ export const translations = {
     navTournament: '1. The Tournament March 21, 2027',
     navSmoothcomp: '2. Athletes via Smoothcomp',
     navTeams: '3. Team Admissions',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navSponsors: '2. Sponsors',
+    navContact: '3. Contact',
 
     // Footer Extras
     footerAbout: 'About us',
@@ -109,8 +109,8 @@ export const translations = {
     navTournament: '1. Het toernooi 21 maart 2027',
     navSmoothcomp: '2. Athleten via Smoothcomp',
     navTeams: '3. Team Admissions',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navSponsors: '2. Sponsors',
+    navContact: '3. Contact',
 
     // Footer Extras
     footerAbout: 'Over ons',
@@ -195,8 +195,8 @@ export const translations = {
     navTournament: '1. Le tournoi 21 mars 2027',
     navSmoothcomp: '2. Athlètes via Smoothcomp',
     navTeams: '3. Inscriptions des Équipes',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navSponsors: '2. Sponsors',
+    navContact: '3. Contact',
 
     // Footer Extras
     footerAbout: 'À propos',
@@ -281,8 +281,8 @@ export const translations = {
     navTournament: '1. Das Turnier 21. März 2027',
     navSmoothcomp: '2. Athleten über Smoothcomp',
     navTeams: '3. Team-Anmeldungen',
-    navSponsors: '4. Sponsoren',
-    navContact: '5. Kontakt',
+    navSponsors: '2. Sponsoren',
+    navContact: '3. Kontakt',
 
     // Footer Extras
     footerAbout: 'Über uns',
