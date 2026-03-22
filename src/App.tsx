@@ -82,6 +82,12 @@ function LanguageSwitcher() {
         >
           FR
         </button>
+        <button 
+          onClick={() => setLang('de')} 
+          className={`px-2 py-1 text-sm font-bold uppercase transition-all duration-300 rounded hover:scale-110 hover:text-[#00ffff] hover:drop-shadow-[0_0_10px_rgba(0,255,255,0.8)] ${lang === 'de' ? 'text-[#00ffff] drop-shadow-[0_0_8px_rgba(0,255,255,0.8)]' : 'text-[#ff00ff]/70'}`}
+        >
+          DE
+        </button>
       </nav>
     </header>
   );

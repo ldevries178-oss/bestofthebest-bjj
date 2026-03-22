@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'nl' | 'fr';
+export type Lang = 'en' | 'nl' | 'fr' | 'de';
 
 export const translations = {
   en: {
@@ -14,10 +14,21 @@ export const translations = {
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'The ultimate confrontation on the mat. Experience the retro-futuristic fight.',
     slogan: 'The Ultimate Grappling Championship.',
-    teamsAdmissions: 'Teams admissions',
+    teamsAdmissions: 'Team Admissions',
     buyTickets: 'Buy Tickets',
     viewLineup: 'View Line-up',
-    smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
+    smoothcompCta: 'Athletes sign up via Smoothcomp',
+
+    // Vertical Nav
+    navTournament: '1. The Tournament March 21, 2027',
+    navSmoothcomp: '2. Athletes via Smoothcomp',
+    navTeams: '3. Team Admissions',
+    navSponsors: '4. Sponsors',
+    navContact: '5. Contact',
+
+    // Footer Extras
+    footerAbout: 'About us',
+    footerPress: 'Press & Mediakit',
 
     // Tickets
     ticketsTitle: 'Tickets',
@@ -89,10 +100,21 @@ export const translations = {
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'De ultieme confrontatie op de mat. Ervaar de retro-futuristische strijd.',
     slogan: 'The Ultimate Grappling Championship.',
-    teamsAdmissions: 'Teams admissions',
+    teamsAdmissions: 'Team Admissions',
     buyTickets: 'Koop Tickets',
     viewLineup: 'Bekijk Line-up',
     smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
+
+    // Vertical Nav
+    navTournament: '1. Het toernooi 21 maart 2027',
+    navSmoothcomp: '2. Athleten via Smoothcomp',
+    navTeams: '3. Team Admissions',
+    navSponsors: '4. Sponsors',
+    navContact: '5. Contact',
+
+    // Footer Extras
+    footerAbout: 'Over ons',
+    footerPress: 'Pers & Mediakit',
 
     // Tickets
     ticketsTitle: 'Tickets',
@@ -164,10 +186,21 @@ export const translations = {
     theUltimateEvent: 'The Ultimate Event',
     heroSubtitle: 'L\'ultime confrontation sur le tapis. Vivez le combat rétro-futuriste.',
     slogan: 'The Ultimate Grappling Championship.',
-    teamsAdmissions: 'Teams admissions',
+    teamsAdmissions: 'Inscriptions des Équipes',
     buyTickets: 'Acheter des Billets',
     viewLineup: 'Voir le Line-up',
-    smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
+    smoothcompCta: 'Les athlètes s\'inscrivent via Smoothcomp',
+
+    // Vertical Nav
+    navTournament: '1. Le tournoi 21 mars 2027',
+    navSmoothcomp: '2. Athlètes via Smoothcomp',
+    navTeams: '3. Inscriptions des Équipes',
+    navSponsors: '4. Sponsors',
+    navContact: '5. Contact',
+
+    // Footer Extras
+    footerAbout: 'À propos',
+    footerPress: 'Presse & Kit média',
 
     // Tickets
     ticketsTitle: 'Billets',
@@ -224,6 +257,92 @@ export const translations = {
     copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
     tos: 'Terms & Conditions',
     privacy: 'Politique de confidentialité',
+  },
+
+  de: {
+    // Navigation
+    home: 'Startseite',
+    about: 'Über uns',
+    tickets: 'Tickets',
+    lineup: 'Line-up',
+    locatie: 'Standort',
+    contact: 'Kontakt',
+
+    // Hero
+    theUltimateEvent: 'Das ultimative Event',
+    heroSubtitle: 'Die ultimative Konfrontation auf der Matte. Erlebe den retro-futuristischen Kampf.',
+    slogan: 'The Ultimate Grappling Championship.',
+    teamsAdmissions: 'Team-Anmeldungen',
+    buyTickets: 'Tickets Kaufen',
+    viewLineup: 'Line-up Ansehen',
+    smoothcompCta: 'Athleten melden sich über Smoothcomp an',
+
+    // Vertical Nav
+    navTournament: '1. Das Turnier 21. März 2027',
+    navSmoothcomp: '2. Athleten über Smoothcomp',
+    navTeams: '3. Team-Anmeldungen',
+    navSponsors: '4. Sponsoren',
+    navContact: '5. Kontakt',
+
+    // Footer Extras
+    footerAbout: 'Über uns',
+    footerPress: 'Presse & Medienkit',
+
+    // Tickets
+    ticketsTitle: 'Tickets',
+    ticketsSubtitle: 'Wähle dein Ticket und sei auf der Matte dabei',
+    earlyBird: 'Frühbucher',
+    earlyBirdDesc: 'Begrenzte Verfügbarkeit – für die echten Fans, die früh dran sind.',
+    earlyBirdF1: 'Zugang zum Event',
+    earlyBirdF2: 'Kostenloses Begrüßungsgetränk',
+    earlyBirdF3: 'Frühbucher-Goodie-Bag',
+    regulier: 'Regulär',
+    regulierDesc: 'Standardzugang zur Best of the Best BJJ Edition.',
+    regulierF1: 'Zugang zum Event',
+    regulierF2: 'Zugang zu allen Kämpfen',
+    regulierF3: 'Essen & Getränke verfügbar',
+    vip: 'VIP',
+    vipDesc: 'Das ultimative Erlebnis – erste Reihe mit exklusiven Privilegien.',
+    vipF1: 'Bevorzugter Einlass',
+    vipF2: 'VIP-Tribüne mit bester Sicht',
+    vipF3: 'All-inclusive Essen & Getränke',
+    vipF4: 'Meet & Greet mit den Kämpfern',
+    vipF5: 'Exklusives VIP-Shirt',
+    popular: 'Beliebt',
+    orderNow: 'Jetzt Bestellen',
+    ticketsFooter: 'Alle Tickets inkl. MwSt. • Keine Rückerstattung • 18+',
+
+    // Line-up
+    lineupTitle: 'Line-up',
+    lineupSubtitle: 'Die besten Kämpfer der Welt – bereit für den Kampf',
+    record: 'Bilanz',
+    blackBelt: 'Schwarzgurt',
+    brownBelt: 'Braungurt',
+    moreFighters: 'Weitere Kämpfer werden bald bekannt gegeben • Folge uns',
+
+    // Locatie
+    locatieTitle: 'Standort',
+    locatieSubtitle: 'AFAS Live — Das Herz von Amsterdam Südost',
+    address: 'Adresse',
+    dateTime: 'Datum & Uhrzeit',
+    dateTimeLine1: 'Samstag, 12. Juli 2026',
+    dateTimeLine2: 'Einlass: 18:00 Uhr',
+    dateTimeLine3: 'Beginn: 19:00 Uhr',
+    publicTransport: 'Öffentliche Verkehrsmittel',
+    ptLine1: 'Metro 54: Station Strandvliet',
+    ptLine2: '5 Min. Fußweg vom Bahnhof',
+    ptLine3: 'Bus 46 & 47 halten vor der Tür',
+    byCar: 'Mit dem Auto',
+    carLine1: 'A2 / A9 Richtung Amsterdam Arena',
+    carLine2: 'Parkhaus P1 Arena',
+    carLine3: '10 € Tageskarte',
+    capacity: 'Kapazität: 6.000 Plätze • Innenarena',
+    openInMaps: 'In Maps öffnen',
+
+    // Footer
+    copyright: '© 2026 Best of the Best BJJ Edition. Alle Rechte vorbehalten.',
+    tos: 'Allgemeine Geschäftsbedingungen',
+    privacy: 'Datenschutzrichtlinie',
   },
 } as const;
 
