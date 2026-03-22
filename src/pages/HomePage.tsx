@@ -38,18 +38,21 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-4 mt-2">
-          <a 
-            href="#smoothcomp" 
-            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
-          >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[800px] px-4 z-20 mt-4 md:mt-2">
+          <a href="#toernooi" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+            {t('navTournament') || "1. The Tournament March 21, 2027"}
+          </a>
+          <a href="#smoothcomp" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
             {t('smoothcompCta') || "Athletes sign up via Smoothcomp"}
           </a>
-          <a 
-            href="#teams" 
-            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
-          >
+          <a href="#teams" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
             {t('teamsAdmissions') || "Team Admissions"}
+          </a>
+          <a href="#sponsors" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+            {t('navSponsors') || "4. Sponsors"}
+          </a>
+          <a href="#contact" className="neon-button-ref md:col-span-2 md:justify-self-center flex items-center justify-center w-full md:w-[380px] h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+            {t('navContact') || "5. Contact"}
           </a>
         </div>
 
@@ -62,12 +65,6 @@ export default function HomePage() {
         </footer>
       </main>
 
-      {/* Right-Side Vertical Navigation */}
-      <nav className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 md:gap-6 z-50 pointer-events-auto text-right font-orbitron text-[10px] md:text-xs xl:text-sm tracking-widest font-semibold hidden md:flex">
-        <a href="#toernooi" className="nav-link-vert">{t('navTournament') || "1. The Tournament March 21, 2027"}</a>
-        <a href="#sponsors" className="nav-link-vert">{t('navSponsors') || "2. Sponsors"}</a>
-        <a href="#contact" className="nav-link-vert">{t('navContact') || "3. Contact"}</a>
-      </nav>
 
     </div>
   );
