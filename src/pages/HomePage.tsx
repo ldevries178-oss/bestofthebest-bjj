@@ -38,18 +38,36 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-3">
+        <div className="flex flex-col items-center justify-center w-full max-w-[420px] px-4 z-20 gap-2">
+          <a 
+            href="#toernooi" 
+            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
+          >
+            {t('navTournament') || "1. Het toernooi 21 maart 2027"}
+          </a>
           <a 
             href="#smoothcomp" 
-            className="neon-button-ref flex items-center justify-center w-full h-[48px] md:h-[52px] font-orbitron font-semibold text-sm md:text-base tracking-wider rounded-lg whitespace-nowrap px-6"
+            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
           >
-            {t('smoothcompCta') || "Athletes Sign up via Smoothcomp"}
+            {t('smoothcompCta') || "2. Athleten via Smoothcomp"}
           </a>
           <a 
             href="#teams" 
-            className="neon-button-ref flex items-center justify-center w-full h-[48px] md:h-[52px] font-orbitron font-semibold text-sm md:text-base tracking-wider rounded-lg whitespace-nowrap px-6"
+            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
           >
-            {t('teamsAdmissions') || "Teams admissions"}
+            {t('teamsAdmissions') || "3. Team Admissions"}
+          </a>
+          <a 
+            href="#sponsors" 
+            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
+          >
+            {t('navSponsors') || "4. Sponsors"}
+          </a>
+          <a 
+            href="#contact" 
+            className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs md:text-sm tracking-widest rounded-lg whitespace-nowrap px-6"
+          >
+            {t('navContact') || "5. Contact"}
           </a>
         </div>
 
@@ -62,24 +80,6 @@ export default function HomePage() {
         </footer>
       </main>
 
-      {/* Right Side Vertical Navigation */}
-      <nav className="fixed right-0 top-1/2 -translate-y-1/2 p-4 md:p-8 z-50 flex flex-col gap-4 md:gap-6 text-right items-end pointer-events-none">
-        <a href="#toernooi" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
-          {t('navTournament') || "1. Het toernooi 21 maart 2027"}
-        </a>
-        <a href="#smoothcomp" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
-          {t('navSmoothcomp') || "2. Athleten via Smoothcomp"}
-        </a>
-        <a href="#teams" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
-          {t('navTeams') || "3. Team Admissions"}
-        </a>
-        <a href="#sponsors" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
-          {t('navSponsors') || "4. Sponsors"}
-        </a>
-        <a href="#contact" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
-          {t('navContact') || "5. Contact"}
-        </a>
-      </nav>
     </div>
   );
 }
