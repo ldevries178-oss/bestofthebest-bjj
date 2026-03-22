@@ -54,11 +54,32 @@ export default function HomePage() {
         </div>
 
         {/* Footer Links */}
-        <footer className="w-full text-center mt-8 text-white text-sm md:text-base font-semibold tracking-widest drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">
-          <a href="#tos" className="hover:text-[#00ffff] transition-colors mr-8">{t('tos')}</a>
-          <a href="#privacy" className="hover:text-[#00ffff] transition-colors">{t('privacy')}</a>
+        <footer className="w-full flex flex-wrap justify-center gap-6 md:gap-10 mt-8 text-white text-xs md:text-sm font-semibold tracking-widest z-20 font-orbitron">
+          <a href="#about" className="footer-link-neon">About us</a>
+          <a href="#tos" className="footer-link-neon">Terms & Conditions</a>
+          <a href="#privacy" className="footer-link-neon">Privacy Policy</a>
+          <a href="#press" className="footer-link-neon">Press & Mediakit</a>
         </footer>
       </main>
+
+      {/* Right Side Vertical Navigation */}
+      <nav className="fixed right-0 top-1/2 -translate-y-1/2 p-4 md:p-8 z-50 flex flex-col gap-4 md:gap-6 text-right items-end pointer-events-none">
+        <a href="#toernooi" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
+          1. Het toernooi 21 maart 2027
+        </a>
+        <a href="#smoothcomp" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
+          2. Athleten via Smoothcomp
+        </a>
+        <a href="#teams" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
+          3. Team Admissions
+        </a>
+        <a href="#sponsors" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
+          4. Sponsors
+        </a>
+        <a href="#contact" className="pointer-events-auto font-orbitron font-semibold text-xs md:text-sm tracking-widest nav-link-vert uppercase">
+          5. Contact
+        </a>
+      </nav>
     </div>
   );
 }
