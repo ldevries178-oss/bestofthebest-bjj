@@ -45,14 +45,10 @@ function SocialIcons() {
           href="https://www.smoothcomp.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon-link"
+          className="social-icon-link flex items-center justify-center w-[22px] h-[22px]"
           aria-label="Smoothcomp"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-            <path d="M2 17l10 5 10-5"/>
-            <path d="M2 12l10 5 10-5"/>
-          </svg>
+          <img src="/smoothcomp-icon.png" alt="Smoothcomp" className="w-full h-full object-contain" />
         </a>
       </nav>
     </div>
