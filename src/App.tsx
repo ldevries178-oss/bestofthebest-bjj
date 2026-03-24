@@ -45,11 +45,11 @@ function SocialIcons() {
           href="https://www.smoothcomp.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon-link flex items-center justify-center p-[2px]"
+          className="social-icon-link flex items-center justify-center"
           aria-label="Smoothcomp"
         >
           <div 
-            className="w-6 h-6"
+            className="w-7 h-7"
             style={{ 
               backgroundColor: 'currentColor', 
               maskImage: 'url(/smoothcomp-icon.png)', 

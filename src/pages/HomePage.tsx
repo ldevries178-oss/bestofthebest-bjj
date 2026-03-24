@@ -16,7 +16,7 @@ export default function HomePage() {
       ></video>
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center justify-center gap-8 w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-8 md:py-12">
+      <main className="relative z-10 flex flex-col items-center justify-center gap-5 md:gap-8 w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-6 md:py-12">
         
         {/* Main Slogan */}
         <div className="z-20">
@@ -38,20 +38,20 @@ export default function HomePage() {
         </div>
 
         {/* Action Buttons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-[800px] px-4 z-20 mt-4 md:mt-2">
-          <a href="#toernooi" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 w-full max-w-[800px] px-2 sm:px-4 z-20 mt-2">
+          <a href="#toernooi" className="neon-button-ref flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
             {t('navTournament') || "1. The Tournament March 21, 2027"}
           </a>
-          <a href="#smoothcomp" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+          <a href="#smoothcomp" className="neon-button-ref flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
             {t('smoothcompCta') || "Athletes sign up via Smoothcomp"}
           </a>
-          <a href="#teams" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+          <a href="#teams" className="neon-button-ref flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
             {t('teamsAdmissions') || "Team Admissions"}
           </a>
-          <a href="#sponsors" className="neon-button-ref flex items-center justify-center w-full h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+          <a href="#sponsors" className="neon-button-ref flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
             {t('navSponsors') || "4. Sponsors"}
           </a>
-          <a href="#contact" className="neon-button-ref md:col-span-2 md:justify-self-center flex items-center justify-center w-full md:w-[380px] h-[42px] md:h-[48px] font-orbitron font-semibold text-xs xl:text-sm tracking-widest rounded-lg whitespace-nowrap px-4 sm:px-6">
+          <a href="#contact" className="neon-button-ref md:col-span-2 md:justify-self-center flex items-center justify-center w-full md:w-[380px] h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
             {t('navContact') || "5. Contact"}
           </a>
         </div>
