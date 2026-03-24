@@ -39,19 +39,19 @@ export default function HomePage() {
 
         {/* Action Buttons */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-4 w-full max-w-[800px] px-2 sm:px-4 z-20 mt-2">
-          <a href="#toernooi" className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
+          <a href="#toernooi" className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
             {t('navTournament') || "The Tournament March 21, 2027"}
           </a>
-          <a href="#smoothcomp" className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
+          <a href="#smoothcomp" className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
             {t('smoothcompCta') || "Athletes sign up via Smoothcomp"}
           </a>
-          <a href="#teams" className="neon-button-ref col-span-1 flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[10px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-1 sm:px-6 text-center">
+          <a href="#teams" className="neon-button-ref col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[10px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-1 sm:px-6 text-center">
             {t('teamsAdmissions') || "Team Admissions"}
           </a>
-          <a href="#sponsors" className="neon-button-ref col-span-1 flex items-center justify-center w-full h-[38px] md:h-[48px] font-orbitron font-semibold text-[10px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-1 sm:px-6 text-center">
+          <a href="#sponsors" className="neon-button-ref col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[10px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-1 sm:px-6 text-center">
             {t('navSponsors') || "Sponsors"}
           </a>
-          <a href="#contact" className="neon-button-ref col-span-2 md:col-span-2 md:justify-self-center flex items-center justify-center w-full md:w-[380px] h-[38px] md:h-[48px] font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-nowrap px-2 sm:px-6">
+          <a href="#contact" className="neon-button-ref col-span-2 md:col-span-2 md:justify-self-center flex items-center justify-center w-full md:w-[380px] h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
             {t('navContact') || "Contact"}
           </a>
         </div>
