@@ -45,22 +45,13 @@ function SocialIcons() {
           href="https://www.smoothcomp.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="social-icon-link flex items-center justify-center"
+          className="social-icon-link flex items-center justify-center group"
           aria-label="Smoothcomp"
         >
-          <div 
-            className="w-7 h-7"
-            style={{ 
-              backgroundColor: 'currentColor', 
-              maskImage: 'url(/smoothcomp-icon.png)', 
-              maskSize: 'contain', 
-              maskRepeat: 'no-repeat', 
-              maskPosition: 'center',
-              WebkitMaskImage: 'url(/smoothcomp-icon.png)',
-              WebkitMaskSize: 'contain',
-              WebkitMaskRepeat: 'no-repeat',
-              WebkitMaskPosition: 'center'
-            }} 
+          <img 
+            src="/smoothcomp-icon.png"
+            alt="Smoothcomp"
+            className="w-7 h-7 object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
           />
         </a>
       </nav>

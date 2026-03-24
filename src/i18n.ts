@@ -20,11 +20,11 @@ export const translations = {
     smoothcompCta: 'Athletes sign up via Smoothcomp',
 
     // Vertical Nav
-    navTournament: '1. The Tournament March 21, 2027',
-    navSmoothcomp: '2. Athletes via Smoothcomp',
-    navTeams: '3. Team Admissions',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navTournament: 'The Tournament March 21, 2027',
+    navSmoothcomp: 'Athletes via Smoothcomp',
+    navTeams: 'Team Admissions',
+    navSponsors: 'Sponsors',
+    navContact: 'Contact',
 
     // Footer Extras
     footerAbout: 'About us',
@@ -106,11 +106,11 @@ export const translations = {
     smoothcompCta: 'Athleten Schrijf je in via Smoothcomp',
 
     // Vertical Nav
-    navTournament: '1. Het toernooi 21 maart 2027',
-    navSmoothcomp: '2. Athleten via Smoothcomp',
-    navTeams: '3. Team Admissions',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navTournament: 'Het toernooi 21 maart 2027',
+    navSmoothcomp: 'Athleten via Smoothcomp',
+    navTeams: 'Team Admissions',
+    navSponsors: 'Sponsors',
+    navContact: 'Contact',
 
     // Footer Extras
     footerAbout: 'Over ons',
@@ -192,11 +192,11 @@ export const translations = {
     smoothcompCta: 'Les athlètes s\'inscrivent via Smoothcomp',
 
     // Vertical Nav
-    navTournament: '1. Le tournoi 21 mars 2027',
-    navSmoothcomp: '2. Athlètes via Smoothcomp',
-    navTeams: '3. Inscriptions des Équipes',
-    navSponsors: '4. Sponsors',
-    navContact: '5. Contact',
+    navTournament: 'Le tournoi 21 mars 2027',
+    navSmoothcomp: 'Athlètes via Smoothcomp',
+    navTeams: 'Inscriptions des Équipes',
+    navSponsors: 'Sponsors',
+    navContact: 'Contact',
 
     // Footer Extras
     footerAbout: 'À propos',
@@ -278,11 +278,11 @@ export const translations = {
     smoothcompCta: 'Athleten melden sich über Smoothcomp an',
 
     // Vertical Nav
-    navTournament: '1. Das Turnier 21. März 2027',
-    navSmoothcomp: '2. Athleten über Smoothcomp',
-    navTeams: '3. Team-Anmeldungen',
-    navSponsors: '4. Sponsoren',
-    navContact: '5. Kontakt',
+    navTournament: 'Das Turnier 21. März 2027',
+    navSmoothcomp: 'Athleten über Smoothcomp',
+    navTeams: 'Team-Anmeldungen',
+    navSponsors: 'Sponsoren',
+    navContact: 'Kontakt',
 
     // Footer Extras
     footerAbout: 'Über uns',
