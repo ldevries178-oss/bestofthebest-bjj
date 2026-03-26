@@ -62,7 +62,7 @@ function SocialIcons() {
 function LanguageSwitcher() {
   const { lang, setLang } = useLang();
   return (
-    <header className="fixed top-0 right-0 p-4 md:p-6 flex justify-end z-[100] pointer-events-none bg-gradient-to-b from-black/80 via-black/40 to-transparent w-auto">
+    <header className="fixed top-0 right-0 p-4 md:p-6 flex justify-end z-[100] pointer-events-none w-auto">
       <nav className="flex gap-2 md:gap-4 items-center px-4 py-2 pointer-events-auto font-orbitron z-50">
         <button 
           onClick={() => setLang('en')} 
