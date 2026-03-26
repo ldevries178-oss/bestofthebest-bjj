@@ -271,8 +271,8 @@ body {
   opacity: 0.6;
 }
 
-/* Adjust YouTube icon specific scaling */
+/* Adjust YouTube icon specific scaling to match Instagram/Smoothcomp height */
 .youtube-icon-fix {
-  transform: scale(1.15);
+  transform: scale(1.3);
   transform-origin: center;
 }
