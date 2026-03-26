@@ -169,8 +169,8 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Alle rechten voorbehouden.',
-    tos: 'Terms & Conditions',
-    privacy: 'Privacy Policy',
+    tos: 'Algemene Voorwaarden',
+    privacy: 'Privacybeleid',
   },
 
   fr: {
@@ -255,8 +255,8 @@ export const translations = {
 
     // Footer
     copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
-    tos: 'Terms & Conditions',
-    privacy: 'Politique de confidentialité',
+    tos: 'Conditions Générales',
+    privacy: 'Politique de Confidentialité',
   },
 
   de: {
