@@ -48,10 +48,10 @@ export default function PageLayout({ title, children }: PageLayoutProps) {
 
       {/* Footer (Simplified) */}
       <footer className="relative z-10 w-full py-12 border-t border-white/10 flex justify-center gap-8 font-orbitron text-[10px] md:text-xs tracking-widest uppercase opacity-60">
-        <Link to="/about" className="hover:text-synth-blue transition-colors">About</Link>
-        <Link to="/terms" className="hover:text-synth-blue transition-colors">Terms</Link>
-        <Link to="/privacy" className="hover:text-synth-blue transition-colors">Privacy</Link>
-        <Link to="/contact" className="hover:text-synth-blue transition-colors">Contact</Link>
+        <Link to="/about" className="hover:text-synth-blue transition-colors">{t('footerAbout') || 'About'}</Link>
+        <Link to="/terms" className="hover:text-synth-blue transition-colors">{t('tos') || 'Terms'}</Link>
+        <Link to="/privacy" className="hover:text-synth-blue transition-colors">{t('privacy') || 'Privacy'}</Link>
+        <Link to="/contact" className="hover:text-synth-blue transition-colors">{t('contact') || 'Contact'}</Link>
       </footer>
     </div>
   );

@@ -17,10 +17,10 @@ export default function Contact() {
   return (
     <PageLayout title={t('navContact') || "Contact Us"}>
       <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto">
-        <p className="text-center italic opacity-60 mb-8 font-orbitron text-xs">Reach out for any questions or inquiries.</p>
+        <p className="text-center italic opacity-60 mb-8 font-orbitron text-xs">{t('contact_subtitle')}</p>
         
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Full Name</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('contact_fullname')}</label>
           <input 
             name="name"
             type="text" 
@@ -30,7 +30,7 @@ export default function Contact() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Email Address</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('contact_email')}</label>
           <input 
             name="email"
             type="email" 
@@ -40,13 +40,13 @@ export default function Contact() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Your Message</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('contact_message')}</label>
           <textarea 
             name="message"
             rows={5}
             required
             className="w-full bg-[#0a0a0f]/80 border border-synth-blue/30 rounded-lg p-3 text-white focus:border-synth-blue focus:shadow-[0_0_10px_rgba(0,255,255,0.3)] outline-none transition-all placeholder:text-white/20"
-            placeholder="How can we help you?"
+            placeholder={t('contact_message_placeholder')}
           ></textarea>
         </div>
 
@@ -54,7 +54,7 @@ export default function Contact() {
           type="submit"
           className="w-full py-4 mt-8 font-orbitron font-bold text-sm bg-gradient-to-r from-synth-pink to-synth-blue text-white rounded-lg shadow-[0_0_20px_rgba(255,0,255,0.5)] hover:shadow-[0_0_30px_rgba(255,0,255,0.8)] hover:scale-[1.02] transition-all"
         >
-          SEND MESSAGE
+          {t('contact_submit')}
         </button>
       </form>
     </PageLayout>

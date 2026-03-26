@@ -15,6 +15,9 @@ import Privacy from './pages/Privacy';
 import Press from './pages/Press';
 import TeamAdmissions from './pages/TeamAdmissions';
 import Contact from './pages/Contact';
+import TicketsPage from './pages/TicketsPage';
+import LineupPage from './pages/LineupPage';
+import LocatiePage from './pages/LocatiePage';
 import { type Lang, translations } from './i18n';
 import { LangContext, useLang } from './LangContext';
 
@@ -107,6 +110,9 @@ function AppContent() {
         <Route path="/press" element={<Press />} />
         <Route path="/teams" element={<TeamAdmissions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/tickets" element={<TicketsPage />} />
+        <Route path="/lineup" element={<LineupPage />} />
+        <Route path="/location" element={<LocatiePage />} />
       </Routes>
     </>
   );

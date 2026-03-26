@@ -17,10 +17,10 @@ export default function TeamAdmissions() {
   return (
     <PageLayout title={t('teamsAdmissions') || "Team Admissions"}>
       <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto">
-        <p className="text-center italic opacity-60 mb-8 font-orbitron text-xs">Register your team for 2027.</p>
+        <p className="text-center italic opacity-60 mb-8 font-orbitron text-xs">{t('teams_subtitle')}</p>
         
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Team Name</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('teams_teamname')}</label>
           <input 
             name="teamName"
             type="text" 
@@ -31,7 +31,7 @@ export default function TeamAdmissions() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Contact Person</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('teams_contact')}</label>
           <input 
             name="contactName"
             type="text" 
@@ -41,7 +41,7 @@ export default function TeamAdmissions() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Email Address</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('teams_email')}</label>
           <input 
             name="email"
             type="email" 
@@ -51,12 +51,12 @@ export default function TeamAdmissions() {
         </div>
 
         <div className="space-y-2">
-          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">Experience Level</label>
+          <label className="block text-[10px] font-orbitron text-synth-pink uppercase tracking-widest pl-2">{t('teams_experience')}</label>
           <textarea 
             name="experience"
             rows={3}
             className="w-full bg-[#0a0a0f]/80 border border-synth-blue/30 rounded-lg p-3 text-white focus:border-synth-blue focus:shadow-[0_0_10px_rgba(0,255,255,0.3)] outline-none transition-all placeholder:text-white/20"
-            placeholder="Briefly describe your team's background..."
+            placeholder={t('teams_experience_placeholder')}
           ></textarea>
         </div>
 
@@ -64,7 +64,7 @@ export default function TeamAdmissions() {
           type="submit"
           className="w-full py-4 mt-8 font-orbitron font-bold text-sm bg-gradient-to-r from-synth-pink to-synth-blue text-white rounded-lg shadow-[0_0_20px_rgba(255,0,255,0.5)] hover:shadow-[0_0_30px_rgba(255,0,255,0.8)] hover:scale-[1.02] transition-all"
         >
-          SEND APPLICATION
+          {t('teams_submit')}
         </button>
       </form>
     </PageLayout>
