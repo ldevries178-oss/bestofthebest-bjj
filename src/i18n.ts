@@ -85,6 +85,7 @@ export const translations = {
     copyright: '© 2026 Best of the Best BJJ Edition. All rights reserved.',
     tos: 'Terms & Conditions',
     privacy: 'Privacy Policy',
+    backToHome: 'BACK TO HOME',
   },
 
   nl: {
@@ -171,6 +172,7 @@ export const translations = {
     copyright: '© 2026 Best of the Best BJJ Edition. Alle rechten voorbehouden.',
     tos: 'Algemene Voorwaarden',
     privacy: 'Privacybeleid',
+    backToHome: 'TERUG NAAR HOME',
   },
 
   fr: {
@@ -257,6 +259,7 @@ export const translations = {
     copyright: '© 2026 Best of the Best BJJ Edition. Tous droits réservés.',
     tos: 'Conditions Générales',
     privacy: 'Politique de Confidentialité',
+    backToHome: 'RETOUR À L\'ACCUEIL',
   },
 
   de: {
@@ -343,6 +346,7 @@ export const translations = {
     copyright: '© 2026 Best of the Best BJJ Edition. Alle Rechte vorbehalten.',
     tos: 'Allgemeine Geschäftsbedingungen',
     privacy: 'Datenschutzrichtlinie',
+    backToHome: 'ZURÜCK ZUR STARTSEITE',
   },
 } as const;
 
