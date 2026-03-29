@@ -21,7 +21,7 @@ export default function HomePage() {
         
         {/* Main Slogan */}
         <div className="z-20">
-          <h1 className="font-orbitron font-semibold text-xl md:text-2xl xl:text-3xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] text-center px-4 tracking-wide leading-snug">
+          <h1 className="font-orbitron font-semibold text-xl md:text-2xl xl:text-3xl text-white/90 drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] text-center px-4 tracking-wide leading-snug">
             {t('slogan') || "The Ultimate Grappling Championship."}
           </h1>
         </div>

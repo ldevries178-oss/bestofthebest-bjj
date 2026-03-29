@@ -12,11 +12,11 @@ export default function Tournament() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="p-6 rounded-xl bg-synth-blue/5 border border-synth-blue/20">
-            <h3 className="font-orbitron text-synth-blue text-lg mb-4">{t('tournament_venue_title')}</h3>
+            <h3 className="font-orbitron text-synth-blue text-lg mb-4 neon-text-blue-subtle">{t('tournament_venue_title')}</h3>
             <p className="whitespace-pre-line">{t('tournament_venue_text')}</p>
           </div>
           <div className="p-6 rounded-xl bg-synth-pink/5 border border-synth-pink/20">
-            <h3 className="font-orbitron text-synth-pink text-lg mb-4">{t('tournament_format_title')}</h3>
+            <h3 className="font-orbitron text-synth-pink text-lg mb-4 neon-text-pink-subtle">{t('tournament_format_title')}</h3>
             <p className="whitespace-pre-line">{t('tournament_format_text')}</p>
           </div>
         </div>
