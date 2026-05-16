@@ -27,7 +27,7 @@ function SocialIcons() {
       <nav className="flex gap-3 items-center pointer-events-auto">
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/bestofthebest_bjj/"
+          href="https://www.instagram.com/bestofthebestbjj?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon-link w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-sm hover:border-synth-blue transition-all"
