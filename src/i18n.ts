@@ -112,16 +112,16 @@ export const translations = {
     // Tournament Page
     tournament_p1: 'March 21, 2027 – Save the date. Best of the Best BJJ Edition returns for the most prestigious grappling event of the year. A retro-futuristic stage where the finest athletes collide in a high-stakes synthwave atmosphere.',
     tournament_venue_title: 'Venue',
-    tournament_venue_text: 'Brussels, Belgium\nPremium Arena\nThe Heart of Europe',
+    tournament_venue_text: 'Pierre de Coubertinplein 4, 1362 LB Almere\nEvent time: 08:00 to 19:00',
     tournament_format_title: 'Format',
-    tournament_format_text: 'EBI Overtime Rules\nSubmission Only\nInvite & Qualifiers Only',
+    tournament_format_text: 'Morning: 1 vs 1 BJJ competition\nAfternoon: Main event, Team vs Team',
 
     // Sponsors Page
-    sponsors_text: 'Join the neon revolution. Partner with the most visually stunning grappling event in the world.',
+    sponsors_text: 'Join the BJJ revolution. Partner with the most spectacular grappling event in the Netherlands and become part of a movement that is redefining the sport. Step in early as an official partner and grow alongside one of the fastest rising events in European grappling.',
     sponsors_cta: 'BECOME A SPONSOR',
 
     // Press Page
-    press_quote: '"The most visually appealing grappling event in the world – A return to the 80s through the eyes of a warrior."',
+    press_quote: 'Cover the BJJ revolution. Gain exclusive access to one of the most spectacular grappling event in the Netherlands and follow the rise of a movement that is reshaping the sport. From elite 1vs 1 matchups to a unique team based format, this is where the next chapter of European grappling begins.',
     press_kit_title: 'LOGOS & COLOR PALETTE',
     press_kit_text: 'High-res PNG & SVG files including neon effects.',
     press_kit_btn: 'DOWNLOAD KIT (ZIP)',
@@ -259,16 +259,16 @@ export const translations = {
     // Toernooi Page (NL)
     tournament_p1: '21 maart 2027 – Save the date. Best of the Best BJJ Edition keert terug voor het meest prestigieuze grappling-evenement van het jaar. Een retro-futuristisch podium waar de beste atleten samenkomen in een high-stakes synthwave sfeer.',
     tournament_venue_title: 'Locatie',
-    tournament_venue_text: 'Brussel, België\nPremium Arena\nHet hart van Europa',
+    tournament_venue_text: 'Pierre de Coubertinplein 4, 1362 LB Almere\nEvenementtijd: 08:00 tot 19:00',
     tournament_format_title: 'Formaat',
-    tournament_format_text: 'EBI Overtime Rules\nSubmission Only\nInvite & Qualifiers Only',
+    tournament_format_text: 'Ochtend: 1 vs 1 BJJ competitie\nMiddag: Hoofdevenement, Team vs Team',
 
     // Sponsors Page (NL)
-    sponsors_text: 'Maak deel uit van de neonrevolutie. Word partner van het meest visueel indrukwekkende grappling-evenement ter wereld.',
+    sponsors_text: 'Word deel van de BJJ-revolutie. Word partner van het meest spectaculaire grappling-evenement in Nederland en maak deel uit van een beweging die de sport herdefinieert. Stap vroeg in als officiële partner en groei mee met een van de snelst stijgende evenementen in Europees grappling.',
     sponsors_cta: 'WORD SPONSOR',
 
     // Pers Page (NL)
-    press_quote: '"Het meest visueel aantrekkelijke grappling-evenement ter wereld – Een terugblik naar de jaren 80 door de ogen van een krijger."',
+    press_quote: 'Versla de BJJ-revolutie. Krijg exclusieve toegang tot een van de meest spectaculaire grappling-evenementen in Nederland en volg de opkomst van een beweging die de sport hervormt. Van elite 1-tegen-1 wedstrijden tot een uniek teamgebaseerd format, hier begint het volgende hoofdstuk van het Europese grappling.',
     press_kit_title: 'LOGO\'S & KLEURENPALET',
     press_kit_text: 'PNG- en SVG-bestanden in hoge resolutie, inclusief neoneffecten.',
     press_kit_btn: 'DOWNLOAD KIT (ZIP)',
@@ -406,16 +406,16 @@ export const translations = {
     // Tournoi Page (FR)
     tournament_p1: '21 mars 2027 – Retenez la date. Best of the Best BJJ Edition revient pour l\'événement de grappling le plus prestigieux de l\'année. Une scène rétro-futuriste où les meilleurs athlètes se rencontrent dans une atmosphère synthwave à enjeux élevés.',
     tournament_venue_title: 'Lieu',
-    tournament_venue_text: 'Bruxelles, Belgique\nPremium Arena\nLe cœur de l\'Europe',
+    tournament_venue_text: 'Pierre de Coubertinplein 4, 1362 LB Almere\nHeure de l\'événement: 08:00 à 19:00',
     tournament_format_title: 'Format',
-    tournament_format_text: 'Règles EBI Overtime\nSoumission uniquement\nInvitations et qualifications uniquement',
+    tournament_format_text: 'Matin: Compétition BJJ 1 vs 1\nAprès-midi: Événement principal, Équipe vs Équipe',
 
     // Sponsors Page (FR)
-    sponsors_text: 'Rejoignez la révolution néon. Devenez partenaire de l\'événement de grappling le plus visuellement époustouflant au monde.',
+    sponsors_text: 'Rejoignez la révolution BJJ. Devenez partenaire de l\'événement de grappling le plus spectaculaire des Pays-Bas et faites partie d\'un mouvement qui redéfinit le sport. Engagez-vous tôt en tant que partenaire officiel et grandissez avec l\'un des événements à la croissance la plus rapide du grappling européen.',
     sponsors_cta: 'DEVENIR SPONSOR',
 
     // Presse Page (FR)
-    press_quote: '"L\'événement de grappling le plus attrayant visuellement au monde – Un retour aux années 80 à travers les yeux d\'un guerrier."',
+    press_quote: 'Couvrez la révolution BJJ. Obtenez un accès exclusif à l\'un des événements de grappling les plus spectaculaires des Pays-Bas et suivez l\'essor d\'un mouvement qui remodèle le sport. Des matchs d\'élite 1vs1 à un format unique par équipe, c\'est ici que commence le prochain chapitre du grappling européen.',
     press_kit_title: 'LOGOS & PALETTE DE COULEURS',
     press_kit_text: 'Fichiers PNG et SVG haute résolution incluant des effets néon.',
     press_kit_btn: 'TÉLÉCHARGER LE KIT (ZIP)',
@@ -553,16 +553,16 @@ export const translations = {
     // Turniere Page (DE)
     tournament_p1: '21. März 2027 – Merken Sie sich das Datum vor. Best of the Best BJJ Edition kehrt für das prestigeträchtigste Grappling-Event des Jahres zurück. Eine retro-futuristische Bühne, auf der die besten Athleten in einer hochkarätigen Synthwave-Atmosphäre aufeinandertreffen.',
     tournament_venue_title: 'Veranstaltungsort',
-    tournament_venue_text: 'Brüssel, Belgien\nPremium Arena\nDas Herz Europas',
+    tournament_venue_text: 'Pierre de Coubertinplein 4, 1362 LB Almere\nVeranstaltungszeit: 08:00 bis 19:00',
     tournament_format_title: 'Format',
-    tournament_format_text: 'EBI Overtime Regeln\nNur Submission\nNur auf Einladung und Qualifikation',
+    tournament_format_text: 'Vormittag: 1 vs 1 BJJ Wettbewerb\nNachmittag: Hauptevent, Team vs Team',
 
     // Sponsors Page (DE)
-    sponsors_text: 'Werden Sie Teil der Neon-Revolution. Werden Sie Partner des visuell beeindruckendsten Grappling-Events der Welt.',
+    sponsors_text: 'Schließen Sie sich der BJJ-Revolution an. Werden Sie Partner des spektakulärsten Grappling-Events in den Niederlanden und werden Sie Teil einer Bewegung, die den Sport neu definiert. Steigen Sie früh als offizieller Partner ein und wachsen Sie mit einem der am schnellsten aufsteigenden Events im europäischen Grappling.',
     sponsors_cta: 'SPONSOR WERDEN',
 
     // Presse Page (DE)
-    press_quote: '"Das visuell ansprechendste Grappling-Event der Welt – Eine Rückkehr in die 80er Jahre durch die Augen eines Kriegers."',
+    press_quote: 'Berichten Sie über die BJJ-Revolution. Erhalten Sie exklusiven Zugang zu einem der spektakulärsten Grappling-Events in den Niederlanden und verfolgen Sie den Aufstieg einer Bewegung, die den Sport neu gestaltet. Von elitären 1-gegen-1-Kämpfen bis hin zu einem einzigartigen teambasierten Format – hier beginnt das nächste Kapitel des europäischen Grapplings.',
     press_kit_title: 'LOGOS & FARBPALETTE',
     press_kit_text: 'Hochauflösende PNG- und SVG-Dateien einschließlich Neoneffekten.',
     press_kit_btn: 'KIT HERUNTERLADEN (ZIP)',

@@ -17,13 +17,16 @@ export default function Sponsors() {
             </div>
           ))}
         </div>
-        <div className="pt-12">
+        <div className="pt-12 flex flex-col items-center justify-center space-y-4">
           <a 
             href="mailto:info@bestofthebestbjj.com" 
             className="inline-block px-10 py-4 font-orbitron font-bold text-synth-blue border-2 border-synth-blue rounded-full shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:bg-synth-blue hover:text-black transition-all"
           >
             {t('sponsors_cta')}
           </a>
+          <p className="text-synth-blue font-orbitron opacity-80">
+            info@bestofthebestbjj.com
+          </p>
         </div>
       </div>
     </PageLayout>
