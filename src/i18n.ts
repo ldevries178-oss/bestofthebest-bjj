@@ -95,11 +95,11 @@ export const translations = {
 
     // Terms Page
     terms_agreement_title: 'Agreement',
-    terms_agreement_text: 'By using this website, you agree to comply with our terms of service. Best of the Best BJJ is a Belgian organization in the heart of Brussels. All events are subject to safety protocols and athlete codes of conduct.',
+    terms_agreement_text: 'By using this website, you agree to comply with our terms of service. Best of the Best BJJ is a Dutch organization in the Netherlands. All events are subject to safety protocols and athlete codes of conduct.',
     terms_refund_title: 'Refund Policy',
     terms_refund_text: 'Tickets are generally non-refundable unless the event is cancelled or rescheduled. Athlete registrations follow specific team guidelines.',
     terms_jurisdiction_title: 'Jurisdiction',
-    terms_jurisdiction_text: 'This agreement is governed by the laws of Belgium.',
+    terms_jurisdiction_text: 'This agreement is governed by the laws of the Netherlands.',
 
     // Privacy Page
     privacy_data_title: 'Data Collection',
@@ -242,11 +242,11 @@ export const translations = {
 
     // Algemene Voorwaarden Page (NL)
     terms_agreement_title: 'Overeenkomst',
-    terms_agreement_text: 'Door deze website te gebruiken, gaat u akkoord met het naleven van onze algemene voorwaarden. Best of the Best BJJ is een Belgische organisatie in het hart van Brussel. Alle evenementen zijn onderworpen aan veiligheidsprotocollen en gedragscodes voor atleten.',
+    terms_agreement_text: 'Door deze website te gebruiken, gaat u akkoord met het naleven van onze algemene voorwaarden. Best of the Best BJJ is een Nederlandse organisatie in Nederland. Alle evenementen zijn onderworpen aan veiligheidsprotocollen en gedragscodes voor atleten.',
     terms_refund_title: 'Restitutiebeleid',
     terms_refund_text: 'Tickets zijn over het algemeen niet-restitueerbaar, tenzij het evenement wordt geannuleerd of verzet. Registraties van atleten volgen specifieke teamrichtlijnen.',
     terms_jurisdiction_title: 'Jurisdictie',
-    terms_jurisdiction_text: 'Deze overeenkomst wordt beheerst door de wetten van België.',
+    terms_jurisdiction_text: 'Deze overeenkomst wordt beheerst door de wetten van Nederland.',
 
     // Privacybeleid Page (NL)
     privacy_data_title: 'Gegevensverzameling',
@@ -389,11 +389,11 @@ export const translations = {
 
     // Conditions Générales Page (FR)
     terms_agreement_title: 'Accord',
-    terms_agreement_text: 'En utilisant ce site web, vous acceptez de vous conformer à nos conditions d\'utilisation. Best of the Best BJJ est une organisation belge au cœur de Bruxelles. Tous les événements sont soumis à des protocoles de sécurité et à des codes de conduite pour les athlètes.',
+    terms_agreement_text: 'En utilisant ce site web, vous acceptez de vous conformer à nos conditions d\'utilisation. Best of the Best BJJ est une organisation néerlandaise aux Pays-Bas. Tous les événements sont soumis à des protocoles de sécurité et à des codes de conduite pour les athlètes.',
     terms_refund_title: 'Politique de remboursement',
     terms_refund_text: 'Les billets sont généralement non remboursables, sauf si l\'événement est annulé ou reporté. Les inscriptions des athlètes suivent les directives spécifiques de l\'équipe.',
     terms_jurisdiction_title: 'Juridiction',
-    terms_jurisdiction_text: 'Cet accord est régi par les lois de la Belgique.',
+    terms_jurisdiction_text: 'Cet accord est régi par les lois des Pays-Bas.',
 
     // Politique de Confidentialité Page (FR)
     privacy_data_title: 'Collecte de données',
@@ -536,11 +536,11 @@ export const translations = {
 
     // AGB Page (DE)
     terms_agreement_title: 'Vereinbarung',
-    terms_agreement_text: 'Durch die Nutzung dieser Website erklären Sie sich mit unseren Nutzungsbedingungen einverstanden. Best of the Best BJJ ist eine belgische Organisation im Herzen von Brüssel. Alle Veranstaltungen unterliegen Sicherheitsprotokollen und Verhaltensregeln für Athleten.',
+    terms_agreement_text: 'Durch die Nutzung dieser Website erklären Sie sich mit unseren Nutzungsbedingungen einverstanden. Best of the Best BJJ ist eine niederländische Organisation in den Niederlanden. Alle Veranstaltungen unterliegen Sicherheitsprotokollen und Verhaltensregeln für Athleten.',
     terms_refund_title: 'Rückerstattungsrichtlinie',
     terms_refund_text: 'Tickets are basically non-refundable unless the event is cancelled or rescheduled. Athlete registrations follow specific team guidelines.',
     terms_jurisdiction_title: 'Gerichtsstand',
-    terms_jurisdiction_text: 'Diese Vereinbarung unterliegt den Gesetzen von Belgien.',
+    terms_jurisdiction_text: 'Diese Vereinbarung unterliegt den Gesetzen der Niederlande.',
 
     // Datenschutz Page (DE)
     privacy_data_title: 'Datenerhebung',
