@@ -42,7 +42,7 @@ function SocialIcons() {
         </a>
         {/* YouTube */}
         <a
-          href="https://www.youtube.com/@bestofthebest_bjj"
+          href="https://www.youtube.com/@bestofthebestbjj"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon-link w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-sm hover:border-synth-blue transition-all"
