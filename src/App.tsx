@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Tournament from './pages/Tournament';
 import Sponsors from './pages/Sponsors';
 import About from './pages/About';
+import Rules from './pages/Rules';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Press from './pages/Press';
@@ -105,6 +106,7 @@ function AppContent() {
         <Route path="/tournament" element={<Tournament />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/about" element={<About />} />
+        <Route path="/rules" element={<Rules />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/press" element={<Press />} />

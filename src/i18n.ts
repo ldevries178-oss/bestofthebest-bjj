@@ -165,6 +165,14 @@ export const translations = {
     contact_message: 'Your Message',
     contact_message_placeholder: 'How can we help you?',
     contact_submit: 'SEND MESSAGE',
+
+    // Rules Page
+    footerRules: 'Rules',
+    rules_title: 'RULES',
+    rules_content_1: 'Team versus Team format follows the CJI x Quintet ruleset.',
+    rules_content_2: 'The Absolutes follow the ADCC ruleset.',
+    rules_content_3: 'Round Robin follows the ADCC ruleset.',
+    rules_subtext: 'As an organization, we like to adhere to known and recognized rulesets. However, the safety of our participants is always our highest priority. Until the event, some changes to the rules may therefore be implemented to ensure the safety of all participants. Even within official rulesets, there are techniques and situations that carry an increased risk of injury. Where necessary, we reserve the right to modify or exclude such components. Any changes will be communicated to all participants in a timely manner.',
   },
 
   nl: {
@@ -331,6 +339,14 @@ export const translations = {
     contact_message: 'Uw bericht',
     contact_message_placeholder: 'Hoe kunnen we u helpen?',
     contact_submit: 'BERICHT VERZENDEN',
+
+    // Rules Page
+    footerRules: 'Regels',
+    rules_title: 'RULES',
+    rules_content_1: 'Team versus Team format gaat volgens de CJI x Quintet ruleset.',
+    rules_content_2: 'The Absolutes gaan volgens de ADCC ruleset.',
+    rules_content_3: 'Round Robin gaat volgens de ADCC ruleset.',
+    rules_subtext: 'Wij houden als organisatie graag de bekende en erkende rulesets aan. De veiligheid van onze deelnemers heeft echter altijd de hoogste prioriteit. Tot aan het evenement kunnen er daarom enkele wijzigingen in de regels worden doorgevoerd om de veiligheid van alle deelnemers te waarborgen. Ook binnen de officiële rulesets komen technieken en situaties voor die een verhoogd risico op blessures met zich meebrengen. Waar nodig behouden wij ons het recht voor om dergelijke onderdelen aan te passen of uit te sluiten. Eventuele wijzigingen zullen tijdig aan alle deelnemers worden gecommuniceerd.',
   },
 
   fr: {
@@ -497,6 +513,14 @@ export const translations = {
     contact_message: 'Votre message',
     contact_message_placeholder: 'Comment pouvons-nous vous aider ?',
     contact_submit: 'ENVOYER LE MESSAGE',
+
+    // Rules Page
+    footerRules: 'Règles',
+    rules_title: 'RÈGLES',
+    rules_content_1: 'Le format Team versus Team suit les règles CJI x Quintet.',
+    rules_content_2: 'The Absolutes suivent les règles ADCC.',
+    rules_content_3: 'Le Round Robin suit les règles ADCC.',
+    rules_subtext: 'En tant qu\'organisation, nous aimons adhérer aux règles connues et reconnues. Cependant, la sécurité de nos participants est toujours notre priorité absolue. Jusqu\'à l\'événement, certaines modifications des règles peuvent donc être mises en œuvre pour assurer la sécurité de tous les participants. Même dans les règles officielles, il existe des techniques et des situations qui comportent un risque accru de blessure. Si nécessaire, nous nous réservons le droit de modifier ou d\'exclure ces éléments. Tout changement sera communiqué à tous les participants en temps utile.',
   },
 
   de: {
@@ -663,6 +687,14 @@ export const translations = {
     contact_message: 'Ihre Nachricht',
     contact_message_placeholder: 'Wie können we Ihnen helfen?',
     contact_submit: 'NACHRICHT SENDEN',
+
+    // Rules Page
+    footerRules: 'Regeln',
+    rules_title: 'REGELN',
+    rules_content_1: 'Das Team versus Team Format folgt dem CJI x Quintet Regelwerk.',
+    rules_content_2: 'The Absolutes folgen dem ADCC Regelwerk.',
+    rules_content_3: 'Round Robin folgt dem ADCC Regelwerk.',
+    rules_subtext: 'Als Organisation halten wir uns gerne an bekannte und anerkannte Regelwerke. Die Sicherheit unserer Teilnehmer hat jedoch immer höchste Priorität. Bis zum Event können daher einige Änderungen an den Regeln vorgenommen werden, um die Sicherheit aller Teilnehmer zu gewährleisten. Auch innerhalb der offiziellen Regelwerke gibt es Techniken und Situationen, die ein erhöhtes Verletzungsrisiko bergen. Wo nötig, behalten wir uns das Recht vor, solche Bestandteile zu ändern oder auszuschließen. Jegliche Änderungen werden allen Teilnehmern rechtzeitig mitgeteilt.',
   },
 } as const;
 

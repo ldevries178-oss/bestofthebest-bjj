@@ -65,6 +65,7 @@ export default function HomePage() {
         {/* Footer Links */}
         <footer className="w-full flex flex-wrap justify-center gap-6 md:gap-10 mt-8 text-white text-xs md:text-sm font-semibold tracking-widest z-20 font-orbitron">
           <Link to="/about" className="footer-link-neon">{t('footerAbout') || "About us"}</Link>
+          <Link to="/rules" className="footer-link-neon">{t('footerRules') || "Rules"}</Link>
           <Link to="/terms" className="footer-link-neon">{t('tos') || "Terms & Conditions"}</Link>
           <Link to="/privacy" className="footer-link-neon">{t('privacy') || "Privacy Policy"}</Link>
           <Link to="/press" className="footer-link-neon">{t('footerPress') || "Press & Mediakit"}</Link>
