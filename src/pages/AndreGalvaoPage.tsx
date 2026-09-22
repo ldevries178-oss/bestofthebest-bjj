@@ -141,12 +141,36 @@ export default function AndreGalvaoPage() {
   return (
     <div className="min-h-screen w-full bg-[#0a0a0f] text-white relative overflow-x-hidden font-sans">
       <Helmet>
-        <title>André Galvão x Best of the Best BJJ — {t('galvao_date_value')}, {t('galvao_location_value')}</title>
+        <title>{`André Galvão x Best of the Best BJJ — ${t('galvao_date_value')}, ${t('galvao_location_value')}`}</title>
         <meta
           name="description"
           content="André Galvão, a BJJ legend, is coming to the Netherlands for the first time ever. Best of the Best BJJ presents an exclusive seminar."
         />
-        <link rel="canonical" href="/andregalvao" />
+        <link rel="canonical" href="https://bestofthebestbjj.com/andregalvao" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Best of the Best BJJ" />
+        <meta property="og:url" content="https://bestofthebestbjj.com/andregalvao" />
+        <meta
+          property="og:title"
+          content={`André Galvão x Best of the Best BJJ — ${t('galvao_date_value')}, ${t('galvao_location_value')}`}
+        />
+        <meta
+          property="og:description"
+          content="André Galvão, a BJJ legend, is coming to the Netherlands for the first time ever. Best of the Best BJJ presents an exclusive seminar."
+        />
+        <meta property="og:image" content="https://bestofthebestbjj.com/images/andregalvao/hero.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`André Galvão x Best of the Best BJJ — ${t('galvao_date_value')}, ${t('galvao_location_value')}`}
+        />
+        <meta
+          name="twitter:description"
+          content="André Galvão, a BJJ legend, is coming to the Netherlands for the first time ever. Best of the Best BJJ presents an exclusive seminar."
+        />
+        <meta name="twitter:image" content="https://bestofthebestbjj.com/images/andregalvao/hero.jpg" />
       </Helmet>
 
       {/* Static Retro Grid (matches site-wide background) */}
