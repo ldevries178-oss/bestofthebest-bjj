@@ -28,7 +28,7 @@ function WeeztixWidget() {
 type Partner = { name: string; logoUrl?: string; url?: string };
 
 // Add sponsors here once logos are delivered, e.g.:
-// { name: 'Sponsor Name', logoUrl: '/andregalvao/sponsors/sponsor-name.png', url: 'https://sponsor.com' }
+// { name: 'Sponsor Name', logoUrl: '/images/andregalvao/sponsors/sponsor-name.png', url: 'https://sponsor.com' }
 const sponsors: Partner[] = [];
 
 // Add media partners here once logos are delivered, same shape as `sponsors` above.
@@ -170,7 +170,7 @@ export default function AndreGalvaoPage() {
       {/* ===== HERO ===== */}
       <section className="relative z-10 min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 pt-28 pb-16 text-center">
         <FallbackImage
-          src="/andregalvao/hero.jpg"
+          src="/images/andregalvao/hero.jpg"
           alt="André Galvão"
           className="absolute inset-0 w-full h-full object-cover object-top -z-10"
           showLabel={false}
@@ -249,7 +249,7 @@ export default function AndreGalvaoPage() {
       <motion.section {...fadeUp} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <FallbackImage
-            src="/andregalvao/about.jpg"
+            src="/images/andregalvao/about.jpg"
             alt="André Galvão"
             className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
           />
@@ -267,7 +267,7 @@ export default function AndreGalvaoPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <FallbackImage
-              src="/andregalvao/career.jpg"
+              src="/images/andregalvao/career.jpg"
               alt="André Galvão"
               className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
             />
