@@ -249,6 +249,25 @@ export default function AndreGalvaoPage() {
         </div>
       </motion.section>
 
+      {/* ===== CAREER ===== */}
+      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="md:order-2">
+            <FallbackImage
+              src="/andregalvao/career.jpg"
+              alt="André Galvão"
+              className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
+            />
+          </div>
+          <div className="md:order-1">
+            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-pink neon-text-pink-subtle mb-6">
+              {t('galvao_career_title')}
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_career_text')}</p>
+          </div>
+        </div>
+      </motion.section>
+
       {/* ===== TICKETS ===== */}
       <motion.section
         {...fadeUp}
