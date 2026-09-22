@@ -19,6 +19,7 @@ import Contact from './pages/Contact';
 import TicketsPage from './pages/TicketsPage';
 import LineupPage from './pages/LineupPage';
 import LocatiePage from './pages/LocatiePage';
+import AndreGalvaoPage from './pages/AndreGalvaoPage';
 import { type Lang, translations } from './i18n';
 import { LangContext, useLang } from './LangContext';
 
@@ -115,6 +116,7 @@ function AppContent() {
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/lineup" element={<LineupPage />} />
         <Route path="/location" element={<LocatiePage />} />
+        <Route path="/andregalvao" element={<AndreGalvaoPage />} />
       </Routes>
     </>
   );
