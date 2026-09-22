@@ -134,6 +134,17 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
+// Zelfde fade-up, maar pas onthuld zodra een substantieel deel van de sectie
+// (inclusief de tekst eronder) al zichtbaar is — i.p.v. meteen bij het eerste
+// randje. Voorkomt dat Tickets/About/Career al "poppen" voordat je er
+// daadwerkelijk naartoe bent gescrold.
+const fadeUpOnceScrolled = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.4 },
+  transition: { duration: 0.6 },
+};
+
 export default function AndreGalvaoPage() {
   const { t } = useLang();
   const salesOpen = new Date() >= TICKET_SALES_START;
@@ -280,18 +291,18 @@ export default function AndreGalvaoPage() {
 
       {/* ===== TICKETS ===== */}
       <motion.section
-        {...fadeUp}
+        {...fadeUpOnceScrolled}
         id="tickets"
         className="relative z-10 w-full max-w-3xl mx-auto px-4 py-16 md:py-24 scroll-mt-24 text-center"
       >
-        <h2 className="font-orbitron text-2xl md:text-3xl neon-text-pink mb-8">{t('galvao_tickets_title')}</h2>
+        <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-8">{t('galvao_tickets_title')}</h2>
 
-        <p className="font-orbitron text-[10px] tracking-widest text-white/40 uppercase mb-4">
+        <p className="font-sans font-semibold text-[11px] tracking-widest text-white/40 uppercase mb-4">
           {t('galvao_format_title')}
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 text-left">
           <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
-            <span className="text-synth-blue mt-0.5">●</span>
+            <span className="text-synth-pink mt-0.5">●</span>
             <p className="text-sm text-white/80">{t('galvao_format_main')}</p>
           </div>
           <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
@@ -303,7 +314,7 @@ export default function AndreGalvaoPage() {
         <div className="rounded-2xl border border-synth-pink/30 bg-[#1a1a2e]/60 backdrop-blur-md p-8 md:p-12">
           {!salesOpen ? (
             <>
-              <p className="font-orbitron text-lg md:text-xl text-synth-pink mb-4">
+              <p className="font-orbitron font-bold text-lg md:text-xl text-synth-pink mb-4">
                 {t('galvao_tickets_presale_title')}
               </p>
               <p className="text-sm md:text-base text-white/70">{t('galvao_tickets_presale_text')}</p>
@@ -314,14 +325,14 @@ export default function AndreGalvaoPage() {
               <WeeztixWidget />
             </>
           )}
-          <p className="font-orbitron text-[10px] tracking-widest text-white/30 uppercase mt-8">
+          <p className="font-sans font-semibold text-[10px] tracking-widest text-white/30 uppercase mt-8">
             {t('galvao_tickets_provider')}
           </p>
         </div>
       </motion.section>
 
       {/* ===== ABOUT ===== */}
-      <motion.section {...fadeUp} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
+      <motion.section {...fadeUpOnceScrolled} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <FallbackImage
             src="/images/andregalvao/about.jpg"
@@ -329,7 +340,7 @@ export default function AndreGalvaoPage() {
             className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
           />
           <div>
-            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-blue neon-text-blue-subtle mb-6">
+            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
               {t('galvao_about_title')}
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_about_text')}</p>
@@ -338,7 +349,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* ===== CAREER ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
+      <motion.section {...fadeUpOnceScrolled} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <FallbackImage
@@ -348,7 +359,7 @@ export default function AndreGalvaoPage() {
             />
           </div>
           <div className="md:order-1">
-            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-pink neon-text-pink-subtle mb-6">
+            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
               {t('galvao_career_title')}
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_career_text')}</p>
@@ -374,13 +385,13 @@ export default function AndreGalvaoPage() {
 
       {/* ===== PRESS & PARTNERSHIPS ===== */}
       <motion.section {...fadeUp} className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 md:py-24 text-center">
-        <h2 className="font-orbitron text-xl md:text-2xl text-synth-blue neon-text-blue-subtle mb-6">
+        <h2 className="font-orbitron font-bold text-xl md:text-2xl text-white mb-6">
           {t('galvao_press_title')}
         </h2>
         <p className="text-sm md:text-base text-white/70 mb-4">{t('galvao_press_text')}</p>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="font-orbitron text-synth-blue hover:text-synth-pink transition-colors text-sm md:text-base"
+          className="font-sans font-semibold text-sm md:text-base text-white/80 underline decoration-white/20 underline-offset-4 hover:text-synth-pink hover:decoration-synth-pink/50 transition-colors"
         >
           {CONTACT_EMAIL}
         </a>
@@ -390,11 +401,11 @@ export default function AndreGalvaoPage() {
       <footer className="relative z-10 w-full py-10 border-t border-white/10 flex flex-col items-center gap-4">
         <Link
           to="/"
-          className="font-orbitron text-[10px] md:text-xs tracking-widest uppercase text-white/50 hover:text-synth-blue transition-colors"
+          className="font-sans font-semibold text-[10px] md:text-xs tracking-widest uppercase text-white/50 hover:text-synth-pink transition-colors"
         >
           {t('backToHome') || 'BACK TO HOME'}
         </Link>
-        <p className="font-orbitron text-[10px] text-white/30">{t('copyright')}</p>
+        <p className="font-sans text-[10px] text-white/30">{t('copyright')}</p>
       </footer>
     </div>
   );
