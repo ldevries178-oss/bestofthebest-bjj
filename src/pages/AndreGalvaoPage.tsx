@@ -1,29 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useLang } from '../LangContext';
 
-// Ticket sales open Monday 5 October 2026 — before that date the page shows a
-// "coming soon" message, from that date the Weeztix widget below is shown.
-const TICKET_SALES_START = new Date('2026-10-05T00:00:00');
-
-// Weeztix event widget config, from the embed snippet Weeztix provided.
+// Weeztix ticket shop for this event.
 const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d56394354e';
-const WEEZTIX_GUID = 'ae0d011a-0580-44a3-8160-82d56394354e';
-const WEEZTIX_INJECTOR_SRC = 'https://v1.widget.shop.weeztix.com/injector.js';
-
-function WeeztixWidget() {
-  useEffect(() => {
-    if (document.querySelector(`script[src="${WEEZTIX_INJECTOR_SRC}"]`)) return;
-    const script = document.createElement('script');
-    script.src = WEEZTIX_INJECTOR_SRC;
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
-
-  return <div className="ot-iframe" data-ot-url={WEEZTIX_URL} data-ot-guid={WEEZTIX_GUID} />;
-}
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
@@ -147,7 +129,6 @@ const fadeUpOnceScrolled = {
 
 export default function AndreGalvaoPage() {
   const { t } = useLang();
-  const salesOpen = new Date() >= TICKET_SALES_START;
 
   return (
     <div className="min-h-screen w-full bg-[#0a0a0f] text-white relative overflow-x-hidden font-sans">
@@ -274,7 +255,9 @@ export default function AndreGalvaoPage() {
             className="flex flex-wrap items-center gap-5 md:gap-6 lg:gap-8"
           >
             <a
-              href="#tickets"
+              href={WEEZTIX_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg bg-synth-pink px-7 py-[13px] md:px-9 md:py-[15px] lg:px-11 lg:py-[17px] font-orbitron font-bold text-xs md:text-[13px] lg:text-sm tracking-wider uppercase text-[#0a0a0f] shadow-[0_6px_22px_rgba(255,0,255,0.35)] md:shadow-[0_8px_30px_rgba(255,0,255,0.35)] transition-transform hover:scale-[1.03]"
             >
               {t('galvao_cta_tickets')}
@@ -288,48 +271,6 @@ export default function AndreGalvaoPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* ===== TICKETS ===== */}
-      <motion.section
-        {...fadeUpOnceScrolled}
-        id="tickets"
-        className="relative z-10 w-full max-w-3xl mx-auto px-4 py-16 md:py-24 scroll-mt-24 text-center"
-      >
-        <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-8">{t('galvao_tickets_title')}</h2>
-
-        <p className="font-sans font-semibold text-[11px] tracking-widest text-white/40 uppercase mb-4">
-          {t('galvao_format_title')}
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 text-left">
-          <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
-            <span className="text-synth-pink mt-0.5">●</span>
-            <p className="text-sm text-white/80">{t('galvao_format_main')}</p>
-          </div>
-          <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
-            <span className="text-synth-pink mt-0.5">●</span>
-            <p className="text-sm text-white/80">{t('galvao_format_masters')}</p>
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-synth-pink/30 bg-[#1a1a2e]/60 backdrop-blur-md p-8 md:p-12">
-          {!salesOpen ? (
-            <>
-              <p className="font-orbitron font-bold text-lg md:text-xl text-synth-pink mb-4">
-                {t('galvao_tickets_presale_title')}
-              </p>
-              <p className="text-sm md:text-base text-white/70">{t('galvao_tickets_presale_text')}</p>
-            </>
-          ) : (
-            <>
-              <p className="text-sm text-white/60 mb-6">{t('galvao_tickets_open_text')}</p>
-              <WeeztixWidget />
-            </>
-          )}
-          <p className="font-sans font-semibold text-[10px] tracking-widest text-white/30 uppercase mt-8">
-            {t('galvao_tickets_provider')}
-          </p>
-        </div>
-      </motion.section>
 
       {/* ===== ABOUT ===== */}
       <motion.section {...fadeUpOnceScrolled} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
