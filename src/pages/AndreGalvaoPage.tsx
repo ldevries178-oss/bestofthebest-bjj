@@ -1,16 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useLang } from '../LangContext';
 
 // Ticket sales open Monday 5 October 2026 — before that date the page shows a
-// "coming soon" message, from that date the Weeztix embed below is shown.
+// "coming soon" message, from that date the Weeztix widget below is shown.
 const TICKET_SALES_START = new Date('2026-10-05T00:00:00');
 
-// Paste the Weeztix embed snippet (iframe/script markup) here once it's delivered.
-// Leave empty to show a "widget is being connected" placeholder instead.
-const WEEZTIX_EMBED_HTML = '';
+// Weeztix event widget config, from the embed snippet Weeztix provided.
+const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d56394354e';
+const WEEZTIX_GUID = 'ae0d011a-0580-44a3-8160-82d56394354e';
+const WEEZTIX_INJECTOR_SRC = 'https://v1.widget.shop.weeztix.com/injector.js';
+
+function WeeztixWidget() {
+  useEffect(() => {
+    if (document.querySelector(`script[src="${WEEZTIX_INJECTOR_SRC}"]`)) return;
+    const script = document.createElement('script');
+    script.src = WEEZTIX_INJECTOR_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  return <div className="ot-iframe" data-ot-url={WEEZTIX_URL} data-ot-guid={WEEZTIX_GUID} />;
+}
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
@@ -276,6 +289,20 @@ export default function AndreGalvaoPage() {
       >
         <h2 className="font-orbitron text-2xl md:text-3xl neon-text-pink mb-8">{t('galvao_tickets_title')}</h2>
 
+        <p className="font-orbitron text-[10px] tracking-widest text-white/40 uppercase mb-4">
+          {t('galvao_format_title')}
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 text-left">
+          <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
+            <span className="text-synth-blue mt-0.5">●</span>
+            <p className="text-sm text-white/80">{t('galvao_format_main')}</p>
+          </div>
+          <div className="flex-1 flex items-start gap-3 px-5 py-4 rounded-xl bg-white/5 border border-white/10">
+            <span className="text-synth-pink mt-0.5">●</span>
+            <p className="text-sm text-white/80">{t('galvao_format_masters')}</p>
+          </div>
+        </div>
+
         <div className="rounded-2xl border border-synth-pink/30 bg-[#1a1a2e]/60 backdrop-blur-md p-8 md:p-12">
           {!salesOpen ? (
             <>
@@ -284,17 +311,10 @@ export default function AndreGalvaoPage() {
               </p>
               <p className="text-sm md:text-base text-white/70">{t('galvao_tickets_presale_text')}</p>
             </>
-          ) : WEEZTIX_EMBED_HTML ? (
-            <>
-              <p className="text-sm text-white/60 mb-6">{t('galvao_tickets_open_text')}</p>
-              <div dangerouslySetInnerHTML={{ __html: WEEZTIX_EMBED_HTML }} />
-            </>
           ) : (
             <>
-              <p className="font-orbitron text-lg md:text-xl text-synth-pink mb-4">
-                {t('galvao_tickets_open_text')}
-              </p>
-              <p className="text-sm md:text-base text-white/70">{t('galvao_tickets_pending')}</p>
+              <p className="text-sm text-white/60 mb-6">{t('galvao_tickets_open_text')}</p>
+              <WeeztixWidget />
             </>
           )}
           <p className="font-orbitron text-[10px] tracking-widest text-white/30 uppercase mt-8">
