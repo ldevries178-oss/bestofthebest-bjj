@@ -211,18 +211,25 @@ export default function AndreGalvaoPage() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-10"
         >
-          <div className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-blue/30">
+          <div className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-blue/30 hover:border-synth-blue hover:bg-[#1a1a2e] hover:shadow-[0_0_20px_rgba(0,255,255,0.5)] transition-all duration-300">
             <p className="font-orbitron text-[10px] tracking-widest text-synth-blue/70 uppercase mb-1">
               {t('galvao_date_label')}
             </p>
             <p className="font-orbitron text-sm md:text-base text-white">{t('galvao_date_value')}</p>
           </div>
-          <div className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-pink/30">
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('galvao_location_value'))}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-pink/30 hover:border-synth-pink hover:bg-[#1a1a2e] transition-colors"
+          >
             <p className="font-orbitron text-[10px] tracking-widest text-synth-pink/70 uppercase mb-1">
               {t('galvao_location_label')}
             </p>
-            <p className="font-orbitron text-sm md:text-base text-white">{t('galvao_location_value')}</p>
-          </div>
+            <p className="font-orbitron text-sm md:text-base text-white underline decoration-synth-pink/50 underline-offset-4">
+              {t('galvao_location_value')}
+            </p>
+          </a>
         </motion.div>
 
         <motion.div
@@ -244,42 +251,6 @@ export default function AndreGalvaoPage() {
           </a>
         </motion.div>
       </section>
-
-      {/* ===== ABOUT ===== */}
-      <motion.section {...fadeUp} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <FallbackImage
-            src="/images/andregalvao/about.jpg"
-            alt="André Galvão"
-            className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
-          />
-          <div>
-            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-blue neon-text-blue-subtle mb-6">
-              {t('galvao_about_title')}
-            </h2>
-            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_about_text')}</p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* ===== CAREER ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="md:order-2">
-            <FallbackImage
-              src="/images/andregalvao/career.jpg"
-              alt="André Galvão"
-              className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
-            />
-          </div>
-          <div className="md:order-1">
-            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-pink neon-text-pink-subtle mb-6">
-              {t('galvao_career_title')}
-            </h2>
-            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_career_text')}</p>
-          </div>
-        </div>
-      </motion.section>
 
       {/* ===== TICKETS ===== */}
       <motion.section
@@ -320,6 +291,42 @@ export default function AndreGalvaoPage() {
           <p className="font-orbitron text-[10px] tracking-widest text-white/30 uppercase mt-8">
             {t('galvao_tickets_provider')}
           </p>
+        </div>
+      </motion.section>
+
+      {/* ===== ABOUT ===== */}
+      <motion.section {...fadeUp} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <FallbackImage
+            src="/images/andregalvao/about.jpg"
+            alt="André Galvão"
+            className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
+          />
+          <div>
+            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-blue neon-text-blue-subtle mb-6">
+              {t('galvao_about_title')}
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_about_text')}</p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* ===== CAREER ===== */}
+      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="md:order-2">
+            <FallbackImage
+              src="/images/andregalvao/career.jpg"
+              alt="André Galvão"
+              className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
+            />
+          </div>
+          <div className="md:order-1">
+            <h2 className="font-orbitron text-2xl md:text-3xl text-synth-pink neon-text-pink-subtle mb-6">
+              {t('galvao_career_title')}
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_career_text')}</p>
+          </div>
         </div>
       </motion.section>
 
