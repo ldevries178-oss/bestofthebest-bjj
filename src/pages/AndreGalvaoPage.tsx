@@ -212,18 +212,28 @@ export default function AndreGalvaoPage() {
           </div>
         </motion.div>
 
-        <motion.a
+        <motion.div
           {...fadeUp}
           transition={{ duration: 0.6, delay: 0.4 }}
-          href="#tickets"
-          className="neon-button-ref inline-flex items-center justify-center px-10 py-4 font-orbitron font-bold text-sm md:text-base tracking-widest uppercase"
+          className="flex flex-col sm:flex-row items-center gap-4"
         >
-          {t('galvao_cta_tickets')}
-        </motion.a>
+          <a
+            href="#tickets"
+            className="neon-button-ref inline-flex items-center justify-center px-10 py-4 font-orbitron font-bold text-sm md:text-base tracking-widest uppercase"
+          >
+            {t('galvao_cta_tickets')}
+          </a>
+          <a
+            href="#about"
+            className="inline-flex items-center justify-center px-10 py-4 font-orbitron font-bold text-sm md:text-base tracking-widest uppercase rounded-lg border-2 border-white/20 text-white/80 hover:border-synth-blue hover:text-synth-blue transition-all"
+          >
+            {t('galvao_cta_about')}
+          </a>
+        </motion.div>
       </section>
 
       {/* ===== ABOUT ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
+      <motion.section {...fadeUp} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <FallbackImage
             src="/andregalvao/about.jpg"
