@@ -192,88 +192,90 @@ export default function AndreGalvaoPage() {
       </div>
 
       {/* ===== HERO ===== */}
-      <section className="relative z-10 min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 pt-28 pb-16 text-center">
+      <section className="relative z-10 min-h-[100dvh] w-full flex flex-col justify-end overflow-hidden px-7 pt-28 pb-10 md:px-14 md:pb-14 lg:px-24 lg:pb-16">
         <FallbackImage
           src="/images/andregalvao/hero.jpg"
           alt="André Galvão"
           className="absolute inset-0 w-full h-full object-cover object-top -z-10"
           showLabel={false}
         />
+        {/* Vaste donkere gradient onderin: geeft de tekst altijd genoeg contrast,
+            ongeacht hoe licht de foto op die plek toevallig is. */}
         <div
           className="absolute inset-0 -z-10"
           style={{
             background:
-              'radial-gradient(circle at center, rgba(45, 0, 77, 0.35) 0%, rgba(10, 10, 15, 0.55) 55%, rgba(10, 10, 15, 0.95) 100%)',
+              'linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,0.12) 40%, rgba(10,10,15,0.76) 70%, rgba(10,10,15,0.97) 100%)',
           }}
         ></div>
+        <div
+          className="absolute inset-0 -z-10"
+          style={{ background: 'linear-gradient(90deg, rgba(10,10,15,0.55) 0%, rgba(10,10,15,0) 50%)' }}
+        ></div>
 
-        <motion.p
-          {...fadeUp}
-          className="font-orbitron text-xs md:text-sm tracking-[0.3em] text-synth-blue neon-text-blue-subtle mb-6"
-        >
-          {t('galvao_kicker')}
-        </motion.p>
-
-        <motion.h1
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-orbitron font-black text-5xl sm:text-6xl md:text-8xl tracking-tight neon-text-pink mb-6"
-        >
-          {t('galvao_title')}
-        </motion.h1>
-
-        <motion.p
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-xl text-base md:text-xl text-white/80 mb-10"
-        >
-          {t('galvao_hero_subtitle')}
-        </motion.p>
-
-        <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-10"
-        >
-          <div className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-blue/30 hover:border-synth-blue hover:bg-[#1a1a2e] hover:shadow-[0_0_20px_rgba(0,255,255,0.5)] transition-all duration-300">
-            <p className="font-orbitron text-[10px] tracking-widest text-synth-blue/70 uppercase mb-1">
-              {t('galvao_date_label')}
-            </p>
-            <p className="font-orbitron text-sm md:text-base text-white">{t('galvao_date_value')}</p>
-          </div>
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('galvao_location_value'))}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-xl bg-[#1a1a2e]/70 backdrop-blur-md border border-synth-pink/30 hover:border-synth-pink hover:bg-[#1a1a2e] transition-colors"
+        <div className="max-w-full md:max-w-[480px] lg:max-w-[640px]">
+          <motion.p
+            {...fadeUp}
+            className="font-sans font-semibold text-[11px] md:text-xs lg:text-[13px] tracking-[0.2em] lg:tracking-[0.25em] uppercase text-white/60 mb-3 md:mb-3.5 lg:mb-4"
           >
-            <p className="font-orbitron text-[10px] tracking-widest text-synth-pink/70 uppercase mb-1">
-              {t('galvao_location_label')}
-            </p>
-            <p className="font-orbitron text-sm md:text-base text-white underline decoration-synth-pink/50 underline-offset-4">
+            {t('galvao_kicker')}
+          </motion.p>
+
+          <motion.h1
+            {...fadeUp}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-orbitron font-black text-[44px] md:text-[68px] lg:text-[88px] leading-[0.95] text-white mb-3.5 md:mb-4 lg:mb-5"
+            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
+          >
+            {t('galvao_title').split(' ')[0]}
+            <br />
+            {t('galvao_title').split(' ').slice(1).join(' ')}
+          </motion.h1>
+
+          <motion.p
+            {...fadeUp}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-[320px] md:max-w-[420px] lg:max-w-[520px] text-[15px] md:text-lg lg:text-xl leading-relaxed text-white/90 mb-[18px] md:mb-6 lg:mb-7"
+          >
+            {t('galvao_hero_subtitle')}
+          </motion.p>
+
+          <motion.p
+            {...fadeUp}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="font-sans font-semibold text-[11px] md:text-xs lg:text-[13px] tracking-[0.1em] lg:tracking-[0.12em] uppercase text-white/75 mb-[22px] md:mb-7 lg:mb-8"
+          >
+            {t('galvao_date_value')}
+            <span className="mx-2 md:mx-3 text-synth-pink">&bull;</span>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(t('galvao_location_value'))}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
               {t('galvao_location_value')}
-            </p>
-          </a>
-        </motion.div>
+            </a>
+          </motion.p>
 
-        <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center gap-4"
-        >
-          <a
-            href="#tickets"
-            className="neon-button-ref inline-flex items-center justify-center px-10 py-4 font-orbitron font-bold text-sm md:text-base tracking-widest uppercase"
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-wrap items-center gap-5 md:gap-6 lg:gap-8"
           >
-            {t('galvao_cta_tickets')}
-          </a>
-          <a
-            href="#about"
-            className="inline-flex items-center justify-center px-10 py-4 font-orbitron font-bold text-sm md:text-base tracking-widest uppercase rounded-lg border-2 border-white/20 text-white/80 hover:border-synth-blue hover:text-synth-blue transition-all"
-          >
-            {t('galvao_cta_about')}
-          </a>
-        </motion.div>
+            <a
+              href="#tickets"
+              className="inline-flex items-center justify-center rounded-lg bg-synth-pink px-7 py-[13px] md:px-9 md:py-[15px] lg:px-11 lg:py-[17px] font-orbitron font-bold text-xs md:text-[13px] lg:text-sm tracking-wider uppercase text-[#0a0a0f] shadow-[0_6px_22px_rgba(255,0,255,0.35)] md:shadow-[0_8px_30px_rgba(255,0,255,0.35)] transition-transform hover:scale-[1.03]"
+            >
+              {t('galvao_cta_tickets')}
+            </a>
+            <a
+              href="#about"
+              className="font-sans font-semibold text-xs md:text-[13px] lg:text-sm tracking-wide text-white/85 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white/60 transition-colors"
+            >
+              {t('galvao_cta_about')} →
+            </a>
+          </motion.div>
+        </div>
       </section>
 
       {/* ===== TICKETS ===== */}
