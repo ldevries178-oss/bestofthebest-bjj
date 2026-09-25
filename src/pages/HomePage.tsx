@@ -40,17 +40,12 @@ export default function HomePage() {
 
         {/* Action Buttons */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-4 w-full max-w-[800px] px-2 sm:px-4 z-20 mt-2">
-          <Link to="/tournament" className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
+          <Link to="/andregalvao" className="neon-button-ref col-span-2 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
+            {t('navGalvao') || "André Galvão — November 28, 2026"}
+          </Link>
+          <Link to="/tournament" className="neon-button-ref col-span-2 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center">
             {t('navTournament') || "The Tournament March 21, 2027"}
           </Link>
-          <a 
-            href="#" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="neon-button-ref col-span-2 md:col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[11px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-2 sm:px-6 text-center"
-          >
-            {t('smoothcompCta') || "Athletes sign up via Smoothcomp"}
-          </a>
           <Link to="/teams" className="neon-button-ref col-span-1 flex items-center justify-center w-full h-auto py-3 font-orbitron font-semibold text-[10px] sm:text-xs xl:text-sm tracking-wider md:tracking-widest rounded-lg whitespace-normal px-1 sm:px-6 text-center">
             {t('teamsAdmissions') || "Team Admissions"}
           </Link>

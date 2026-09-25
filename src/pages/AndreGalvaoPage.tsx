@@ -9,12 +9,12 @@ const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d5639435
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
-// Add sponsors here once logos are delivered, e.g.:
-// { name: 'Sponsor Name', logoUrl: '/images/andregalvao/sponsors/sponsor-name.png', url: 'https://sponsor.com' }
-const sponsors: Partner[] = [];
+// Add a `logoUrl` (and optional `url`) once real logos are delivered, e.g.:
+// { name: 'Olympus BJJ', logoUrl: '/images/andregalvao/sponsors/olympus-bjj.png', url: 'https://olympusbjj.com' }
+const sponsors: Partner[] = [{ name: 'Olympus BJJ' }];
 
 // Add media partners here once logos are delivered, same shape as `sponsors` above.
-const mediaPartners: Partner[] = [];
+const mediaPartners: Partner[] = [{ name: 'LV Media' }, { name: 'Studio Apex' }];
 
 const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
 
@@ -262,18 +262,18 @@ export default function AndreGalvaoPage() {
             >
               {t('galvao_cta_tickets')}
             </a>
-            <a
-              href="#about"
+            <Link
+              to="/andregalvao/faq"
               className="font-sans font-semibold text-xs md:text-[13px] lg:text-sm tracking-wide text-white/85 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white/60 transition-colors"
             >
-              {t('galvao_cta_about')} →
-            </a>
+              {t('galvao_cta_faq')} →
+            </Link>
           </motion.div>
         </div>
       </section>
 
       {/* ===== ABOUT ===== */}
-      <motion.section {...fadeUpOnceScrolled} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24 scroll-mt-24">
+      <motion.section {...fadeUpOnceScrolled} id="about" className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-16 pb-6 md:pt-24 md:pb-8 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <FallbackImage
             src="/images/andregalvao/about.jpg"
@@ -284,13 +284,17 @@ export default function AndreGalvaoPage() {
             <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
               {t('galvao_about_title')}
             </h2>
-            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_about_text')}</p>
+            {t('galvao_about_text').split('\n\n').map((paragraph, i) => (
+              <p key={i} className="text-sm md:text-base leading-relaxed text-white/80 mb-4 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </motion.section>
 
       {/* ===== CAREER ===== */}
-      <motion.section {...fadeUpOnceScrolled} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-24">
+      <motion.section {...fadeUpOnceScrolled} className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-16 md:pt-8 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <FallbackImage
@@ -303,7 +307,24 @@ export default function AndreGalvaoPage() {
             <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
               {t('galvao_career_title')}
             </h2>
-            <p className="text-sm md:text-base leading-relaxed text-white/80">{t('galvao_career_text')}</p>
+            <p className="text-sm md:text-base leading-relaxed text-white/80 mb-6">{t('galvao_career_text')}</p>
+            <h3 className="font-orbitron font-bold text-xs md:text-sm tracking-widest uppercase text-synth-pink mb-3">
+              {t('galvao_titles_heading')}
+            </h3>
+            <ul className="space-y-2">
+              {[
+                t('galvao_major_title_1'),
+                t('galvao_major_title_2'),
+                t('galvao_major_title_3'),
+                t('galvao_major_title_4'),
+                t('galvao_major_title_5'),
+              ].map((title) => (
+                <li key={title} className="flex items-center gap-2.5 text-sm md:text-base text-white/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-synth-pink flex-shrink-0" />
+                  {title}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </motion.section>
@@ -325,7 +346,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* ===== PRESS & PARTNERSHIPS ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-2xl mx-auto px-4 py-16 md:py-24 text-center">
+      <motion.section {...fadeUp} className="relative z-10 w-full max-w-2xl mx-auto px-4 pt-16 pb-8 md:pt-24 md:pb-10 text-center">
         <h2 className="font-orbitron font-bold text-xl md:text-2xl text-white mb-6">
           {t('galvao_press_title')}
         </h2>
@@ -339,13 +360,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full py-10 border-t border-white/10 flex flex-col items-center gap-4">
-        <Link
-          to="/"
-          className="font-sans font-semibold text-[10px] md:text-xs tracking-widest uppercase text-white/50 hover:text-synth-pink transition-colors"
-        >
-          {t('backToHome') || 'BACK TO HOME'}
-        </Link>
+      <footer className="relative z-10 w-full py-6 border-t border-white/10 flex flex-col items-center gap-4">
         <p className="font-sans text-[10px] text-white/30">{t('copyright')}</p>
       </footer>
     </div>
