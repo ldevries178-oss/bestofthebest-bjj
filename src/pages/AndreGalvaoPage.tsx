@@ -9,12 +9,14 @@ const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d5639435
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
-// Add a `logoUrl` (and optional `url`) once real logos are delivered, e.g.:
-// { name: 'Olympus BJJ', logoUrl: '/images/andregalvao/sponsors/olympus-bjj.png', url: 'https://olympusbjj.com' }
-const sponsors: Partner[] = [{ name: 'Olympus BJJ' }];
+const sponsors: Partner[] = [
+  { name: 'Olympus BJJ', logoUrl: '/images/andregalvao/sponsors/olympus-bjj.png' },
+];
 
-// Add media partners here once logos are delivered, same shape as `sponsors` above.
-const mediaPartners: Partner[] = [{ name: 'LV Media' }, { name: 'Studio Apex' }];
+const mediaPartners: Partner[] = [
+  { name: 'LV Media', logoUrl: '/images/andregalvao/media/lv-media.png' },
+  { name: 'Studio Apex', logoUrl: '/images/andregalvao/media/studio-apex.png' },
+];
 
 const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
 
