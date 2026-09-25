@@ -77,17 +77,17 @@ function PartnerGrid({ items, placeholder }: { items: Partner[]; placeholder: st
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
       {items.map((partner) => {
         const content = partner.logoUrl ? (
           <FallbackImage
             src={partner.logoUrl}
             alt={partner.name}
-            className="h-20 w-full object-contain rounded-lg bg-white/5 border border-white/10 p-3"
+            className="h-24 md:h-28 w-auto max-w-[180px] md:max-w-[220px] object-contain"
           />
         ) : (
-          <div className="h-20 w-full flex items-center justify-center rounded-lg bg-white/5 border border-white/10">
-            <span className="font-orbitron text-xs tracking-widest text-white/70 text-center px-2">
+          <div className="h-20 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 px-6">
+            <span className="font-orbitron text-xs tracking-widest text-white/70 text-center">
               {partner.name}
             </span>
           </div>
