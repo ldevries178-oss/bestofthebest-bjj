@@ -65,7 +65,7 @@ export default function AndreGalvaoFaqPage() {
           {t('galvao_title')}
         </Link>
 
-        <h1 className="font-orbitron font-bold text-3xl md:text-4xl mb-10 tracking-tight">
+        <h1 className="font-orbitron font-bold text-3xl md:text-4xl mb-10 tracking-tight neon-text-blue">
           {t('galvao_cta_faq')}
         </h1>
 

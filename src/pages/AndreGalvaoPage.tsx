@@ -230,7 +230,7 @@ export default function AndreGalvaoPage() {
             {...heroReveal}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-orbitron font-black text-[44px] md:text-[68px] lg:text-[88px] leading-[0.95] text-white mb-3.5 md:mb-4 lg:mb-5"
-            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
+            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6), 0 0 25px rgba(0,255,255,0.35), 0 0 50px rgba(255,0,255,0.2)' }}
           >
             {t('galvao_title').split(' ')[0]}
             <br />
@@ -294,7 +294,7 @@ export default function AndreGalvaoPage() {
             className="w-full h-72 md:h-96 object-cover rounded-2xl border border-white/10"
           />
           <div>
-            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
+            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6 neon-text-blue">
               {t('galvao_about_title')}
             </h2>
             {t('galvao_about_text').split('\n\n').map((paragraph, i) => (
@@ -317,7 +317,7 @@ export default function AndreGalvaoPage() {
             />
           </div>
           <div className="md:order-1">
-            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6">
+            <h2 className="font-orbitron font-bold text-2xl md:text-3xl text-white mb-6 neon-text-pink">
               {t('galvao_career_title')}
             </h2>
             <p className="text-sm md:text-base leading-relaxed text-white/80 mb-6">{t('galvao_career_text')}</p>
@@ -344,7 +344,7 @@ export default function AndreGalvaoPage() {
 
       {/* ===== SPONSORS ===== */}
       <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20">
-        <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-white/80 uppercase mb-8 text-center">
+        <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-blue neon-text-blue-subtle uppercase mb-8 text-center">
           {t('galvao_sponsors_title')}
         </h2>
         <PartnerGrid items={sponsors} placeholder={t('galvao_sponsors_placeholder')} />
@@ -352,7 +352,7 @@ export default function AndreGalvaoPage() {
 
       {/* ===== MEDIA PARTNERS ===== */}
       <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20">
-        <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-white/80 uppercase mb-8 text-center">
+        <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-pink neon-text-pink-subtle uppercase mb-8 text-center">
           {t('galvao_media_title')}
         </h2>
         <PartnerGrid items={mediaPartners} placeholder={t('galvao_media_placeholder')} />
@@ -360,7 +360,7 @@ export default function AndreGalvaoPage() {
 
       {/* ===== PRESS & PARTNERSHIPS ===== */}
       <motion.section {...fadeUp} className="relative z-10 w-full max-w-2xl mx-auto px-4 pt-16 pb-8 md:pt-24 md:pb-10 text-center">
-        <h2 className="font-orbitron font-bold text-xl md:text-2xl text-white mb-6">
+        <h2 className="font-orbitron font-bold text-xl md:text-2xl text-white mb-6 neon-text-blue">
           {t('galvao_press_title')}
         </h2>
         <p className="text-sm md:text-base text-white/70 mb-4">{t('galvao_press_text')}</p>
