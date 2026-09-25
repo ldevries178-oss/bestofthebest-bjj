@@ -118,6 +118,16 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
+// Hero content reveals on mount (time-based), not on scroll — the hero sits
+// above the fold, so its text and buttons must stay in sync with each other
+// regardless of whether the button row happens to start below the fold on a
+// short viewport. A viewport-triggered fade would otherwise pop the buttons
+// in late, out of step with the text above, once the user scrolls to them.
+const heroReveal = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+};
+
 // Zelfde fade-up, maar pas onthuld zodra een substantieel deel van de sectie
 // (inclusief de tekst eronder) al zichtbaar is — i.p.v. meteen bij het eerste
 // randje. Voorkomt dat Tickets/About/Career al "poppen" voordat je er
@@ -209,14 +219,15 @@ export default function AndreGalvaoPage() {
 
         <div className="max-w-full md:max-w-[480px] lg:max-w-[640px]">
           <motion.p
-            {...fadeUp}
+            {...heroReveal}
+            transition={{ duration: 0.6, delay: 0 }}
             className="font-sans font-semibold text-[11px] md:text-xs lg:text-[13px] tracking-[0.2em] lg:tracking-[0.25em] uppercase text-white/60 mb-3 md:mb-3.5 lg:mb-4"
           >
             {t('galvao_kicker')}
           </motion.p>
 
           <motion.h1
-            {...fadeUp}
+            {...heroReveal}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-orbitron font-black text-[44px] md:text-[68px] lg:text-[88px] leading-[0.95] text-white mb-3.5 md:mb-4 lg:mb-5"
             style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
@@ -227,7 +238,7 @@ export default function AndreGalvaoPage() {
           </motion.h1>
 
           <motion.p
-            {...fadeUp}
+            {...heroReveal}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="max-w-[320px] md:max-w-[420px] lg:max-w-[520px] text-[15px] md:text-lg lg:text-xl leading-relaxed text-white/90 mb-[18px] md:mb-6 lg:mb-7"
           >
@@ -235,7 +246,7 @@ export default function AndreGalvaoPage() {
           </motion.p>
 
           <motion.p
-            {...fadeUp}
+            {...heroReveal}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="font-sans font-semibold text-[11px] md:text-xs lg:text-[13px] tracking-[0.1em] lg:tracking-[0.12em] uppercase text-white/75 mb-[22px] md:mb-7 lg:mb-8"
           >
@@ -252,7 +263,7 @@ export default function AndreGalvaoPage() {
           </motion.p>
 
           <motion.div
-            {...fadeUp}
+            {...heroReveal}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap items-center gap-5 md:gap-6 lg:gap-8"
           >
