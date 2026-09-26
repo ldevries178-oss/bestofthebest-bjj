@@ -22,8 +22,12 @@ import LocatiePage from './pages/LocatiePage';
 import AndreGalvaoPage from './pages/AndreGalvaoPage';
 import { type Lang, translations } from './i18n';
 import { LangContext, useLang } from './LangContext';
+import { useLocation } from 'react-router-dom';
 
 function SocialIcons() {
+  const location = useLocation();
+  const isGalvaoPage = location.pathname === '/andregalvao';
+
   return (
     <div className="fixed top-0 left-0 p-4 md:p-6 z-[100] pointer-events-none">
       <nav className="flex gap-3 items-center pointer-events-auto">
@@ -55,19 +59,21 @@ function SocialIcons() {
           </svg>
         </a>
         {/* Smoothcomp */}
-        <a
-          href="https://www.smoothcomp.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-icon-link w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-sm hover:border-synth-blue transition-all"
-          aria-label="Smoothcomp"
-        >
-          <svg className="w-6 h-6 text-current smoothcomp-icon-fix" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="4" ry="4" />
-            <rect x="7" y="7" width="10" height="10" rx="2" ry="2" />
-            <rect x="10.5" y="10.5" width="3" height="3" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
+        {!isGalvaoPage && (
+          <a
+            href="https://www.smoothcomp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-icon-link w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 bg-[#0a0a0f]/40 backdrop-blur-sm hover:border-synth-blue transition-all"
+            aria-label="Smoothcomp"
+          >
+            <svg className="w-6 h-6 text-current smoothcomp-icon-fix" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="4" ry="4" />
+              <rect x="7" y="7" width="10" height="10" rx="2" ry="2" />
+              <rect x="10.5" y="10.5" width="3" height="3" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+        )}
       </nav>
     </div>
   );
