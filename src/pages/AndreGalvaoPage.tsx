@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { useLang } from '../LangContext';
 
 // Weeztix ticket shop for this event.
@@ -9,13 +8,10 @@ const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d5639435
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
-const sponsors: Partner[] = [
-  { name: 'Olympus BJJ', logoUrl: '/images/andregalvao/sponsors/olympus-bjj.png' },
-];
+const sponsors: Partner[] = [];
 
 const mediaPartners: Partner[] = [
   { name: 'LV Media', logoUrl: '/images/andregalvao/media/lv-media.png' },
-  { name: 'Studio Apex', logoUrl: '/images/andregalvao/media/studio-apex.png' },
 ];
 
 const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
@@ -58,8 +54,18 @@ function FallbackImage({
   );
 }
 
-function PartnerGrid({ items, placeholder }: { items: Partner[]; placeholder: string }) {
-  if (items.length === 0) {
+function PartnerGrid({
+  items,
+  placeholder,
+  comingSoonCount = 0,
+  comingSoonLabel,
+}: {
+  items: Partner[];
+  placeholder: string;
+  comingSoonCount?: number;
+  comingSoonLabel?: string;
+}) {
+  if (items.length === 0 && comingSoonCount === 0) {
     return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-40">
         {[1, 2, 3, 4].map((v) => (
@@ -107,6 +113,16 @@ function PartnerGrid({ items, placeholder }: { items: Partner[]; placeholder: st
           <div key={partner.name}>{content}</div>
         );
       })}
+      {Array.from({ length: comingSoonCount }, (_, i) => (
+        <div
+          key={`coming-soon-${i}`}
+          className="h-20 min-w-[160px] flex items-center justify-center rounded-lg bg-white/5 border border-dashed border-white/15 px-6"
+        >
+          <span className="font-orbitron text-[10px] tracking-widest text-white/40 uppercase text-center">
+            {comingSoonLabel ?? placeholder}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
@@ -275,12 +291,6 @@ export default function AndreGalvaoPage() {
             >
               {t('galvao_cta_tickets')}
             </a>
-            <Link
-              to="/andregalvao/faq"
-              className="font-sans font-semibold text-xs md:text-[13px] lg:text-sm tracking-wide text-white/85 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white/60 transition-colors"
-            >
-              {t('galvao_cta_faq')} →
-            </Link>
           </motion.div>
         </div>
       </section>
@@ -347,7 +357,7 @@ export default function AndreGalvaoPage() {
         <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-blue neon-text-blue-subtle uppercase mb-8 text-center">
           {t('galvao_sponsors_title')}
         </h2>
-        <PartnerGrid items={sponsors} placeholder={t('galvao_sponsors_placeholder')} />
+        <PartnerGrid items={sponsors} placeholder={t('galvao_sponsors_placeholder')} comingSoonCount={1} />
       </motion.section>
 
       {/* ===== MEDIA PARTNERS ===== */}
@@ -355,7 +365,12 @@ export default function AndreGalvaoPage() {
         <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-pink neon-text-pink-subtle uppercase mb-8 text-center">
           {t('galvao_media_title')}
         </h2>
-        <PartnerGrid items={mediaPartners} placeholder={t('galvao_media_placeholder')} />
+        <PartnerGrid
+          items={mediaPartners}
+          placeholder={t('galvao_media_placeholder')}
+          comingSoonCount={1}
+          comingSoonLabel={t('galvao_media_more_placeholder')}
+        />
       </motion.section>
 
       {/* ===== PRESS & PARTNERSHIPS ===== */}
