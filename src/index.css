@@ -260,6 +260,39 @@ body {
   color: #00ffff;
   text-shadow: 0 0 5px #fff, 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
+
+/* ===== Secondary CTA (outline, lower visual weight than neon-button-ref) ===== */
+.neon-button-outline {
+  background: transparent;
+  border: 1.5px solid rgba(0, 255, 255, 0.5);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+}
+.neon-button-outline:hover {
+  border-color: rgba(0, 255, 255, 0.85);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.35);
+}
+
+/* ===== Tertiary quiet nav links (Team Admissions / Sponsors / Contact) ===== */
+.link-tertiary {
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease;
+}
+.link-tertiary:hover {
+  color: #00ffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+/* ===== Muted legal footer links (About/Rules/Terms/Privacy/Press) ===== */
+.footer-link-muted {
+  color: rgba(255, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+.footer-link-muted:hover {
+  color: rgba(0, 255, 255, 0.85);
+}
 /* ===== Language Toggle Buttons ===== */
 .lang-toggle-btn {
   padding: 0.4rem 0.8rem;
