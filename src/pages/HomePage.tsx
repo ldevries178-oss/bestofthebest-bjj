@@ -49,7 +49,7 @@ export default function HomePage() {
         </div>
 
         {/* Divider */}
-        <div className="w-full max-w-[280px] h-px bg-white/10 my-7 md:my-9 z-20"></div>
+        <div className="w-full max-w-[280px] h-px bg-white/10 my-3 md:my-4 z-20"></div>
 
         {/* Tertiary quick links */}
         <div className="flex items-center justify-center flex-wrap gap-x-4 gap-y-2 z-20 font-orbitron font-semibold text-[11px] sm:text-xs tracking-wider">
