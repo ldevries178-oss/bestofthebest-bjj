@@ -413,7 +413,7 @@ export const translations = {
     galvao_tickets_open_text: 'Tickets zijn nu te koop via Weeztix.',
     galvao_tickets_provider: 'Tickets via Weeztix',
     galvao_sponsors_title: 'Sponsoren',
-    galvao_sponsors_placeholder: 'Sponsoren worden binnenkort bekendgemaakt.',
+    galvao_sponsors_placeholder: 'Sponsoren worden binnenkort bekend gemaakt.',
     galvao_media_title: 'Mediapartners',
     galvao_media_placeholder: 'Mediapartners worden binnenkort bekendgemaakt.',
     galvao_media_more_placeholder: 'Meer mediapartners worden binnenkort bekendgemaakt.',
