@@ -388,7 +388,7 @@ export const translations = {
     // André Galvão Seminar Page (NL)
     galvao_kicker: 'BEST OF THE BEST BJJ PRESENTEERT',
     galvao_title: 'ANDRÉ GALVÃO',
-    galvao_hero_subtitle: 'Een BJJ-legende komt naar Nederland. Voor het eerst ooit.',
+    galvao_hero_subtitle: 'Voor het eerst ooit komt een BJJ-legende naar Nederland.',
     galvao_date_label: 'Datum',
     galvao_date_value: '28 november 2026',
     galvao_location_label: 'Locatie',
