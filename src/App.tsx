@@ -31,7 +31,7 @@ function SiteHeader() {
   const { lang, setLang } = useLang();
 
   return (
-    <header className="fixed top-0 inset-x-0 z-[100] bg-[#0a0a0f]/70 backdrop-blur-md border-b border-white/5">
+    <header className="fixed top-0 inset-x-0 z-[100]">
       <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-4">
         {/* Social icons */}
         <nav className="flex gap-4 items-center" aria-label="Social media">

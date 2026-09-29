@@ -52,12 +52,10 @@ export default function HomePage() {
         <div className="w-full max-w-[280px] h-px bg-white/10 my-3 md:my-4 z-20"></div>
 
         {/* Tertiary quick links */}
-        <div className="flex items-center justify-center flex-wrap gap-x-4 gap-y-2 z-20 font-orbitron font-semibold text-[11px] sm:text-xs tracking-wider">
-          <Link to="/teams" className="link-tertiary">{t('teamsAdmissions') || "Team Admissions"}</Link>
-          <span className="text-white/25">•</span>
-          <Link to="/sponsors" className="link-tertiary">{t('navSponsors') || "Sponsors"}</Link>
-          <span className="text-white/25">•</span>
-          <Link to="/contact" className="link-tertiary">{t('navContact') || "Contact"}</Link>
+        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-3 z-20 font-orbitron font-semibold text-[11px] sm:text-xs tracking-wider">
+          <Link to="/teams" className="link-tertiary bg-[#0a0a0f]/60 backdrop-blur-sm border border-white/10 rounded-lg px-4 py-2">{t('teamsAdmissions') || "Team Admissions"}</Link>
+          <Link to="/sponsors" className="link-tertiary bg-[#0a0a0f]/60 backdrop-blur-sm border border-white/10 rounded-lg px-4 py-2">{t('navSponsors') || "Sponsors"}</Link>
+          <Link to="/contact" className="link-tertiary bg-[#0a0a0f]/60 backdrop-blur-sm border border-white/10 rounded-lg px-4 py-2">{t('navContact') || "Contact"}</Link>
         </div>
 
         <div className="flex-grow"></div>
