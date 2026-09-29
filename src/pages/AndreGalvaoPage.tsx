@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
-import { User, Trophy, Handshake, Mail, Ticket } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { User, Trophy, Handshake, Mail, Ticket, HelpCircle } from 'lucide-react';
 import { useLang } from '../LangContext';
 
 // Weeztix ticket shop for this event.
-const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d56394354e';
+export const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d56394354e';
 
 type Partner = { name: string; logoUrl?: string; url?: string };
 
@@ -15,7 +16,7 @@ const mediaPartners: Partner[] = [
   { name: 'LV Media', logoUrl: '/images/andregalvao/media/lv-media.png' },
 ];
 
-const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
+export const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
 
 function FallbackImage({
   src,
@@ -458,6 +459,13 @@ export default function AndreGalvaoPage() {
             >
               {t('galvao_cta_tickets')}
             </a>
+            <Link
+              to="/andregalvao/faq"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-synth-blue/60 bg-white/5 px-7 py-[11px] md:px-9 md:py-[13px] lg:px-11 lg:py-[15px] font-orbitron font-bold text-xs md:text-[13px] lg:text-sm tracking-wider uppercase text-synth-blue shadow-[0_0_15px_rgba(0,255,255,0.15)] transition-all hover:bg-synth-blue/10 hover:border-synth-blue hover:scale-[1.03]"
+            >
+              <HelpCircle className="w-4 h-4" />
+              {t('galvao_cta_faq')}
+            </Link>
           </motion.div>
         </div>
       </section>

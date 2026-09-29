@@ -21,13 +21,14 @@ import TicketsPage from './pages/TicketsPage';
 import LineupPage from './pages/LineupPage';
 import LocatiePage from './pages/LocatiePage';
 import AndreGalvaoPage from './pages/AndreGalvaoPage';
+import FaqPage from './pages/FaqPage';
 import { type Lang, translations } from './i18n';
 import { LangContext, useLang } from './LangContext';
 import { useLocation } from 'react-router-dom';
 
 function SiteHeader() {
   const location = useLocation();
-  const isGalvaoPage = location.pathname === '/andregalvao';
+  const isGalvaoPage = location.pathname.startsWith('/andregalvao');
   const { lang, setLang } = useLang();
 
   return (
@@ -138,6 +139,7 @@ function AppContent() {
         <Route path="/lineup" element={<LineupPage />} />
         <Route path="/location" element={<LocatiePage />} />
         <Route path="/andregalvao" element={<AndreGalvaoPage />} />
+        <Route path="/andregalvao/faq" element={<FaqPage />} />
       </Routes>
     </>
   );
