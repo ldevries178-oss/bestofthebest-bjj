@@ -5,7 +5,7 @@ export default function HomePage() {
   const { t } = useLang();
 
   return (
-    <div className="h-[100dvh] w-full text-white flex flex-col items-center justify-center relative overflow-hidden font-sans">
+    <div className="h-[100dvh] w-full text-white flex flex-col items-center justify-start relative overflow-hidden font-sans">
       {/* Fullscreen Video Background */}
       <video 
         autoPlay 
@@ -17,7 +17,7 @@ export default function HomePage() {
       ></video>
 
       {/* Main Content Container (Centered over video) */}
-      <main className="relative z-10 flex flex-col items-center w-full h-full max-h-[950px] max-w-3xl px-4 text-center py-8 md:py-14 overflow-y-auto">
+      <main className="relative z-10 flex flex-col items-center w-full h-full max-h-[950px] max-w-3xl px-4 text-center pt-20 pb-8 md:pt-28 md:pb-14 overflow-y-auto">
 
         {/* Main Slogan */}
         <div className="z-20">
