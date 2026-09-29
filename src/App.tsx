@@ -81,7 +81,7 @@ function SiteHeader() {
         </nav>
 
         {/* Language switcher — desktop/tablet: button group */}
-        <nav className="hidden sm:flex gap-1.5 md:gap-2 items-center p-1.5 font-orbitron rounded-xl border border-white/5" aria-label="Language">
+        <nav className="hidden sm:flex gap-1.5 md:gap-2 items-center p-1.5 font-orbitron rounded-xl border border-white/10 bg-[#0a0a0f]/70 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.4)]" aria-label="Language">
           {(['en', 'nl', 'fr', 'de'] as const).map((l) => (
             <button
               key={l}
@@ -90,7 +90,7 @@ function SiteHeader() {
                 px-3 py-1.5 text-[10px] md:text-xs font-bold tracking-widest rounded-lg transition-all duration-300
                 ${lang === l
                   ? 'bg-synth-blue/20 text-synth-blue shadow-[0_0_15px_rgba(0,255,255,0.3)] border border-synth-blue/50'
-                  : 'text-white/40 hover:text-white/80 hover:bg-white/5 border border-transparent'}
+                  : 'text-white/60 hover:text-white/90 hover:bg-white/10 border border-transparent'}
               `}
             >
               {l.toUpperCase()}
@@ -104,7 +104,7 @@ function SiteHeader() {
             value={lang}
             onChange={(e) => setLang(e.target.value as Lang)}
             aria-label="Language"
-            className="appearance-none w-[4.5rem] h-9 pl-3 pr-7 rounded-lg border border-white/10 bg-white/5 text-synth-blue text-[10px] font-bold tracking-widest focus:outline-none focus:border-synth-blue/50"
+            className="appearance-none w-[4.5rem] h-9 pl-3 pr-7 rounded-lg border border-white/10 bg-[#0a0a0f]/70 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.4)] text-synth-blue text-[10px] font-bold tracking-widest focus:outline-none focus:border-synth-blue/50"
           >
             {(['en', 'nl', 'fr', 'de'] as const).map((l) => (
               <option key={l} value={l} className="bg-[#0a0a0f] text-white">

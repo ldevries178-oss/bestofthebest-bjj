@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
+import { User, Trophy, Handshake, Mail, Ticket } from 'lucide-react';
 import { useLang } from '../LangContext';
 
 // Weeztix ticket shop for this event.
@@ -155,8 +156,174 @@ const fadeUpOnceScrolled = {
   transition: { duration: 0.6 },
 };
 
+const NAV_SECTION_IDS = ['about', 'career', 'partners', 'contact'] as const;
+type NavSectionId = (typeof NAV_SECTION_IDS)[number];
+
+// Tracks which section is currently in view so both nav variants can
+// highlight the right item as the visitor scrolls. Driven by scroll
+// position rather than IntersectionObserver ratios: "Contact" is short, so
+// on many viewports it never becomes the single highest-ratio entry, and
+// the dot would get stuck on "Partners" even once you've scrolled past
+// everything. Reaching the bottom of the page always forces the last item
+// active, matching what a visitor expects from a progress indicator.
+function useActiveSection() {
+  const [active, setActive] = useState<NavSectionId | ''>('');
+
+  useEffect(() => {
+    const elements = NAV_SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (elements.length === 0) return;
+
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+
+      const atBottom =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActive(NAV_SECTION_IDS[NAV_SECTION_IDS.length - 1]);
+        return;
+      }
+
+      // Reference line ~30% down the viewport — roughly where the fixed
+      // header's scroll-mt offset already aims scrolled-to sections.
+      const referenceY = window.scrollY + window.innerHeight * 0.3;
+
+      let current: NavSectionId | '' = '';
+      for (const el of elements) {
+        if (el.getBoundingClientRect().top + window.scrollY <= referenceY) {
+          current = el.id as NavSectionId;
+        }
+      }
+      setActive(current);
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
+  return active;
+}
+
+function useSectionNavItems() {
+  const { t } = useLang();
+  return [
+    { id: 'about' as const, label: t('galvao_nav_about'), Icon: User },
+    { id: 'career' as const, label: t('galvao_nav_career'), Icon: Trophy },
+    { id: 'partners' as const, label: t('galvao_nav_partners'), Icon: Handshake },
+    { id: 'contact' as const, label: t('galvao_nav_contact'), Icon: Mail },
+  ];
+}
+
+// App-style bottom tab bar: the primary section nav on phones, where a
+// thumb-reachable fixed bar beats a top menu most visitors would have to
+// stretch for.
+function MobileSectionNav({ active }: { active: NavSectionId | '' }) {
+  const { t } = useLang();
+  const items = useSectionNavItems();
+
+  return (
+    <nav
+      aria-label="Section navigation"
+      className="fixed inset-x-0 bottom-0 z-[90] md:hidden"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+    >
+      <div className="mx-3 mb-3 flex items-center gap-1 rounded-2xl border border-white/10 bg-[#0a0a0f]/90 backdrop-blur-xl px-1.5 py-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.55)]">
+        {items.map(({ id, label, Icon }) => {
+          const isActive = active === id;
+          return (
+            <a
+              key={id}
+              href={`#${id}`}
+              aria-current={isActive ? 'true' : undefined}
+              className={`flex flex-1 flex-col items-center gap-1 rounded-xl px-1 py-2 transition-colors ${
+                isActive ? 'text-synth-blue' : 'text-white/50'
+              }`}
+            >
+              <Icon className="w-5 h-5" strokeWidth={isActive ? 2.5 : 1.75} />
+              <span className="font-orbitron text-[9px] leading-none tracking-widest uppercase">{label}</span>
+            </a>
+          );
+        })}
+        <a
+          href={WEEZTIX_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-1 flex-col items-center gap-1 rounded-xl border border-synth-pink/40 bg-synth-pink/15 px-1 py-2 text-synth-pink"
+        >
+          <Ticket className="w-5 h-5" strokeWidth={2} />
+          <span className="font-orbitron text-[9px] leading-none tracking-widest uppercase">
+            {t('galvao_nav_tickets')}
+          </span>
+        </a>
+      </div>
+    </nav>
+  );
+}
+
+// On wider screens the whole page fits comfortably, so a slim glowing dot
+// rail on the edge (à la synthwave indicator lights) gives orientation
+// without competing with the fixed header for space.
+function DesktopSectionNav({ active }: { active: NavSectionId | '' }) {
+  const { t } = useLang();
+  const items = useSectionNavItems();
+
+  return (
+    <nav
+      aria-label="Section navigation"
+      className="fixed right-5 top-1/2 z-[90] hidden -translate-y-1/2 flex-col items-center gap-4 rounded-full border border-white/10 bg-[#0a0a0f]/70 backdrop-blur-md px-2.5 py-4 shadow-[0_4px_24px_rgba(0,0,0,0.45)] md:flex"
+    >
+      {items.map(({ id, label }) => {
+        const isActive = active === id;
+        return (
+          <a key={id} href={`#${id}`} aria-label={label} className="group relative flex items-center justify-center py-1">
+            <span
+              className={`h-2.5 w-2.5 rounded-full border transition-all duration-300 ${
+                isActive
+                  ? 'scale-125 border-synth-blue bg-synth-blue shadow-[0_0_10px_rgba(0,255,255,0.8)]'
+                  : 'border-white/40 bg-transparent group-hover:border-white/80'
+              }`}
+            />
+            <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-md border border-white/10 bg-[#0a0a0f]/90 px-2.5 py-1 font-orbitron text-[10px] tracking-widest uppercase text-white/80 opacity-0 transition-opacity group-hover:opacity-100">
+              {label}
+            </span>
+          </a>
+        );
+      })}
+      <span className="h-px w-4 bg-white/15" aria-hidden="true" />
+      <a
+        href={WEEZTIX_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t('galvao_nav_tickets')}
+        className="group relative flex items-center justify-center py-1"
+      >
+        <Ticket className="h-4 w-4 text-synth-pink drop-shadow-[0_0_6px_rgba(255,0,255,0.7)]" strokeWidth={2} />
+        <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-md border border-synth-pink/30 bg-[#0a0a0f]/90 px-2.5 py-1 font-orbitron text-[10px] tracking-widest uppercase text-synth-pink opacity-0 transition-opacity group-hover:opacity-100">
+          {t('galvao_nav_tickets')}
+        </span>
+      </a>
+    </nav>
+  );
+}
+
 export default function AndreGalvaoPage() {
   const { t } = useLang();
+  const active = useActiveSection();
 
   return (
     <div className="min-h-screen w-full bg-[#0a0a0f] text-white relative overflow-x-hidden font-sans">
@@ -212,7 +379,7 @@ export default function AndreGalvaoPage() {
       </div>
 
       {/* ===== HERO ===== */}
-      <section className="relative z-10 min-h-[100dvh] w-full flex flex-col justify-end overflow-hidden px-7 pt-28 pb-10 md:px-14 md:pb-14 lg:px-24 lg:pb-16">
+      <section className="relative z-10 min-h-[100dvh] w-full flex flex-col justify-end overflow-hidden px-7 pt-28 pb-28 md:px-14 md:pb-14 lg:px-24 lg:pb-16">
         <FallbackImage
           src="/images/andregalvao/hero.jpg"
           alt="André Galvão"
@@ -317,7 +484,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* ===== CAREER ===== */}
-      <motion.section {...fadeUpOnceScrolled} className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-16 md:pt-8 md:pb-24">
+      <motion.section {...fadeUpOnceScrolled} id="career" className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-16 md:pt-8 md:pb-24 scroll-mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="md:order-2">
             <FallbackImage
@@ -353,7 +520,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* ===== SPONSORS ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20">
+      <motion.section {...fadeUp} id="partners" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20 scroll-mt-24">
         <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-blue neon-text-blue-subtle uppercase mb-8 text-center">
           {t('galvao_sponsors_title')}
         </h2>
@@ -374,7 +541,7 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* ===== PRESS & PARTNERSHIPS ===== */}
-      <motion.section {...fadeUp} className="relative z-10 w-full max-w-2xl mx-auto px-4 pt-16 pb-8 md:pt-24 md:pb-10 text-center">
+      <motion.section {...fadeUp} id="contact" className="relative z-10 w-full max-w-2xl mx-auto px-4 pt-16 pb-8 md:pt-24 md:pb-10 text-center scroll-mt-24">
         <h2 className="font-orbitron font-bold text-xl md:text-2xl text-white mb-6 neon-text-blue">
           {t('galvao_press_title')}
         </h2>
@@ -388,9 +555,12 @@ export default function AndreGalvaoPage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full py-6 border-t border-white/10 flex flex-col items-center gap-4">
+      <footer className="relative z-10 w-full pt-6 pb-28 md:pb-6 border-t border-white/10 flex flex-col items-center gap-4">
         <p className="font-sans text-[10px] text-white/30">{t('copyright')}</p>
       </footer>
+
+      <MobileSectionNav active={active} />
+      <DesktopSectionNav active={active} />
     </div>
   );
 }

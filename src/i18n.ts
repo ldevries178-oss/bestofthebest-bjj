@@ -209,6 +209,11 @@ export const translations = {
     galvao_media_more_placeholder: 'More media partners will be announced soon.',
     galvao_press_title: 'Press & Partnerships',
     galvao_press_text: 'For press, interviews, accreditations, media & influencer collaborations, and partnership requests, please contact us at:',
+    galvao_nav_about: 'About',
+    galvao_nav_career: 'Career',
+    galvao_nav_partners: 'Partners',
+    galvao_nav_contact: 'Contact',
+    galvao_nav_tickets: 'Tickets',
   },
 
   nl: {
@@ -419,6 +424,11 @@ export const translations = {
     galvao_media_more_placeholder: 'Meer mediapartners worden binnenkort bekend gemaakt.',
     galvao_press_title: 'Pers & Samenwerkingen',
     galvao_press_text: 'Voor pers, interviews, accreditaties, media- & influencersamenwerkingen en overige partnerships kun je contact opnemen via:',
+    galvao_nav_about: 'Over',
+    galvao_nav_career: 'Carrière',
+    galvao_nav_partners: 'Partners',
+    galvao_nav_contact: 'Contact',
+    galvao_nav_tickets: 'Tickets',
   },
 
   fr: {
@@ -629,6 +639,11 @@ export const translations = {
     galvao_media_more_placeholder: "D'autres partenaires médias seront annoncés prochainement.",
     galvao_press_title: 'Presse & Partenariats',
     galvao_press_text: 'Pour la presse, les interviews, les accréditations, les collaborations médias et influenceurs, ainsi que les demandes de partenariat, contactez-nous à :',
+    galvao_nav_about: 'À propos',
+    galvao_nav_career: 'Carrière',
+    galvao_nav_partners: 'Partenaires',
+    galvao_nav_contact: 'Contact',
+    galvao_nav_tickets: 'Billets',
   },
 
   de: {
@@ -839,6 +854,11 @@ export const translations = {
     galvao_media_more_placeholder: 'Weitere Medienpartner werden in Kürze bekannt gegeben.',
     galvao_press_title: 'Presse & Partnerschaften',
     galvao_press_text: 'Für Presse, Interviews, Akkreditierungen, Medien- & Influencer-Kooperationen sowie Partnerschaftsanfragen kontaktieren Sie uns unter:',
+    galvao_nav_about: 'Über',
+    galvao_nav_career: 'Karriere',
+    galvao_nav_partners: 'Partner',
+    galvao_nav_contact: 'Kontakt',
+    galvao_nav_tickets: 'Tickets',
   },
 } as const;
 
