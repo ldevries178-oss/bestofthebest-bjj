@@ -94,6 +94,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Hide scrollbar visually while keeping scroll functionality */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .hero-overlay {
   background: radial-gradient(circle at center, rgba(45, 0, 77, 0.3) 0%, rgba(10, 10, 15, 0.9) 100%);
 }
