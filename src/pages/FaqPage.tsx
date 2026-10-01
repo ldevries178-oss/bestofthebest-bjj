@@ -9,7 +9,7 @@ import { WEEZTIX_URL, CONTACT_EMAIL } from './AndreGalvaoPage';
 
 // Number of Q&A items in each of the 12 FAQ sections, matching the
 // faq_s{n}_q{m}/faq_s{n}_a{m} keys laid out in i18n.ts.
-const SECTION_ITEM_COUNTS = [6, 4, 3, 6, 6, 5, 8, 4, 7, 6, 3, 1] as const;
+const SECTION_ITEM_COUNTS = [6, 4, 3, 7, 6, 5, 8, 4, 7, 6, 3, 1] as const;
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -80,9 +80,24 @@ function AnswerBody({ text, ticketShopLabel }: { text: string; ticketShopLabel: 
           );
         }
 
+        // A plain-text email address inside a paragraph becomes a mailto link.
+        const parts = block.split(CONTACT_EMAIL);
+
         return (
           <p key={i} className="text-sm md:text-base leading-relaxed text-white/75">
-            {block}
+            {parts.map((part, j) => (
+              <span key={j}>
+                {part}
+                {j < parts.length - 1 && (
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="font-semibold text-white/90 underline decoration-white/30 underline-offset-4 hover:text-synth-pink hover:decoration-synth-pink/50 transition-colors"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                )}
+              </span>
+            ))}
           </p>
         );
       })}
