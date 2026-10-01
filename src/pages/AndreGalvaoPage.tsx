@@ -447,7 +447,7 @@ export default function AndreGalvaoPage() {
           <motion.h1
             {...heroReveal}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-orbitron font-black text-[44px] md:text-[68px] lg:text-[88px] leading-[0.95] text-white mb-3.5 md:mb-4 lg:mb-5"
+            className="font-orbitron font-black text-[44px] md:text-[68px] lg:text-[88px] leading-[1.12] text-white mb-3.5 md:mb-4 lg:mb-5"
             style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6), 0 0 25px rgba(0,255,255,0.35), 0 0 50px rgba(255,0,255,0.2)' }}
           >
             {t('galvao_title').split(' ')[0]}
