@@ -21,7 +21,7 @@ type Partner = {
 const sponsors: Partner[] = [];
 
 // LV Media en Sprint Studio staan naast elkaar en moeten even groot ogen:
-// LV en het Sprint-icoon delen dezelfde hoogte, het woordmerk is iets lager.
+// beide logo's delen dezelfde hoogte.
 const mediaPartners: Partner[] = [
   {
     name: 'LV Media',
@@ -32,10 +32,8 @@ const mediaPartners: Partner[] = [
   {
     name: 'Sprint Studio',
     url: 'https://www.sprintstudio.nl/',
-    logoParts: [
-      { src: '/images/andregalvao/media/sprint-studio-icon.png', className: 'h-16 md:h-20 w-auto' },
-      { src: '/images/andregalvao/media/sprint-studio-text.png', className: 'h-14 md:h-[4.5rem] w-auto' },
-    ],
+    logoUrl: '/images/andregalvao/media/sprint-studio-icon.png',
+    logoClassName: 'h-16 md:h-20 w-auto',
   },
 ];
 
