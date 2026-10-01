@@ -8,12 +8,35 @@ import { useLang } from '../LangContext';
 // Weeztix ticket shop for this event.
 export const WEEZTIX_URL = 'https://shop.weeztix.com/ae0d011a-0580-44a3-8160-82d56394354e';
 
-type Partner = { name: string; logoUrl?: string; url?: string };
+// logoParts: logo dat uit losse stukken (bv. icoon + woordmerk) naast elkaar staat.
+// logoClassName: eigen formaat voor één logo, i.p.v. de standaard in PartnerGrid.
+type Partner = {
+  name: string;
+  logoUrl?: string;
+  logoClassName?: string;
+  logoParts?: { src: string; className: string }[];
+  url?: string;
+};
 
 const sponsors: Partner[] = [];
 
+// LV Media en Sprint Studio staan naast elkaar en moeten even groot ogen:
+// LV en het Sprint-icoon delen dezelfde hoogte, het woordmerk is iets lager.
 const mediaPartners: Partner[] = [
-  { name: 'LV Media', logoUrl: '/images/andregalvao/media/lv-media.png' },
+  {
+    name: 'LV Media',
+    logoUrl: '/images/andregalvao/media/lv-media.png',
+    logoClassName: 'h-16 md:h-20 w-auto',
+    url: 'https://www.lvmedia.nl',
+  },
+  {
+    name: 'Sprint Studio',
+    url: 'https://www.sprintstudio.nl/',
+    logoParts: [
+      { src: '/images/andregalvao/media/sprint-studio-icon.png', className: 'h-16 md:h-20 w-auto' },
+      { src: '/images/andregalvao/media/sprint-studio-text.png', className: 'h-14 md:h-[4.5rem] w-auto' },
+    ],
+  },
 ];
 
 export const CONTACT_EMAIL = 'info@bestofthebestbjj.com';
@@ -24,6 +47,7 @@ function FallbackImage({
   className,
   showLabel = true,
 }: {
+  key?: string | number;
   src: string;
   alt: string;
   className?: string;
@@ -87,11 +111,23 @@ function PartnerGrid({
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
       {items.map((partner) => {
-        const content = partner.logoUrl ? (
+        const content = partner.logoParts ? (
+          <div role="img" aria-label={partner.name} className="flex items-center gap-3 md:gap-4">
+            {partner.logoParts.map((part) => (
+              <FallbackImage
+                key={part.src}
+                src={part.src}
+                alt=""
+                showLabel={false}
+                className={`${part.className} object-contain`}
+              />
+            ))}
+          </div>
+        ) : partner.logoUrl ? (
           <FallbackImage
             src={partner.logoUrl}
             alt={partner.name}
-            className="h-24 md:h-28 w-auto max-w-[180px] md:max-w-[220px] object-contain"
+            className={`${partner.logoClassName ?? 'h-24 md:h-28 w-auto max-w-[180px] md:max-w-[220px]'} object-contain`}
           />
         ) : (
           <div className="h-20 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 px-6">
