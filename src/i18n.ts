@@ -262,7 +262,7 @@ export const translations = {
     faq_s1_q4: `Are tickets limited?`,
     faq_s1_a4: `Yes. Capacity is limited, especially for the Seminar and Masterclass. We recommend booking in advance.`,
     faq_s1_q5: `Can I buy a ticket at the door?`,
-    faq_s1_a5: `Door sales are subject to availability. If a ticket category is sold out in advance, that category will not be available at the entrance.`,
+    faq_s1_a5: `No. Tickets are sold exclusively online through the official ticket shop. There are no ticket sales at the door or on the day of the event, so make sure to purchase your ticket in advance.`,
     faq_s1_q6: `What happens when a ticket category is sold out?`,
     faq_s1_a6: `Once the maximum capacity for a package has been reached, no additional tickets for that category will be available unless otherwise announced. Check the official ticket shop for the latest availability.`,
 
@@ -658,7 +658,7 @@ export const translations = {
     faq_s1_q4: `Zijn tickets beperkt beschikbaar?`,
     faq_s1_a4: `Ja. De capaciteit is beperkt, vooral voor Seminar en Masterclass. We raden aan om vooraf te boeken.`,
     faq_s1_q5: `Kan ik een ticket aan de deur kopen?`,
-    faq_s1_a5: `Verkoop aan de deur is afhankelijk van beschikbaarheid. Als een ticketcategorie vooraf is uitverkocht, is deze niet meer beschikbaar bij de ingang.`,
+    faq_s1_a5: `Nee. Tickets worden uitsluitend online verkocht via de officiële ticketshop. Er is geen verkoop aan de deur of aan de kassa op de dag zelf, dus zorg dat je je ticket vooraf koopt.`,
     faq_s1_q6: `Wat gebeurt er als een ticketcategorie is uitverkocht?`,
     faq_s1_a6: `Zodra de maximale capaciteit van een pakket is bereikt, zijn er geen extra tickets meer beschikbaar voor die categorie, tenzij anders aangekondigd. Bekijk de officiële ticketshop voor de laatste beschikbaarheid.`,
 
@@ -1054,7 +1054,7 @@ export const translations = {
     faq_s1_q4: `Les billets sont-ils limités ?`,
     faq_s1_a4: `Oui. La capacité est limitée, en particulier pour le Seminar et la Masterclass. Nous recommandons de réserver à l'avance.`,
     faq_s1_q5: `Puis-je acheter un billet sur place ?`,
-    faq_s1_a5: `La vente sur place dépend de la disponibilité. Si une catégorie de billets est épuisée à l'avance, elle ne sera pas disponible à l'entrée.`,
+    faq_s1_a5: `Non. Les billets sont vendus exclusivement en ligne via la boutique officielle. Il n'y a pas de vente sur place ni le jour de l'événement : achetez votre billet à l'avance.`,
     faq_s1_q6: `Que se passe-t-il lorsqu'une catégorie de billets est épuisée ?`,
     faq_s1_a6: `Une fois la capacité maximale d'une formule atteinte, aucun billet supplémentaire ne sera disponible pour cette catégorie, sauf annonce contraire. Consultez la boutique officielle de billets pour la disponibilité la plus récente.`,
 
@@ -1450,7 +1450,7 @@ export const translations = {
     faq_s1_q4: `Sind Tickets begrenzt verfügbar?`,
     faq_s1_a4: `Ja. Die Kapazität ist begrenzt, insbesondere für Seminar und Masterclass. Wir empfehlen eine frühzeitige Buchung.`,
     faq_s1_q5: `Kann ich ein Ticket an der Abendkasse kaufen?`,
-    faq_s1_a5: `Der Verkauf an der Abendkasse ist von der Verfügbarkeit abhängig. Ist eine Ticketkategorie im Vorverkauf ausverkauft, ist sie am Eingang nicht mehr verfügbar.`,
+    faq_s1_a5: `Nein. Tickets werden ausschließlich online über den offiziellen Ticketshop verkauft. Es gibt keine Abendkasse und keinen Verkauf am Veranstaltungstag – kaufen Sie Ihr Ticket daher bitte im Voraus.`,
     faq_s1_q6: `Was passiert, wenn eine Ticketkategorie ausverkauft ist?`,
     faq_s1_a6: `Sobald die maximale Kapazität eines Pakets erreicht ist, sind keine weiteren Tickets für diese Kategorie verfügbar, sofern nicht anders angekündigt. Aktuelle Verfügbarkeit bitte im offiziellen Ticketshop prüfen.`,
 
