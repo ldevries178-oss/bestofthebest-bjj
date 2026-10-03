@@ -1,6 +1,12 @@
 import PageLayout from '../components/PageLayout';
 import { useLang } from '../LangContext';
 
+// Beide logo's delen dezelfde hoogte zodat ze even groot ogen.
+const partners = [
+  { name: 'LV Media', logo: '/images/andregalvao/media/lv-media.png', url: 'https://www.lvmedia.nl' },
+  { name: 'Sprint Studio', logo: '/images/andregalvao/media/sprint-studio-icon.png', url: 'https://www.sprintstudio.nl/' },
+];
+
 export default function Sponsors() {
   const { t } = useLang();
   
@@ -10,11 +16,22 @@ export default function Sponsors() {
         <p className="max-w-xl mx-auto text-lg md:text-xl">
           {t('sponsors_text')} 
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 opacity-30">
-          {[1,2,3,4,5,6].map(v => (
-            <div key={v} className="h-24 bg-white/5 rounded-lg flex items-center justify-center border border-white/10 font-orbitron text-xs">
-              PARTNER {v}
-            </div>
+        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 py-6">
+          {partners.map(partner => (
+            <a
+              key={partner.name}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={partner.name}
+              className="opacity-90 hover:opacity-100 hover:scale-105 transition-all"
+            >
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="h-20 md:h-24 w-auto object-contain"
+              />
+            </a>
           ))}
         </div>
         <div className="pt-12 flex flex-col items-center justify-center space-y-4">
