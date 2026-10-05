@@ -577,8 +577,6 @@ export default function AndreGalvaoPage() {
         <PartnerGrid
           items={mediaPartners}
           placeholder={t('galvao_media_placeholder')}
-          comingSoonCount={1}
-          comingSoonLabel={t('galvao_media_more_placeholder')}
         />
       </motion.section>
 
