@@ -82,12 +82,10 @@ function PartnerGrid({
   items,
   placeholder,
   comingSoonCount = 0,
-  comingSoonLabel,
 }: {
   items: Partner[];
   placeholder: string;
   comingSoonCount?: number;
-  comingSoonLabel?: string;
 }) {
   if (items.length === 0 && comingSoonCount === 0) {
     return (
@@ -155,7 +153,7 @@ function PartnerGrid({
           className="h-20 min-w-[160px] flex items-center justify-center rounded-lg bg-white/5 border border-dashed border-white/15 px-6"
         >
           <span className="font-orbitron text-[10px] tracking-widest text-white/40 uppercase text-center">
-            {comingSoonLabel ?? placeholder}
+            {placeholder}
           </span>
         </div>
       ))}
@@ -561,7 +559,7 @@ export default function AndreGalvaoPage() {
         </div>
       </motion.section>
 
-      {/* ===== SPONSORS ===== */}
+      {/* ===== EVENT PARTNERS ===== */}
       <motion.section {...fadeUp} id="partners" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20 scroll-mt-24">
         <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-blue neon-text-blue-subtle uppercase mb-8 text-center">
           {t('galvao_sponsors_title')}
@@ -577,8 +575,6 @@ export default function AndreGalvaoPage() {
         <PartnerGrid
           items={mediaPartners}
           placeholder={t('galvao_media_placeholder')}
-          comingSoonCount={1}
-          comingSoonLabel={t('galvao_media_more_placeholder')}
         />
       </motion.section>
 
