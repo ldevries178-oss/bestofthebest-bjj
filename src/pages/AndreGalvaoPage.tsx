@@ -559,7 +559,7 @@ export default function AndreGalvaoPage() {
         </div>
       </motion.section>
 
-      {/* ===== EVENT PARTNERS ===== */}
+      {/* ===== PARTNERS ===== */}
       <motion.section {...fadeUp} id="partners" className="relative z-10 w-full max-w-5xl mx-auto px-4 py-16 md:py-20 scroll-mt-24">
         <h2 className="font-orbitron text-xl md:text-2xl tracking-widest text-synth-blue neon-text-blue-subtle uppercase mb-8 text-center">
           {t('galvao_sponsors_title')}
